@@ -167,7 +167,7 @@ export default function Home() {
           font-weight: 800;
           line-height: 1.1;
           margin-bottom: 20px;
-          background: linear-gradient(135deg, var(--white), var(--gray-light));
+          background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -175,7 +175,7 @@ export default function Home() {
 
         .hero p {
           font-size: 1.2rem;
-          color: var(--gray);
+          color: var(--text-secondary);
           margin-bottom: 32px;
         }
 
@@ -193,8 +193,8 @@ export default function Home() {
         }
 
         .stat-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
           text-align: center;
@@ -222,7 +222,7 @@ export default function Home() {
         }
 
         .stat-card .label {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 0.9rem;
           margin-top: 4px;
         }
@@ -239,7 +239,7 @@ export default function Home() {
         }
 
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
 
@@ -250,8 +250,8 @@ export default function Home() {
         }
 
         .card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
           cursor: pointer;
@@ -263,7 +263,7 @@ export default function Home() {
         .card:hover {
           border-color: var(--primary);
           transform: translateY(-4px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 40px var(--shadow-color);
         }
 
         .card-icon {
@@ -289,7 +289,7 @@ export default function Home() {
         }
 
         .card p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 0.95rem;
           line-height: 1.6;
           margin-bottom: 16px;
