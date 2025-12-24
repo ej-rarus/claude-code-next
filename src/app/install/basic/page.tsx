@@ -123,8 +123,8 @@ export default function BasicPage() {
           margin: 40px 0;
         }
         .step-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 32px;
           position: relative;
@@ -141,7 +141,7 @@ export default function BasicPage() {
           width: 45px;
           height: 45px;
           background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: var(--white);
+          color: #ffffff;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -154,7 +154,7 @@ export default function BasicPage() {
           font-size: 1.4rem;
         }
         .step-card p {
-          color: var(--gray);
+          color: var(--text-muted);
           margin-bottom: 20px;
           font-size: 1.05rem;
           line-height: 1.7;
@@ -165,8 +165,8 @@ export default function BasicPage() {
           gap: 24px;
         }
         .card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255,255,255,0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 28px;
           transition: all 0.3s ease;
@@ -180,8 +180,8 @@ export default function BasicPage() {
           margin-bottom: 16px;
         }
         .command-box {
-          background: #0d1117;
-          border: 1px solid rgba(255,255,255,0.1);
+          background: var(--command-bg);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
         }
         .command-content {

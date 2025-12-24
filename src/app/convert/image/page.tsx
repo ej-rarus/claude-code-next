@@ -15,7 +15,7 @@ export default function ConvertImagePage() {
 
       <div className="card">
         <h3>기본 사용법</h3>
-        <p style={{ color: 'var(--gray)', marginBottom: '16px' }}>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>
           이미지 파일에서 텍스트를 추출합니다.
         </p>
         <CommandBox command='screenshot.png에서 텍스트를 추출해줘' />
@@ -34,12 +34,12 @@ export default function ConvertImagePage() {
           align-items: center;
         }
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
         .card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
         }

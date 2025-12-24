@@ -78,7 +78,7 @@ export default function Step1Page() {
         <div className="tip-content">
           <h4>터미널 재시작 필요!</h4>
           <p>Homebrew 설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span></p>
-          <ul style={{ marginTop: '8px', color: 'var(--gray)' }}>
+          <ul style={{ marginTop: '8px', color: 'var(--text-muted)' }}>
             <li>터미널 창을 닫는 것만으로는 부족합니다</li>
             <li><strong>Command + Q</strong>를 눌러 터미널 앱 자체를 종료하세요</li>
             <li>다시 터미널(또는 iTerm2)을 열고 다음 단계를 진행하세요</li>
@@ -100,8 +100,8 @@ export default function Step1Page() {
           margin: 40px 0;
         }
         .step-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 32px;
           position: relative;
@@ -117,7 +117,7 @@ export default function Step1Page() {
           width: 45px;
           height: 45px;
           background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: var(--white);
+          color: #ffffff;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -130,14 +130,14 @@ export default function Step1Page() {
           font-size: 1.4rem;
         }
         .step-card p {
-          color: var(--gray);
+          color: var(--text-muted);
           margin-bottom: 20px;
           font-size: 1.05rem;
           line-height: 1.7;
         }
         .step-card ul {
           padding-left: 24px;
-          color: var(--gray);
+          color: var(--text-muted);
         }
         .step-card li {
           margin-bottom: 8px;

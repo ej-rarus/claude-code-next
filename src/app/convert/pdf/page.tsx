@@ -17,7 +17,7 @@ export default function ConvertPdfPage() {
 
       <div className="card" style={{ marginBottom: '24px' }}>
         <h3>기본 사용법</h3>
-        <p style={{ color: 'var(--gray)', marginBottom: '16px' }}>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>
           PDF 파일 경로를 지정하고 변환을 요청하세요.
         </p>
         <CommandBox command='document.pdf 파일을 마크다운으로 변환해줘' />
@@ -25,7 +25,7 @@ export default function ConvertPdfPage() {
 
       <div className="card" style={{ marginBottom: '24px' }}>
         <h3>고급 옵션</h3>
-        <p style={{ color: 'var(--gray)', marginBottom: '16px' }}>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>
           특정 페이지만 변환하거나 표 형식을 유지할 수 있습니다.
         </p>
         <CommandBox command='report.pdf의 1-5페이지만 마크다운으로 변환해줘' />
@@ -54,13 +54,13 @@ export default function ConvertPdfPage() {
         }
 
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
 
         .card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
         }

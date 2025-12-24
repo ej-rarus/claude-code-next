@@ -85,7 +85,7 @@ export default function ExamplesPage() {
         }
 
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
 
@@ -96,8 +96,8 @@ export default function ExamplesPage() {
         }
 
         .example-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
           transition: all 0.3s ease;
@@ -135,7 +135,7 @@ export default function ExamplesPage() {
         }
 
         .example-desc {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 0.95rem;
           margin-bottom: 16px;
         }

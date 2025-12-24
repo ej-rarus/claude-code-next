@@ -23,8 +23,8 @@ export default function DocsEditPage() {
       <style jsx>{`
         .section-header { margin-bottom: 40px; }
         .section-header h2 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; }
-        .section-header p { color: var(--gray); font-size: 1.1rem; }
-        .card { background: var(--dark-light); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
+        .card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; }
         .card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 16px; }
       `}</style>
     </>

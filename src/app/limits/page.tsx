@@ -64,7 +64,7 @@ export default function LimitsPage() {
       <style jsx>{`
         .section-header { margin-bottom: 40px; }
         .section-header h2 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; }
-        .section-header p { color: var(--gray); font-size: 1.1rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
 
         .limits-grid {
           display: grid;
@@ -73,7 +73,7 @@ export default function LimitsPage() {
         }
 
         .limit-card {
-          background: var(--dark-light);
+          background: var(--bg-secondary);
           border-radius: 16px;
           padding: 24px;
         }
@@ -108,8 +108,8 @@ export default function LimitsPage() {
           align-items: center;
           gap: 12px;
           padding: 12px 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          color: var(--gray);
+          border-bottom: 1px solid var(--border-light);
+          color: var(--text-muted);
         }
 
         .limit-card li:last-child {

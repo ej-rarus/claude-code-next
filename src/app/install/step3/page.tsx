@@ -52,7 +52,7 @@ export default function Step3Page() {
           <div className="step-number">2</div>
           <h3>계정 만들기 (무료)</h3>
           <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
-          <ol style={{ paddingLeft: '24px', color: 'var(--gray)', marginTop: '12px' }}>
+          <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
             <li style={{ marginBottom: '12px' }}>
               <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
             </li>
@@ -118,8 +118,8 @@ export default function Step3Page() {
           margin: 40px 0;
         }
         .step-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 32px;
           position: relative;
@@ -136,7 +136,7 @@ export default function Step3Page() {
           width: 45px;
           height: 45px;
           background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: var(--white);
+          color: #ffffff;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -149,22 +149,22 @@ export default function Step3Page() {
           font-size: 1.4rem;
         }
         .step-card p {
-          color: var(--gray);
+          color: var(--text-muted);
           margin-bottom: 20px;
           font-size: 1.05rem;
           line-height: 1.7;
         }
         .step-card ul, .step-card ol {
           padding-left: 24px;
-          color: var(--gray);
+          color: var(--text-muted);
         }
         .step-card li {
           margin-bottom: 8px;
           line-height: 1.6;
         }
         .command-box {
-          background: #0d1117;
-          border: 1px solid rgba(255,255,255,0.1);
+          background: var(--command-bg);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: 16px 20px;
         }

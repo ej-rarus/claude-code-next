@@ -70,7 +70,7 @@ export default function QuickstartPage() {
           icon="fa-dollar-sign"
           defaultOpen={true}
         >
-          <p style={{ color: 'var(--gray)' }}>
+          <p style={{ color: 'var(--text-muted)' }}>
             Claude Code는 Anthropic의 API 사용량에 따라 과금됩니다.
             월 $20의 Pro 플랜에 가입하면 더 많은 사용량을 제공받을 수 있습니다.
           </p>
@@ -80,7 +80,7 @@ export default function QuickstartPage() {
           title="어떤 파일 형식을 지원하나요?"
           icon="fa-file"
         >
-          <p style={{ color: 'var(--gray)' }}>
+          <p style={{ color: 'var(--text-muted)' }}>
             PDF, PPT, Word, Excel, 이미지(PNG, JPG), 텍스트 파일 등
             대부분의 일반적인 문서 형식을 지원합니다.
           </p>
@@ -90,7 +90,7 @@ export default function QuickstartPage() {
           title="파일 크기 제한이 있나요?"
           icon="fa-weight-hanging"
         >
-          <p style={{ color: 'var(--gray)' }}>
+          <p style={{ color: 'var(--text-muted)' }}>
             단일 파일은 약 100MB까지 처리할 수 있습니다.
             매우 큰 파일의 경우 분할하여 처리하는 것을 권장합니다.
           </p>
@@ -111,7 +111,7 @@ export default function QuickstartPage() {
         }
 
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
 
@@ -149,7 +149,7 @@ export default function QuickstartPage() {
         }
 
         .step-content p {
-          color: var(--gray);
+          color: var(--text-muted);
           margin-bottom: 16px;
         }
 

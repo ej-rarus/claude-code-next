@@ -17,17 +17,17 @@ export default function ConvertPptPage() {
         <h3 style={{ fontSize: '1.3rem', marginBottom: '20px' }}>기본 명령어</h3>
 
         <div style={{ marginBottom: '24px' }}>
-          <p style={{ color: 'var(--gray)', marginBottom: '12px' }}>기본 변환</p>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '12px' }}>기본 변환</p>
           <CommandBox command="이 PPT 파일 마크다운으로 변환해줘" />
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <p style={{ color: 'var(--gray)', marginBottom: '12px' }}>특정 파일 지정</p>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '12px' }}>특정 파일 지정</p>
           <CommandBox command="바이오스펙트럼_디자인요청서.pptx 내용 MD로 정리해줘" />
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <p style={{ color: 'var(--gray)', marginBottom: '12px' }}>특정 슬라이드만</p>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '12px' }}>특정 슬라이드만</p>
           <CommandBox command="PPT에서 3~5번 슬라이드만 추출해줘" />
         </div>
 
@@ -80,28 +80,28 @@ export default function ConvertPptPage() {
         table {
           width: 100%;
           border-collapse: collapse;
-          background: var(--dark-light);
+          background: var(--bg-secondary);
           border-radius: 12px;
           overflow: hidden;
         }
         th, td {
           padding: 16px 20px;
           text-align: left;
-          border-bottom: 1px solid rgba(255,255,255,0.1);
+          border-bottom: 1px solid var(--border-color);
         }
         th {
           background: rgba(99, 102, 241, 0.1);
           font-weight: 600;
-          color: var(--white);
+          color: var(--text-primary);
         }
         td {
-          color: var(--gray);
+          color: var(--text-muted);
         }
         tr:last-child td {
           border-bottom: none;
         }
         code {
-          background: var(--dark);
+          background: var(--bg-tertiary);
           padding: 2px 8px;
           border-radius: 4px;
           font-size: 0.9rem;

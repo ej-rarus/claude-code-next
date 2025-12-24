@@ -79,8 +79,8 @@ export default function Step2Page() {
           margin: 40px 0;
         }
         .step-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 32px;
           position: relative;
@@ -97,7 +97,7 @@ export default function Step2Page() {
           width: 45px;
           height: 45px;
           background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: var(--white);
+          color: #ffffff;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -110,14 +110,14 @@ export default function Step2Page() {
           font-size: 1.4rem;
         }
         .step-card p {
-          color: var(--gray);
+          color: var(--text-muted);
           margin-bottom: 20px;
           font-size: 1.05rem;
           line-height: 1.7;
         }
         .step-card ul {
           padding-left: 24px;
-          color: var(--gray);
+          color: var(--text-muted);
         }
         .step-card li {
           margin-bottom: 8px;

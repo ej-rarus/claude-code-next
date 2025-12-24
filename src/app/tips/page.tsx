@@ -102,7 +102,7 @@ export default function TipsPage() {
         }
 
         .section-header p {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 1.1rem;
         }
 
@@ -114,8 +114,8 @@ export default function TipsPage() {
         }
 
         .tip-card {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
           transition: all 0.3s ease;
@@ -159,14 +159,14 @@ export default function TipsPage() {
         }
 
         .tip-content {
-          color: var(--gray);
+          color: var(--text-muted);
           font-size: 0.95rem;
           margin-bottom: 16px;
         }
 
         .shortcuts-section {
-          background: var(--dark-light);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
         }
@@ -190,12 +190,12 @@ export default function TipsPage() {
           justify-content: space-between;
           align-items: center;
           padding: 12px 16px;
-          background: rgba(255, 255, 255, 0.05);
+          background: var(--bg-tertiary);
           border-radius: 8px;
         }
 
         .shortcut-item code {
-          background: var(--dark);
+          background: var(--bg-primary);
           padding: 4px 12px;
           border-radius: 6px;
           font-size: 0.85rem;

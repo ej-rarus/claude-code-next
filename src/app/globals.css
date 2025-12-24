@@ -49,9 +49,6 @@
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --color-dark: var(--dark);
-  --color-dark-light: var(--dark-light);
-  --color-gray: var(--gray);
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-danger: var(--danger);
@@ -93,7 +90,7 @@ body {
 /* Selection */
 ::selection {
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Button base styles */
@@ -113,7 +110,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: var(--white);
+  color: #ffffff;
 }
 
 .btn-primary:hover {
@@ -171,12 +168,12 @@ body {
 
 .command-box .copy-btn:hover {
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
 }
 
 .command-box .copy-btn.copied {
   background: var(--success);
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Card */
