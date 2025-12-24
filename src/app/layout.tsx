@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
@@ -84,6 +85,7 @@ export default function RootLayout({
       </head>
       <body>
         <ClientLayout>{children}</ClientLayout>
+        <Analytics />
       </body>
     </html>
   );
