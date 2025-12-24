@@ -3,3 +3,5 @@ export { default as Topbar } from './Topbar';
 export { default as CommandBox } from './CommandBox';
 export { default as Toast } from './Toast';
 export { default as Accordion, AccordionItem } from './Accordion';
+export { ThemeProvider, useTheme } from './ThemeProvider';
+export { default as ThemeToggle } from './ThemeToggle';
