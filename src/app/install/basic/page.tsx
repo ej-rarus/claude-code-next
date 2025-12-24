@@ -52,7 +52,7 @@ export default function BasicPage() {
 
       <div className="cards-grid">
         <div className="card">
-          <h3>파일 변환</h3>
+          <h3><i className="fas fa-exchange-alt" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>파일 변환</h3>
           <div className="command-box">
             <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
               "이 PPT 읽고 워드로 정리해줘"<br/><br/>
@@ -63,7 +63,7 @@ export default function BasicPage() {
         </div>
 
         <div className="card">
-          <h3>데이터 분석</h3>
+          <h3><i className="fas fa-chart-bar" style={{ marginRight: '8px', color: 'var(--success)' }}></i>데이터 분석</h3>
           <div className="command-box">
             <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
               "엑셀 파일 분석해줘"<br/><br/>
@@ -74,7 +74,7 @@ export default function BasicPage() {
         </div>
 
         <div className="card">
-          <h3>문서 작성</h3>
+          <h3><i className="fas fa-file-signature" style={{ marginRight: '8px', color: 'var(--warning)' }}></i>문서 작성</h3>
           <div className="command-box">
             <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
               "회의록 양식 만들어줘"<br/><br/>
@@ -85,12 +85,100 @@ export default function BasicPage() {
         </div>
 
         <div className="card">
-          <h3>반복 작업</h3>
+          <h3><i className="fas fa-redo" style={{ marginRight: '8px', color: 'var(--secondary)' }}></i>반복 작업</h3>
           <div className="command-box">
             <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
               "파일 100개 이름 바꿔줘"<br/><br/>
               "모든 이미지 크기 조정해줘"<br/><br/>
               "문서 10개 합쳐줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-code" style={{ marginRight: '8px', color: 'var(--accent)' }}></i>코드 작업</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "이 코드 분석해서 설명해줘"<br/><br/>
+              "버그 찾아서 수정해줘"<br/><br/>
+              "테스트 코드 작성해줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-language" style={{ marginRight: '8px', color: 'var(--danger)' }}></i>번역 & 교정</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "이 문서 영어로 번역해줘"<br/><br/>
+              "맞춤법 검사하고 수정해줘"<br/><br/>
+              "더 자연스럽게 다듬어줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-globe" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>웹 검색</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "2024년 최신 트렌드 검색해줘"<br/><br/>
+              "이 URL 내용 요약해줘"<br/><br/>
+              "경쟁사 정보 조사해줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-folder-open" style={{ marginRight: '8px', color: 'var(--warning)' }}></i>파일 관리</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "이 폴더 구조 보여줘"<br/><br/>
+              "파일들 날짜별로 정리해줘"<br/><br/>
+              "중복 파일 찾아줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-compress-alt" style={{ marginRight: '8px', color: 'var(--success)' }}></i>요약 & 정리</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "3줄로 요약해줘"<br/><br/>
+              "핵심 키워드 추출해줘"<br/><br/>
+              "목차 만들어줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-clipboard" style={{ marginRight: '8px', color: 'var(--secondary)' }}></i>클립보드 활용</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "결과 클립보드에 복사해줘"<br/><br/>
+              "표 형식으로 복사해줘"<br/><br/>
+              "마크다운으로 복사해줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-tasks" style={{ marginRight: '8px', color: 'var(--accent)' }}></i>할 일 관리</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "이 문서에서 할 일 추출해줘"<br/><br/>
+              "우선순위별로 정리해줘"<br/><br/>
+              "체크리스트 만들어줘"
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3><i className="fas fa-calendar-alt" style={{ marginRight: '8px', color: 'var(--danger)' }}></i>일정 & 시간</h3>
+          <div className="command-box">
+            <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
+              "미팅 일정 정리해줘"<br/><br/>
+              "타임라인 만들어줘"<br/><br/>
+              "마감일 기준으로 정렬해줘"
             </div>
           </div>
         </div>
