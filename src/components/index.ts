@@ -5,3 +5,6 @@ export { default as Toast } from './Toast';
 export { default as Accordion, AccordionItem } from './Accordion';
 export { ThemeProvider, useTheme } from './ThemeProvider';
 export { default as ThemeToggle } from './ThemeToggle';
+export { default as ShortcutsModal } from './ShortcutsModal';
+export { default as HelpModal } from './HelpModal';
+export { default as SearchModal } from './SearchModal';
