@@ -65,6 +65,7 @@ const navSections = {
       { href: '/analysis', icon: 'fa-search', label: '문서 분석' },
       { href: '/web', icon: 'fa-globe', label: '웹 정보 수집' },
       { href: '/automation', icon: 'fa-magic', label: '자동화' },
+      { href: '/mcp', icon: 'fa-plug', label: 'MCP 서버' },
     ],
   },
   reference: {
