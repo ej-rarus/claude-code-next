@@ -1,6 +1,6 @@
 'use client';
 
-import { CommandBox, AccordionItem } from '@/components';
+import { CommandBox, AccordionItem, OSTabs } from '@/components';
 
 export default function QuickstartPage() {
   return (
@@ -20,12 +20,26 @@ export default function QuickstartPage() {
             <h4>작업 폴더 지정</h4>
             <p>먼저 작업할 폴더 경로를 알려주세요.</p>
             <CommandBox command='/Users/username/Desktop/project 경로에서 작업할거야' />
-            <div className="tip-box">
-              <i className="fas fa-lightbulb"></i>
-              <div>
-                <strong>팁:</strong> Finder에서 폴더를 터미널로 드래그하면 경로가 자동으로 입력됩니다.
-              </div>
-            </div>
+            <OSTabs>
+              {{
+                mac: (
+                  <div className="tip-box">
+                    <i className="fas fa-lightbulb"></i>
+                    <div>
+                      <strong>팁:</strong> Finder에서 폴더를 터미널로 드래그하면 경로가 자동으로 입력됩니다.
+                    </div>
+                  </div>
+                ),
+                windows: (
+                  <div className="tip-box">
+                    <i className="fas fa-lightbulb"></i>
+                    <div>
+                      <strong>팁:</strong> 파일 탐색기에서 폴더를 터미널로 드래그하면 경로가 자동으로 입력됩니다.
+                    </div>
+                  </div>
+                )
+              }}
+            </OSTabs>
           </div>
         </div>
 

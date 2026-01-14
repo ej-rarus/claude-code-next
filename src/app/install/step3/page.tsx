@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { CommandBox } from '@/components';
+import { CommandBox, OSTabs } from '@/components';
 
 export default function Step3Page() {
   return (
@@ -9,9 +9,9 @@ export default function Step3Page() {
       <div className="section-header">
         <h2>
           <i className="fas fa-robot" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
-          3단계: Claude AI 설치하기
+          3단계: Claude Code 설치하기
         </h2>
-        <p>드디어! AI 비서를 설치합니다 (5분 소요)</p>
+        <p>드디어! AI 비서를 설치합니다</p>
       </div>
 
       <div className="tip-box info">
@@ -31,70 +31,162 @@ export default function Step3Page() {
         </div>
       </div>
 
-      <div className="steps-container">
-        <div className="step-card">
-          <div className="step-number">1</div>
-          <h3>Claude 설치하기</h3>
-          <p>iTerm2를 열고 아래 명령어를 입력하세요.</p>
-          <CommandBox command="brew install --cask claude-code" />
-          <p style={{ marginTop: '16px' }}>2-3분 기다리면 설치 완료!</p>
+      <OSTabs>
+        {{
+          mac: (
+            <>
+              <div className="steps-container">
+                <div className="step-card">
+                  <div className="step-number">1</div>
+                  <h3>Claude Code 설치하기</h3>
+                  <p>iTerm2를 열고 아래 명령어를 입력하세요.</p>
+                  <CommandBox command="brew install --cask claude-code" />
+                  <p style={{ marginTop: '16px' }}>2-3분 기다리면 설치 완료!</p>
 
-          <div className="tip-box info" style={{ marginTop: '16px' }}>
-            <i className="fas fa-sync-alt"></i>
-            <div className="tip-content">
-              <h4>터미널 재시작 필요!</h4>
-              <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 인식됩니다.</p>
-            </div>
-          </div>
-        </div>
+                  <div className="tip-box info" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-sync-alt"></i>
+                    <div className="tip-content">
+                      <h4>터미널 재시작 필요!</h4>
+                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 인식됩니다.</p>
+                    </div>
+                  </div>
+                </div>
 
-        <div className="step-card">
-          <div className="step-number">2</div>
-          <h3>계정 만들기 (무료)</h3>
-          <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
-          <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
-            <li style={{ marginBottom: '12px' }}>
-              <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
-            </li>
-            <li style={{ marginBottom: '12px' }}>
-              <strong>"Sign Up"</strong> 또는 <strong>"계정 만들기"</strong> 클릭
-            </li>
-            <li style={{ marginBottom: '12px' }}>
-              이메일 주소와 비밀번호 입력
-            </li>
-            <li>
-              이메일로 온 인증 링크 클릭하면 끝!
-            </li>
-          </ol>
-        </div>
+                <div className="step-card">
+                  <div className="step-number">2</div>
+                  <h3>계정 만들기 (무료)</h3>
+                  <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
+                  <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
+                    <li style={{ marginBottom: '12px' }}>
+                      <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
+                    </li>
+                    <li style={{ marginBottom: '12px' }}>
+                      <strong>"Sign Up"</strong> 또는 <strong>"계정 만들기"</strong> 클릭
+                    </li>
+                    <li style={{ marginBottom: '12px' }}>
+                      이메일 주소와 비밀번호 입력
+                    </li>
+                    <li>
+                      이메일로 온 인증 링크 클릭하면 끝!
+                    </li>
+                  </ol>
+                </div>
 
-        <div className="step-card">
-          <div className="step-number">3</div>
-          <h3>로그인하기</h3>
-          <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
-          <CommandBox command="claude auth login" />
-          <ul style={{ marginTop: '16px' }}>
-            <li><strong>브라우저가 자동으로 열립니다</strong> (Safari, Chrome 등)</li>
-            <li>방금 만든 계정으로 <strong>로그인</strong></li>
-            <li>"Claude Code 접근 허용" 같은 버튼이 나오면 <strong>"허용"</strong> 클릭</li>
-            <li>"인증 완료" 메시지가 보이면 → 터미널로 돌아오세요</li>
-          </ul>
-        </div>
+                <div className="step-card">
+                  <div className="step-number">3</div>
+                  <h3>로그인하기</h3>
+                  <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
+                  <CommandBox command="claude auth login" />
+                  <ul style={{ marginTop: '16px' }}>
+                    <li><strong>브라우저가 자동으로 열립니다</strong> (Safari, Chrome 등)</li>
+                    <li>방금 만든 계정으로 <strong>로그인</strong></li>
+                    <li>"Claude Code 접근 허용" 같은 버튼이 나오면 <strong>"허용"</strong> 클릭</li>
+                    <li>"인증 완료" 메시지가 보이면 → 터미널로 돌아오세요</li>
+                  </ul>
+                </div>
 
-        <div className="step-card">
-          <div className="step-number">4</div>
-          <h3>첫 대화 해보기!</h3>
-          <p>드디어 AI와 대화할 준비가 끝났어요! 간단히 테스트해봅시다.</p>
-          <CommandBox command="claude" />
-          <p style={{ marginTop: '16px' }}>이제 아무거나 질문해보세요!</p>
-          <div className="command-box" style={{ marginTop: '12px' }}>
-            <div className="command-content">
-              안녕? 내 이름은 김철수야. 기억해줘!
-            </div>
-          </div>
-          <p style={{ marginTop: '16px', color: 'var(--primary)', fontWeight: 600 }}>AI가 답변하면 설치 완료!</p>
-        </div>
-      </div>
+                <div className="step-card">
+                  <div className="step-number">4</div>
+                  <h3>첫 대화 해보기!</h3>
+                  <p>드디어 AI와 대화할 준비가 끝났어요! 간단히 테스트해봅시다.</p>
+                  <CommandBox command="claude" />
+                  <p style={{ marginTop: '16px' }}>이제 아무거나 질문해보세요!</p>
+                  <div className="command-box" style={{ marginTop: '12px' }}>
+                    <div className="command-content">
+                      안녕? 내 이름은 김철수야. 기억해줘!
+                    </div>
+                  </div>
+                  <p style={{ marginTop: '16px', color: 'var(--primary)', fontWeight: 600 }}>AI가 답변하면 설치 완료!</p>
+                </div>
+              </div>
+            </>
+          ),
+          windows: (
+            <>
+              <div className="steps-container">
+                <div className="step-card">
+                  <div className="step-number">1</div>
+                  <h3>Node.js 설치하기</h3>
+                  <p>Claude Code는 Node.js가 필요합니다. Windows Terminal을 열고 아래 명령어를 입력하세요.</p>
+                  <CommandBox command="winget install OpenJS.NodeJS.LTS" />
+                  <p style={{ marginTop: '16px' }}>설치 완료 후 터미널을 껐다가 다시 열어주세요!</p>
+
+                  <div className="tip-box info" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-check-circle"></i>
+                    <div className="tip-content">
+                      <h4>이미 Node.js가 있다면?</h4>
+                      <p><code>node --version</code>을 입력해서 버전이 나오면 이 단계는 건너뛰세요!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="step-card">
+                  <div className="step-number">2</div>
+                  <h3>Claude Code 설치하기</h3>
+                  <p>Node.js 설치 후, 아래 명령어로 Claude Code를 설치합니다.</p>
+                  <CommandBox command="npm install -g @anthropic-ai/claude-code" />
+                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 완료!</p>
+
+                  <div className="tip-box info" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-sync-alt"></i>
+                    <div className="tip-content">
+                      <h4>터미널 재시작 필요!</h4>
+                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 인식됩니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="step-card">
+                  <div className="step-number">3</div>
+                  <h3>계정 만들기 (무료)</h3>
+                  <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
+                  <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
+                    <li style={{ marginBottom: '12px' }}>
+                      <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
+                    </li>
+                    <li style={{ marginBottom: '12px' }}>
+                      <strong>"Sign Up"</strong> 또는 <strong>"계정 만들기"</strong> 클릭
+                    </li>
+                    <li style={{ marginBottom: '12px' }}>
+                      이메일 주소와 비밀번호 입력
+                    </li>
+                    <li>
+                      이메일로 온 인증 링크 클릭하면 끝!
+                    </li>
+                  </ol>
+                </div>
+
+                <div className="step-card">
+                  <div className="step-number">4</div>
+                  <h3>로그인하기</h3>
+                  <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
+                  <CommandBox command="claude auth login" />
+                  <ul style={{ marginTop: '16px' }}>
+                    <li><strong>브라우저가 자동으로 열립니다</strong> (Chrome, Edge 등)</li>
+                    <li>방금 만든 계정으로 <strong>로그인</strong></li>
+                    <li>"Claude Code 접근 허용" 같은 버튼이 나오면 <strong>"허용"</strong> 클릭</li>
+                    <li>"인증 완료" 메시지가 보이면 → 터미널로 돌아오세요</li>
+                  </ul>
+                </div>
+
+                <div className="step-card">
+                  <div className="step-number">5</div>
+                  <h3>첫 대화 해보기!</h3>
+                  <p>드디어 AI와 대화할 준비가 끝났어요! 간단히 테스트해봅시다.</p>
+                  <CommandBox command="claude" />
+                  <p style={{ marginTop: '16px' }}>이제 아무거나 질문해보세요!</p>
+                  <div className="command-box" style={{ marginTop: '12px' }}>
+                    <div className="command-content">
+                      안녕? 내 이름은 김철수야. 기억해줘!
+                    </div>
+                  </div>
+                  <p style={{ marginTop: '16px', color: 'var(--primary)', fontWeight: 600 }}>AI가 답변하면 설치 완료!</p>
+                </div>
+              </div>
+            </>
+          )
+        }}
+      </OSTabs>
 
       <div className="tip-box" style={{ background: 'linear-gradient(135deg, rgba(32, 236, 138, 0.2), rgba(160, 255, 209, 0.2))', borderColor: 'var(--primary)' }}>
         <i className="fas fa-trophy"></i>

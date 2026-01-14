@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { OSTabs } from '@/components';
 
 export default function Step0Page() {
   return (
@@ -10,7 +11,7 @@ export default function Step0Page() {
           <i className="fas fa-info-circle" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           0단계: 시작하기 전에
         </h2>
-        <p>설치할 프로그램들이 무엇인지, 왜 필요한지 알아봅시다 (2분 소요)</p>
+        <p>설치할 프로그램들이 무엇인지, 왜 필요한지 알아봅시다</p>
       </div>
 
       <div className="tip-box success">
@@ -24,51 +25,108 @@ export default function Step0Page() {
       <div style={{ marginTop: '32px' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '24px', color: 'var(--text-primary)' }}>뭘 설치하는 건가요?</h3>
 
-        <div className="step-card">
-          <h3>1. Homebrew (홈브루)</h3>
-          <p style={{ marginBottom: '12px' }}><span className="emphasis">프로그램 설치 도우미</span>입니다.</p>
-          <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
-            <li>Mac에 프로그램을 쉽게 설치할 수 있게 해줍니다</li>
-            <li>앱스토어에 없는 개발 도구들도 간단한 명령어로 설치 가능</li>
-            <li>비유: "프로그램 자동 설치 기계"</li>
-          </ul>
-          <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
-            <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>iTerm2와 Claude Code를 간편하게 설치하기 위해 먼저 설치합니다.</p>
-          </div>
-        </div>
+        <OSTabs>
+          {{
+            mac: (
+              <>
+                <div className="step-card">
+                  <h3>1. Homebrew (홈브루)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">프로그램 설치 도우미</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>Mac에 프로그램을 쉽게 설치할 수 있게 해줍니다</li>
+                    <li>앱스토어에 없는 개발 도구들도 간단한 명령어로 설치 가능</li>
+                    <li>비유: "프로그램 자동 설치 기계"</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>iTerm2와 Claude Code를 간편하게 설치하기 위해 먼저 설치합니다.</p>
+                  </div>
+                </div>
 
-        <div className="step-card">
-          <h3>2. iTerm2 (아이텀2)</h3>
-          <p style={{ marginBottom: '12px' }}><span className="emphasis">향상된 터미널 프로그램</span>입니다.</p>
-          <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
-            <li>Mac 기본 터미널보다 편리하고 보기 좋습니다</li>
-            <li>복사/붙여넣기가 쉽고, 화면 분할도 가능</li>
-            <li>비유: "컴퓨터에게 글자로 명령을 내리는 창"</li>
-          </ul>
-          <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
-            <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code를 실행하고 AI와 대화하기 위한 창입니다. Mac 기본 터미널도 사용 가능하지만 iTerm2가 훨씬 편합니다.</p>
-          </div>
-        </div>
+                <div className="step-card">
+                  <h3>2. iTerm2 (아이텀2)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">향상된 터미널 프로그램</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>Mac 기본 터미널보다 편리하고 보기 좋습니다</li>
+                    <li>복사/붙여넣기가 쉽고, 화면 분할도 가능</li>
+                    <li>비유: "컴퓨터에게 글자로 명령을 내리는 창"</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code를 실행하고 AI와 대화하기 위한 창입니다. Mac 기본 터미널도 사용 가능하지만 iTerm2가 훨씬 편합니다.</p>
+                  </div>
+                </div>
 
-        <div className="step-card">
-          <h3>3. Claude Code (클로드 코드)</h3>
-          <p style={{ marginBottom: '12px' }}><span className="emphasis">여러분 컴퓨터의 AI 비서</span>입니다.</p>
-          <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
-            <li>Anthropic의 Claude AI를 터미널에서 사용하는 도구</li>
-            <li>자연어로 명령하면 파일 읽기/쓰기/수정을 자동으로 실행</li>
-            <li>문서 작성, 파일 변환, 정보 추출 등 다양한 작업 수행</li>
-          </ul>
-          <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
-            <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>우리의 최종 목표! 이것을 사용하기 위해 앞의 두 프로그램을 설치하는 것입니다.</p>
-          </div>
-          <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px', borderLeft: '3px solid #f59e0b' }}>
-            <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: '4px' }}>중요: 유료 플랜 필요</p>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code는 <strong style={{ color: 'var(--text-primary)' }}>Claude Pro 또는 Team 유료 플랜</strong> 사용자만 이용 가능합니다. 무료 계정으로는 사용할 수 없습니다.</p>
-          </div>
-        </div>
+                <div className="step-card">
+                  <h3>3. Claude Code (클로드 코드)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">여러분 컴퓨터의 AI 비서</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>Anthropic의 Claude AI를 터미널에서 사용하는 도구</li>
+                    <li>자연어로 명령하면 파일 읽기/쓰기/수정을 자동으로 실행</li>
+                    <li>문서 작성, 파일 변환, 정보 추출 등 다양한 작업 수행</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>우리의 최종 목표! 이것을 사용하기 위해 앞의 두 프로그램을 설치하는 것입니다.</p>
+                  </div>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px', borderLeft: '3px solid #f59e0b' }}>
+                    <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: '4px' }}>중요: 유료 플랜 필요</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code는 <strong style={{ color: 'var(--text-primary)' }}>Claude Pro 또는 Team 유료 플랜</strong> 사용자만 이용 가능합니다. 무료 계정으로는 사용할 수 없습니다.</p>
+                  </div>
+                </div>
+              </>
+            ),
+            windows: (
+              <>
+                <div className="step-card">
+                  <h3>1. WinGet (윈겟)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">Windows 공식 패키지 관리자</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>Windows 10/11에 기본으로 설치되어 있습니다</li>
+                    <li>명령어 한 줄로 프로그램을 쉽게 설치 가능</li>
+                    <li>비유: "프로그램 자동 설치 기계"</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Windows Terminal과 Node.js를 간편하게 설치하기 위해 사용합니다.</p>
+                  </div>
+                </div>
+
+                <div className="step-card">
+                  <h3>2. Windows Terminal (윈도우 터미널)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">현대적인 터미널 프로그램</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>기본 명령 프롬프트보다 편리하고 보기 좋습니다</li>
+                    <li>탭 기능, 화면 분할, 테마 설정 가능</li>
+                    <li>Windows 11에는 기본 설치되어 있습니다</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code를 실행하고 AI와 대화하기 위한 창입니다. PowerShell도 사용 가능하지만 Windows Terminal이 훨씬 편합니다.</p>
+                  </div>
+                </div>
+
+                <div className="step-card">
+                  <h3>3. Claude Code (클로드 코드)</h3>
+                  <p style={{ marginBottom: '12px' }}><span className="emphasis">여러분 컴퓨터의 AI 비서</span>입니다.</p>
+                  <ul style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
+                    <li>Anthropic의 Claude AI를 터미널에서 사용하는 도구</li>
+                    <li>자연어로 명령하면 파일 읽기/쓰기/수정을 자동으로 실행</li>
+                    <li>문서 작성, 파일 변환, 정보 추출 등 다양한 작업 수행</li>
+                  </ul>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
+                    <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>우리의 최종 목표! 이것을 사용하기 위해 앞의 프로그램들을 설치하는 것입니다.</p>
+                  </div>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px', borderLeft: '3px solid #f59e0b' }}>
+                    <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: '4px' }}>중요: 유료 플랜 필요</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code는 <strong style={{ color: 'var(--text-primary)' }}>Claude Pro 또는 Team 유료 플랜</strong> 사용자만 이용 가능합니다. 무료 계정으로는 사용할 수 없습니다.</p>
+                  </div>
+                </div>
+              </>
+            )
+          }}
+        </OSTabs>
       </div>
 
       <div style={{ marginTop: '48px' }}>
@@ -144,7 +202,7 @@ export default function Step0Page() {
         <i className="fas fa-check-circle"></i>
         <div className="tip-content">
           <h4>준비되셨나요?</h4>
-          <p>이제 <span className="emphasis">Homebrew 설치</span>부터 시작해봅시다!</p>
+          <p>이제 <span className="emphasis">패키지 관리자 설치</span>부터 시작해봅시다!</p>
         </div>
       </div>
 

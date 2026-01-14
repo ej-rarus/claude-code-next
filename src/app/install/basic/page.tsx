@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { CommandBox } from '@/components';
+import { CommandBox, OSTabs } from '@/components';
 
 export default function BasicPage() {
   return (
@@ -14,39 +14,80 @@ export default function BasicPage() {
         <p>AI에게 일 시키는 방법 3단계</p>
       </div>
 
-      <div className="steps-container">
-        <div className="step-card">
-          <div className="step-number">1</div>
-          <h3>iTerm 열고 Claude 실행</h3>
-          <p>매번 작업할 때마다 이렇게 시작하세요.</p>
-          <CommandBox command="claude" />
-          <p style={{ marginTop: '16px' }}>프롬프트(▶)가 나오면 준비 완료!</p>
-        </div>
+      <OSTabs>
+        {{
+          mac: (
+            <div className="steps-container">
+              <div className="step-card">
+                <div className="step-number">1</div>
+                <h3>iTerm 열고 Claude 실행</h3>
+                <p>매번 작업할 때마다 이렇게 시작하세요.</p>
+                <CommandBox command="claude" />
+                <p style={{ marginTop: '16px' }}>프롬프트(▶)가 나오면 준비 완료!</p>
+              </div>
 
-        <div className="step-card">
-          <div className="step-number">2</div>
-          <h3>작업 폴더 알려주기</h3>
-          <p>어떤 폴더에서 작업할지 먼저 알려주세요.</p>
-          <div className="command-box" style={{ marginTop: '12px' }}>
-            <div className="command-content">
-              ~/Desktop/회사업무 폴더에서 작업할 거야
-            </div>
-          </div>
-          <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 경로는 Finder에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
-        </div>
+              <div className="step-card">
+                <div className="step-number">2</div>
+                <h3>작업 폴더 알려주기</h3>
+                <p>어떤 폴더에서 작업할지 먼저 알려주세요.</p>
+                <div className="command-box" style={{ marginTop: '12px' }}>
+                  <div className="command-content">
+                    ~/Desktop/회사업무 폴더에서 작업할 거야
+                  </div>
+                </div>
+                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 경로는 Finder에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
+              </div>
 
-        <div className="step-card">
-          <div className="step-number">3</div>
-          <h3>하고 싶은 일 말하기</h3>
-          <p>이제 원하는 작업을 <span className="emphasis">일상 대화처럼</span> 말하면 됩니다!</p>
-          <div className="command-box" style={{ marginTop: '12px' }}>
-            <div className="command-content">
-              발표자료.pptx 파일 읽고 마크다운으로 정리해줘
+              <div className="step-card">
+                <div className="step-number">3</div>
+                <h3>하고 싶은 일 말하기</h3>
+                <p>이제 원하는 작업을 <span className="emphasis">일상 대화처럼</span> 말하면 됩니다!</p>
+                <div className="command-box" style={{ marginTop: '12px' }}>
+                  <div className="command-content">
+                    발표자료.pptx 파일 읽고 마크다운으로 정리해줘
+                  </div>
+                </div>
+                <p style={{ marginTop: '16px' }}>AI가 자동으로 파일을 읽고 작업합니다!</p>
+              </div>
             </div>
-          </div>
-          <p style={{ marginTop: '16px' }}>AI가 자동으로 파일을 읽고 작업합니다!</p>
-        </div>
-      </div>
+          ),
+          windows: (
+            <div className="steps-container">
+              <div className="step-card">
+                <div className="step-number">1</div>
+                <h3>Windows Terminal 열고 Claude 실행</h3>
+                <p>매번 작업할 때마다 이렇게 시작하세요.</p>
+                <CommandBox command="claude" />
+                <p style={{ marginTop: '16px' }}>프롬프트(▶)가 나오면 준비 완료!</p>
+              </div>
+
+              <div className="step-card">
+                <div className="step-number">2</div>
+                <h3>작업 폴더 알려주기</h3>
+                <p>어떤 폴더에서 작업할지 먼저 알려주세요.</p>
+                <div className="command-box" style={{ marginTop: '12px' }}>
+                  <div className="command-content">
+                    C:\Users\사용자\Desktop\회사업무 폴더에서 작업할 거야
+                  </div>
+                </div>
+                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 경로는 파일 탐색기에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
+              </div>
+
+              <div className="step-card">
+                <div className="step-number">3</div>
+                <h3>하고 싶은 일 말하기</h3>
+                <p>이제 원하는 작업을 <span className="emphasis">일상 대화처럼</span> 말하면 됩니다!</p>
+                <div className="command-box" style={{ marginTop: '12px' }}>
+                  <div className="command-content">
+                    발표자료.pptx 파일 읽고 마크다운으로 정리해줘
+                  </div>
+                </div>
+                <p style={{ marginTop: '16px' }}>AI가 자동으로 파일을 읽고 작업합니다!</p>
+              </div>
+            </div>
+          )
+        }}
+      </OSTabs>
 
       <h3 style={{ margin: '60px 0 24px' }}>자주 쓰는 명령어 패턴</h3>
 

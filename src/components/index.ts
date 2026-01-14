@@ -8,3 +8,4 @@ export { default as ThemeToggle } from './ThemeToggle';
 export { default as ShortcutsModal } from './ShortcutsModal';
 export { default as HelpModal } from './HelpModal';
 export { default as SearchModal } from './SearchModal';
+export { default as OSTabs } from './OSTabs';
