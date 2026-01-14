@@ -2,7 +2,7 @@
 
 Mac에서 Claude Code를 설치하고 사용하는 방법을 안내하는 한국어 가이드 웹사이트입니다.
 
-**Live Site**: https://claude-code-guide-eight.vercel.app/
+**Live Site**: https://claude-code-next.vercel.app/
 
 ## 기술 스택
 
