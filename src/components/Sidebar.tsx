@@ -73,6 +73,7 @@ const navSections = {
     items: [
       { href: '/examples', icon: 'fa-lightbulb', label: '실전 예시' },
       { href: '/tips', icon: 'fa-star', label: '유용한 팁' },
+      { href: '/tips/markdown-viewer', icon: 'fa-eye', label: 'MD 파일 보기' },
       { href: '/limits', icon: 'fa-info-circle', label: '가능/불가능' },
     ],
   },
