@@ -177,6 +177,38 @@ const searchItems: SearchItem[] = [
     keywords: ['스킬', 'skill', '슬래시 명령', '커스텀', '명령어', 'SKILL.md', 'frontmatter', '자동화', '커밋', 'PR', '/commit', '/review'],
   },
   {
+    href: '/hooks',
+    icon: 'fa-bell',
+    label: 'Hooks (이벤트 훅)',
+    category: '확장 & 도구',
+    description: '도구 호출 전후 자동 실행되는 셸 명령',
+    keywords: ['훅', 'hook', 'hooks', 'PreToolUse', 'PostToolUse', 'Notification', '이벤트', '자동화', '린트', 'lint', '포맷', 'format', 'settings.json'],
+  },
+  {
+    href: '/claude-md',
+    icon: 'fa-file-code',
+    label: 'CLAUDE.md (프로젝트 설정)',
+    category: '확장 & 도구',
+    description: '프로젝트별 규칙과 컨벤션 파일',
+    keywords: ['CLAUDE.md', '클로드엠디', '프로젝트 설정', '컨벤션', '규칙', '메모리', 'memory', '설정 파일', 'convention'],
+  },
+  {
+    href: '/ide',
+    icon: 'fa-laptop-code',
+    label: 'IDE 연동',
+    category: '확장 & 도구',
+    description: 'VS Code, JetBrains에서 Claude Code 사용',
+    keywords: ['IDE', 'VS Code', 'VSCode', 'JetBrains', 'IntelliJ', 'WebStorm', 'PyCharm', '확장', 'extension', 'plugin', '플러그인', '편집기', 'editor'],
+  },
+  {
+    href: '/github-integration',
+    icon: 'fab fa-github',
+    label: 'GitHub 연동',
+    category: '확장 & 도구',
+    description: 'gh CLI와 Claude Code로 GitHub 워크플로우 자동화',
+    keywords: ['GitHub', '깃허브', 'gh', 'CLI', 'PR', 'pull request', '이슈', 'issue', '코드 리뷰', 'review', '브랜치', 'branch', '커밋'],
+  },
+  {
     href: '/openclaw',
     icon: 'fa-paw',
     label: 'OpenClaw',
@@ -364,7 +396,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                         onClick={() => handleSelect(item)}
                         onMouseEnter={() => setSelectedIndex(itemIndex)}
                       >
-                        <i className={`fas ${item.icon}`}></i>
+                        <i className={item.icon.startsWith('fab ') ? item.icon : `fas ${item.icon}`}></i>
                         <div className="result-content">
                           <span className="result-label">{item.label}</span>
                           {item.matchedKeyword && (

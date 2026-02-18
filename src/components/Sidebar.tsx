@@ -72,6 +72,10 @@ const navSections = {
     title: '확장 & 도구',
     items: [
       { href: '/skills', icon: 'fa-wand-magic-sparkles', label: 'Skills (커스텀 명령)' },
+      { href: '/hooks', icon: 'fa-bell', label: 'Hooks (이벤트 훅)' },
+      { href: '/claude-md', icon: 'fa-file-code', label: 'CLAUDE.md (프로젝트 설정)' },
+      { href: '/ide', icon: 'fa-laptop-code', label: 'IDE 연동' },
+      { href: '/github-integration', icon: 'fab fa-github', label: 'GitHub 연동' },
       { href: '/openclaw', icon: 'fa-paw', label: 'OpenClaw' },
     ],
   },
@@ -241,7 +245,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               className={`nav-item ${isActive(item.href) ? 'active' : ''}`}
               onClick={onClose}
             >
-              <i className={`fas ${item.icon}`}></i>
+              <i className={item.icon.startsWith('fab ') ? item.icon : `fas ${item.icon}`}></i>
               <span>{item.label}</span>
             </Link>
           ))}
