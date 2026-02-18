@@ -167,6 +167,23 @@ const searchItems: SearchItem[] = [
     description: 'Model Context Protocol로 기능 확장',
     keywords: ['MCP', 'Model Context Protocol', '서버', '플러그인', '확장', 'Claude Desktop', '파일시스템', 'Git', 'API'],
   },
+  // 확장 & 도구
+  {
+    href: '/skills',
+    icon: 'fa-wand-magic-sparkles',
+    label: 'Skills (커스텀 명령)',
+    category: '확장 & 도구',
+    description: '재사용 가능한 슬래시 명령 만들기',
+    keywords: ['스킬', 'skill', '슬래시 명령', '커스텀', '명령어', 'SKILL.md', 'frontmatter', '자동화', '커밋', 'PR', '/commit', '/review'],
+  },
+  {
+    href: '/openclaw',
+    icon: 'fa-paw',
+    label: 'OpenClaw',
+    category: '확장 & 도구',
+    description: '오픈소스 개인 AI 비서 설치 및 사용법',
+    keywords: ['오픈클로', 'OpenClaw', 'AI 비서', '메시징', 'WhatsApp', 'Telegram', 'Slack', '개인 비서', '챗봇', '오픈소스'],
+  },
   // 레퍼런스
   {
     href: '/examples',

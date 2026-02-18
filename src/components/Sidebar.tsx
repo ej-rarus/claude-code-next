@@ -68,6 +68,13 @@ const navSections = {
       { href: '/mcp', icon: 'fa-plug', label: 'MCP 서버' },
     ],
   },
+  tools: {
+    title: '확장 & 도구',
+    items: [
+      { href: '/skills', icon: 'fa-wand-magic-sparkles', label: 'Skills (커스텀 명령)' },
+      { href: '/openclaw', icon: 'fa-paw', label: 'OpenClaw' },
+    ],
+  },
   reference: {
     title: '레퍼런스',
     items: [
@@ -211,6 +218,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="nav-section">
           <div className="nav-section-title">{navSections.features.title}</div>
           {navSections.features.items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav-item ${isActive(item.href) ? 'active' : ''}`}
+              onClick={onClose}
+            >
+              <i className={`fas ${item.icon}`}></i>
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* 확장 & 도구 */}
+        <div className="nav-section">
+          <div className="nav-section-title">{navSections.tools.title}</div>
+          {navSections.tools.items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
