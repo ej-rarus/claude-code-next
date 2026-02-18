@@ -110,7 +110,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <div className="sidebar-header">
         <Link href="/" className="logo" onClick={onClose}>
           <div className="logo-icon">
-            <i className="fas fa-robot"></i>
+            <i className="fas fa-bolt"></i>
           </div>
           <span>Claudxk</span>
         </Link>

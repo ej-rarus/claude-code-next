@@ -280,7 +280,7 @@ export default function MarkdownViewerPage() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: linear-gradient(135deg, #007AFF, #5856D6);
+          background: linear-gradient(135deg, var(--primary), var(--secondary));
           color: white;
           padding: 12px 24px;
           border-radius: 12px;
@@ -290,7 +290,7 @@ export default function MarkdownViewerPage() {
         }
         .app-store-link a:hover {
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+          box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
         }
         .command-box {
           background: var(--command-bg);

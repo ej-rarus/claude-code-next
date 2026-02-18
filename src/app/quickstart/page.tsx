@@ -170,8 +170,8 @@ export default function QuickstartPage() {
         .tip-box {
           display: flex;
           gap: 16px;
-          background: rgba(99, 102, 241, 0.1);
-          border: 1px solid rgba(99, 102, 241, 0.3);
+          background: rgba(249, 115, 22, 0.1);
+          border: 1px solid rgba(249, 115, 22, 0.3);
           border-radius: 12px;
           padding: 16px 20px;
           margin-top: 16px;

@@ -135,7 +135,7 @@ export default function TipsPage() {
         .tip-icon {
           width: 48px;
           height: 48px;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(245, 158, 11, 0.2));
           border-radius: 12px;
           display: flex;
           align-items: center;

@@ -90,7 +90,7 @@ export default function ConvertPptPage() {
           border-bottom: 1px solid var(--border-color);
         }
         th {
-          background: rgba(99, 102, 241, 0.1);
+          background: rgba(249, 115, 22, 0.1);
           font-weight: 600;
           color: var(--text-primary);
         }

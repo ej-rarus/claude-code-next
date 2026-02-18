@@ -444,7 +444,7 @@ export default function OpenClawPage() {
           display: flex;
           gap: 12px;
           padding: 16px;
-          background: rgba(99, 102, 241, 0.1);
+          background: rgba(249, 115, 22, 0.1);
           border-radius: 12px;
           border-left: 4px solid var(--primary);
           margin-top: 16px;

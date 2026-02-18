@@ -215,8 +215,8 @@ export default function SessionResumePage() {
         .info-card {
           display: flex;
           gap: 20px;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-          border: 1px solid rgba(99, 102, 241, 0.3);
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(245, 158, 11, 0.1));
+          border: 1px solid rgba(249, 115, 22, 0.3);
           border-radius: 16px;
           padding: 24px;
           margin-bottom: 40px;
@@ -312,8 +312,8 @@ export default function SessionResumePage() {
           display: flex;
           align-items: center;
           gap: 12px;
-          background: rgba(99, 102, 241, 0.1);
-          border: 1px solid rgba(99, 102, 241, 0.3);
+          background: rgba(249, 115, 22, 0.1);
+          border: 1px solid rgba(249, 115, 22, 0.3);
           border-radius: 8px;
           padding: 12px 16px;
           margin-top: 16px;
@@ -387,7 +387,7 @@ export default function SessionResumePage() {
         .tip-card-icon {
           width: 40px;
           height: 40px;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(245, 158, 11, 0.2));
           border-radius: 10px;
           display: flex;
           align-items: center;
@@ -478,7 +478,7 @@ export default function SessionResumePage() {
         }
 
         .badge-primary {
-          background: rgba(99, 102, 241, 0.2);
+          background: rgba(249, 115, 22, 0.2);
           color: var(--primary);
         }
 

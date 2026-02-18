@@ -61,12 +61,13 @@ export default function Home() {
       <div className="hero">
         <div className="hero-content">
           <span className="hero-badge">
-            <i className="fas fa-wand-magic-sparkles"></i>
+            <i className="fas fa-fire"></i>
             Claude Code 한국어 가이드
           </span>
           <h1>
             Claudxk
           </h1>
+          <p className="hero-subtitle">치명타</p>
           <p>
             Anthropic의 AI 코딩 어시스턴트 <strong>Claude Code</strong>를 쉽게 시작할 수 있도록 돕는 한국어 가이드입니다.
             설치부터 문서 작업, 자동화까지 단계별로 안내합니다.
@@ -122,7 +123,7 @@ export default function Home() {
 
       <style jsx>{`
         .hero {
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(245, 158, 11, 0.1));
           border-radius: 24px;
           padding: 80px 60px;
           margin-bottom: 40px;
@@ -137,7 +138,7 @@ export default function Home() {
           right: -20%;
           width: 600px;
           height: 600px;
-          background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+          background: radial-gradient(circle, rgba(249, 115, 22, 0.2), transparent 70%);
           pointer-events: none;
         }
 
@@ -151,7 +152,7 @@ export default function Home() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(99, 102, 241, 0.2);
+          background: rgba(249, 115, 22, 0.2);
           color: var(--primary);
           padding: 8px 16px;
           border-radius: 20px;
@@ -164,11 +165,19 @@ export default function Home() {
           font-size: 3.5rem;
           font-weight: 800;
           line-height: 1.1;
-          margin-bottom: 20px;
-          background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+          margin-bottom: 8px;
+          background: linear-gradient(135deg, #f97316, #f59e0b);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+        }
+
+        .hero-subtitle {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #fb923c;
+          letter-spacing: 0.15em;
+          margin-bottom: 20px;
         }
 
         .hero p {
@@ -267,7 +276,7 @@ export default function Home() {
         .card-icon {
           width: 56px;
           height: 56px;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(245, 158, 11, 0.2));
           border-radius: 16px;
           display: flex;
           align-items: center;
@@ -300,7 +309,7 @@ export default function Home() {
         }
 
         .tag {
-          background: rgba(99, 102, 241, 0.1);
+          background: rgba(249, 115, 22, 0.1);
           color: var(--primary);
           padding: 4px 12px;
           border-radius: 20px;

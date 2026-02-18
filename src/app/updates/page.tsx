@@ -398,7 +398,7 @@ export default function UpdatesPage() {
         }
 
         .tag-major {
-          background: rgba(99, 102, 241, 0.15);
+          background: rgba(249, 115, 22, 0.15);
           color: var(--primary);
         }
 
@@ -447,8 +447,8 @@ export default function UpdatesPage() {
           gap: 12px;
           align-items: flex-start;
           padding: 12px 16px;
-          background: rgba(99, 102, 241, 0.08);
-          border: 1px solid rgba(99, 102, 241, 0.2);
+          background: rgba(249, 115, 22, 0.08);
+          border: 1px solid rgba(249, 115, 22, 0.2);
           border-radius: 8px;
           font-size: 0.9rem;
           color: var(--text-muted);

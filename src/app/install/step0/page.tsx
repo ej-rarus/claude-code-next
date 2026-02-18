@@ -37,7 +37,7 @@ export default function Step0Page() {
                     <li>앱스토어에 없는 개발 도구들도 간단한 명령어로 설치 가능</li>
                     <li>비유: "프로그램 자동 설치 기계"</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(249, 115, 22, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>iTerm2와 Claude Code를 간편하게 설치하기 위해 먼저 설치합니다.</p>
                   </div>
@@ -51,7 +51,7 @@ export default function Step0Page() {
                     <li>복사/붙여넣기가 쉽고, 화면 분할도 가능</li>
                     <li>비유: "컴퓨터에게 글자로 명령을 내리는 창"</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(251, 191, 36, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code를 실행하고 AI와 대화하기 위한 창입니다. Mac 기본 터미널도 사용 가능하지만 iTerm2가 훨씬 편합니다.</p>
                   </div>
@@ -65,7 +65,7 @@ export default function Step0Page() {
                     <li>자연어로 명령하면 파일 읽기/쓰기/수정을 자동으로 실행</li>
                     <li>문서 작성, 파일 변환, 정보 추출 등 다양한 작업 수행</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>우리의 최종 목표! 이것을 사용하기 위해 앞의 두 프로그램을 설치하는 것입니다.</p>
                   </div>
@@ -86,7 +86,7 @@ export default function Step0Page() {
                     <li>명령어 한 줄로 프로그램을 쉽게 설치 가능</li>
                     <li>비유: "프로그램 자동 설치 기계"</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(249, 115, 22, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Windows Terminal과 Node.js를 간편하게 설치하기 위해 사용합니다.</p>
                   </div>
@@ -100,7 +100,7 @@ export default function Step0Page() {
                     <li>탭 기능, 화면 분할, 테마 설정 가능</li>
                     <li>Windows 11에는 기본 설치되어 있습니다</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(251, 191, 36, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--accent)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Claude Code를 실행하고 AI와 대화하기 위한 창입니다. PowerShell도 사용 가능하지만 Windows Terminal이 훨씬 편합니다.</p>
                   </div>
@@ -114,7 +114,7 @@ export default function Step0Page() {
                     <li>자연어로 명령하면 파일 읽기/쓰기/수정을 자동으로 실행</li>
                     <li>문서 작성, 파일 변환, 정보 추출 등 다양한 작업 수행</li>
                   </ul>
-                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
+                  <div style={{ marginTop: '16px', padding: '16px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px', borderLeft: '3px solid var(--secondary)' }}>
                     <p style={{ color: 'var(--text-primary)', fontWeight: 500, marginBottom: '4px' }}>왜 필요한가요?</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>우리의 최종 목표! 이것을 사용하기 위해 앞의 프로그램들을 설치하는 것입니다.</p>
                   </div>
@@ -154,7 +154,7 @@ export default function Step0Page() {
             </ul>
           </div>
 
-          <div className="card" style={{ background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2))', border: '2px solid var(--primary)', padding: '24px', borderRadius: '12px', position: 'relative' }}>
+          <div className="card" style={{ background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(245, 158, 11, 0.2))', border: '2px solid var(--primary)', padding: '24px', borderRadius: '12px', position: 'relative' }}>
             <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'var(--success)', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700 }}>추천!</div>
             <div style={{ background: 'linear-gradient(135deg, var(--primary), var(--secondary))', width: '48px', height: '48px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
               <i className="fas fa-laptop-code" style={{ fontSize: '1.2rem' }}></i>
