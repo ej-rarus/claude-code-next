@@ -83,6 +83,7 @@ const navSections = {
       { href: '/tips/session-resume', icon: 'fa-history', label: '세션 이어하기' },
       { href: '/tips/markdown-viewer', icon: 'fa-eye', label: 'MD 파일 보기' },
       { href: '/limits', icon: 'fa-info-circle', label: '가능/불가능' },
+      { href: '/updates', icon: 'fa-bullhorn', label: '업데이트 내역' },
     ],
   },
 };

@@ -225,6 +225,14 @@ const searchItems: SearchItem[] = [
     description: 'Claude Code의 기능 범위',
     keywords: ['가능', '불가능', '제한', '한계', '지원', '파일 변환', '동영상', '오디오', '데이터베이스', 'exe'],
   },
+  {
+    href: '/updates',
+    icon: 'fa-bullhorn',
+    label: '업데이트 내역',
+    category: '레퍼런스',
+    description: 'Claude Code 주요 업데이트 및 변경사항',
+    keywords: ['업데이트', 'update', 'changelog', '변경사항', '버전', 'version', '릴리즈', 'release', '패치', '새 기능'],
+  },
 ];
 
 interface SearchResult extends SearchItem {
