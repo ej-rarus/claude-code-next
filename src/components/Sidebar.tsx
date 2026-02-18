@@ -112,7 +112,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="logo-icon">
             <i className="fas fa-robot"></i>
           </div>
-          <span>Claude Code</span>
+          <span>Claudxk</span>
         </Link>
       </div>
 

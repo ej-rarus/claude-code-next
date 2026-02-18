@@ -6,31 +6,31 @@ import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Claude Code 가이드 - Mac에서 AI 코딩 어시스턴트 시작하기",
+  title: "Claudxk 가이드 - AI 코딩 어시스턴트 시작하기",
   description:
-    "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. Homebrew, iTerm2 설치부터 Claude Code 실행까지 초보자도 쉽게 따라할 수 있는 한국어 가이드입니다.",
+    "Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. Homebrew, iTerm2 설치부터 Claude Code 실행까지 초보자도 쉽게 따라할 수 있는 한국어 가이드입니다.",
   keywords:
-    "Claude Code, 클로드 코드, AI 코딩, Mac 설치, Homebrew, iTerm2, Anthropic, AI 어시스턴트, 개발 도구, 터미널, 코딩 도우미",
+    "Claudxk, Claude Code, 클로드 코드, AI 코딩, Mac 설치, Homebrew, iTerm2, Anthropic, AI 어시스턴트, 개발 도구, 터미널, 코딩 도우미",
   authors: [{ name: "LUKUKU" }],
   openGraph: {
     type: "website",
     url: "https://claude-code-next.vercel.app/",
-    title: "Claude Code 가이드 - Mac에서 AI 코딩 어시스턴트 시작하기",
+    title: "Claudxk 가이드 - AI 코딩 어시스턴트 시작하기",
     description:
-      "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
+      "Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
     images: [
       {
         url: "https://claude-code-next.vercel.app/og-image.png",
       },
     ],
     locale: "ko_KR",
-    siteName: "Claude Code Guide",
+    siteName: "Claudxk Guide",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claude Code 가이드 - Mac에서 AI 코딩 어시스턴트 시작하기",
+    title: "Claudxk 가이드 - AI 코딩 어시스턴트 시작하기",
     description:
-      "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
+      "Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
     images: ["https://claude-code-next.vercel.app/og-image.png"],
   },
   robots: "index, follow",
@@ -60,7 +60,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HowTo",
-              name: "Claude Code 설치 가이드",
+              name: "Claudxk 설치 가이드",
               description:
                 "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다.",
               step: [

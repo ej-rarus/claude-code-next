@@ -65,7 +65,7 @@ export default function Home() {
             AI-Powered Document Assistant
           </span>
           <h1>
-            Claude Code
+            Claudxk
             <br />
             가이드
           </h1>
