@@ -162,7 +162,7 @@ export default function BasicPage() {
           <h3><i className="fas fa-globe" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>웹 검색</h3>
           <div className="command-box">
             <div className="command-content" style={{ padding: '16px', fontSize: '0.9rem' }}>
-              "2024년 최신 트렌드 검색해줘"<br/><br/>
+              "올해 최신 트렌드 검색해줘"<br/><br/>
               "이 URL 내용 요약해줘"<br/><br/>
               "경쟁사 정보 조사해줘"
             </div>

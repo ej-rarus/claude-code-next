@@ -61,7 +61,7 @@ export default function Home() {
       <div className="hero">
         <div className="hero-content">
           <span className="hero-badge">
-            <i className="fas fa-sparkles"></i>
+            <i className="fas fa-wand-magic-sparkles"></i>
             AI-Powered Document Assistant
           </span>
           <h1>

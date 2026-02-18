@@ -38,10 +38,27 @@ export default function Step3Page() {
               <div className="steps-container">
                 <div className="step-card">
                   <div className="step-number">1</div>
+                  <h3>Node.js 설치하기</h3>
+                  <p>Claude Code는 Node.js가 필요합니다. iTerm2를 열고 아래 명령어를 입력하세요.</p>
+                  <CommandBox command="brew install node" />
+                  <p style={{ marginTop: '16px' }}>설치 완료 후 확인해보세요:</p>
+                  <CommandBox command="node --version" />
+
+                  <div className="tip-box info" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-check-circle"></i>
+                    <div className="tip-content">
+                      <h4>이미 Node.js가 있다면?</h4>
+                      <p><code>node --version</code>을 입력해서 버전이 나오면 이 단계는 건너뛰세요!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="step-card">
+                  <div className="step-number">2</div>
                   <h3>Claude Code 설치하기</h3>
-                  <p>iTerm2를 열고 아래 명령어를 입력하세요.</p>
-                  <CommandBox command="brew install --cask claude-code" />
-                  <p style={{ marginTop: '16px' }}>2-3분 기다리면 설치 완료!</p>
+                  <p>Node.js 설치 후, 아래 명령어로 Claude Code를 설치합니다.</p>
+                  <CommandBox command="npm install -g @anthropic-ai/claude-code" />
+                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 완료!</p>
 
                   <div className="tip-box info" style={{ marginTop: '16px' }}>
                     <i className="fas fa-sync-alt"></i>
@@ -53,7 +70,7 @@ export default function Step3Page() {
                 </div>
 
                 <div className="step-card">
-                  <div className="step-number">2</div>
+                  <div className="step-number">3</div>
                   <h3>계정 만들기 (무료)</h3>
                   <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
                   <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
@@ -73,7 +90,7 @@ export default function Step3Page() {
                 </div>
 
                 <div className="step-card">
-                  <div className="step-number">3</div>
+                  <div className="step-number">4</div>
                   <h3>로그인하기</h3>
                   <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
                   <CommandBox command="claude auth login" />
@@ -86,7 +103,7 @@ export default function Step3Page() {
                 </div>
 
                 <div className="step-card">
-                  <div className="step-number">4</div>
+                  <div className="step-number">5</div>
                   <h3>첫 대화 해보기!</h3>
                   <p>드디어 AI와 대화할 준비가 끝났어요! 간단히 테스트해봅시다.</p>
                   <CommandBox command="claude" />

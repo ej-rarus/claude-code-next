@@ -28,8 +28,8 @@ const navSections = {
     title: '설치 가이드',
     items: [
       { href: '/install/step0', icon: 'fa-info-circle', label: '0단계: 시작하기 전에' },
-      { href: '/install/step1', icon: 'fa-download', label: '1단계: Homebrew' },
-      { href: '/install/step2', icon: 'fa-terminal', label: '2단계: iTerm2' },
+      { href: '/install/step1', icon: 'fa-download', label: '1단계: 패키지 관리자' },
+      { href: '/install/step2', icon: 'fa-terminal', label: '2단계: 터미널 설치' },
       { href: '/install/step3', icon: 'fa-robot', label: '3단계: Claude Code' },
       { href: '/install/basic', icon: 'fa-play-circle', label: '기본 사용법' },
     ],

@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   authors: [{ name: "LUKUKU" }],
   openGraph: {
     type: "website",
-    url: "https://claude-code-guide-eight.vercel.app/",
+    url: "https://claude-code-next.vercel.app/",
     title: "Claude Code 가이드 - Mac에서 AI 코딩 어시스턴트 시작하기",
     description:
       "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
     images: [
       {
-        url: "https://claude-code-guide-eight.vercel.app/og-image.png",
+        url: "https://claude-code-next.vercel.app/og-image.png",
       },
     ],
     locale: "ko_KR",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Claude Code 가이드 - Mac에서 AI 코딩 어시스턴트 시작하기",
     description:
       "Mac에서 Claude Code를 설치하고 사용하는 방법을 단계별로 알려드립니다. 초보자도 쉽게 따라할 수 있는 한국어 가이드.",
-    images: ["https://claude-code-guide-eight.vercel.app/og-image.png"],
+    images: ["https://claude-code-next.vercel.app/og-image.png"],
   },
   robots: "index, follow",
 };

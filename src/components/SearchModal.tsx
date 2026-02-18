@@ -47,18 +47,18 @@ const searchItems: SearchItem[] = [
   {
     href: '/install/step1',
     icon: 'fa-download',
-    label: '1단계: Homebrew',
+    label: '1단계: 패키지 관리자',
     category: '설치 가이드',
-    description: 'Homebrew 패키지 관리자 설치',
-    keywords: ['Homebrew', '홈브류', '패키지 관리자', '터미널', 'brew', '설치', 'install'],
+    description: '패키지 관리자 설치 (Homebrew / WinGet)',
+    keywords: ['Homebrew', '홈브류', 'WinGet', '윈겟', '패키지 관리자', '터미널', 'brew', '설치', 'install'],
   },
   {
     href: '/install/step2',
     icon: 'fa-terminal',
-    label: '2단계: iTerm2',
+    label: '2단계: 터미널 설치',
     category: '설치 가이드',
-    description: 'iTerm2 터미널 설치',
-    keywords: ['iTerm2', '아이텀', '터미널', 'terminal', 'brew install', 'cask'],
+    description: '터미널 프로그램 설치 (iTerm2 / Windows Terminal)',
+    keywords: ['iTerm2', '아이텀', '터미널', 'terminal', 'Windows Terminal', '윈도우 터미널', 'brew install', 'cask'],
   },
   {
     href: '/install/step3',
@@ -159,6 +159,14 @@ const searchItems: SearchItem[] = [
     description: '반복 작업 자동화',
     keywords: ['자동화', 'automation', '반복', '일괄 처리', 'batch', '스크립트', '매크로'],
   },
+  {
+    href: '/mcp',
+    icon: 'fa-plug',
+    label: 'MCP 서버',
+    category: '고급 기능',
+    description: 'Model Context Protocol로 기능 확장',
+    keywords: ['MCP', 'Model Context Protocol', '서버', '플러그인', '확장', 'Claude Desktop', '파일시스템', 'Git', 'API'],
+  },
   // 레퍼런스
   {
     href: '/examples',
@@ -175,6 +183,22 @@ const searchItems: SearchItem[] = [
     category: '레퍼런스',
     description: '효율적인 사용 팁',
     keywords: ['팁', 'tip', '클립보드', '복사', '단축키', '파일 경로', '드래그', '일괄 처리', '이어하기'],
+  },
+  {
+    href: '/tips/session-resume',
+    icon: 'fa-history',
+    label: '세션 이어하기',
+    category: '레퍼런스',
+    description: '이전 대화를 이어서 작업하기',
+    keywords: ['세션', 'session', 'resume', 'continue', '이어하기', '이전 대화', '컨텍스트', '불러오기'],
+  },
+  {
+    href: '/tips/markdown-viewer',
+    icon: 'fa-eye',
+    label: 'MD 파일 보기',
+    category: '레퍼런스',
+    description: '마크다운 파일을 예쁘게 보는 방법',
+    keywords: ['마크다운', 'markdown', '뷰어', 'viewer', 'Antigravity', 'VS Code', '미리보기', '.md'],
   },
   {
     href: '/limits',

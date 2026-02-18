@@ -118,6 +118,18 @@ body {
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
 }
 
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .btn-ghost {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
@@ -776,6 +788,6 @@ body {
   }
 
   .topbar-actions {
-    display: none;
+    gap: 4px;
   }
 }

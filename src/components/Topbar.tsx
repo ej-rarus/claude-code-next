@@ -32,7 +32,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
       return;
     }
 
-    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
     const modifier = isMac ? e.metaKey : e.ctrlKey;
 
     if (modifier) {
