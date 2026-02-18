@@ -209,6 +209,14 @@ const searchItems: SearchItem[] = [
     keywords: ['GitHub', '깃허브', 'gh', 'CLI', 'PR', 'pull request', '이슈', 'issue', '코드 리뷰', 'review', '브랜치', 'branch', '커밋'],
   },
   {
+    href: '/local-agent',
+    icon: 'fa-robot',
+    label: '로컬 에이전트',
+    category: '확장 & 도구',
+    description: '에이전트 모드와 Claude Agent SDK 활용',
+    keywords: ['에이전트', 'agent', '로컬', 'local', '멀티스텝', 'SDK', 'Agent SDK', '자율', '서브에이전트', 'subagent', 'plan', 'Task', '백그라운드'],
+  },
+  {
     href: '/openclaw',
     icon: 'fa-paw',
     label: 'OpenClaw',

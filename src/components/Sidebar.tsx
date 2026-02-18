@@ -76,6 +76,7 @@ const navSections = {
       { href: '/claude-md', icon: 'fa-file-code', label: 'CLAUDE.md (프로젝트 설정)' },
       { href: '/ide', icon: 'fa-laptop-code', label: 'IDE 연동' },
       { href: '/github-integration', icon: 'fab fa-github', label: 'GitHub 연동' },
+      { href: '/local-agent', icon: 'fa-robot', label: '로컬 에이전트' },
       { href: '/openclaw', icon: 'fa-paw', label: 'OpenClaw' },
     ],
   },
