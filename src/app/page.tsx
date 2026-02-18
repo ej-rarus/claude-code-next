@@ -62,16 +62,14 @@ export default function Home() {
         <div className="hero-content">
           <span className="hero-badge">
             <i className="fas fa-wand-magic-sparkles"></i>
-            AI-Powered Document Assistant
+            Claude Code 한국어 가이드
           </span>
           <h1>
             Claudxk
-            <br />
-            가이드
           </h1>
           <p>
-            AI와 함께하는 스마트한 문서 작업. 파일 변환, 문서 생성, 자동화까지 모든
-            것을 한 곳에서.
+            Anthropic의 AI 코딩 어시스턴트 <strong>Claude Code</strong>를 쉽게 시작할 수 있도록 돕는 한국어 가이드입니다.
+            설치부터 문서 작업, 자동화까지 단계별로 안내합니다.
           </p>
           <div className="hero-buttons">
             <Link href="/quickstart" className="btn btn-primary">
