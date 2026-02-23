@@ -234,6 +234,14 @@ const searchItems: SearchItem[] = [
     keywords: ['예시', 'example', '회의록', 'API 문서', '보고서 요약', '번역', '다국어', '실전'],
   },
   {
+    href: '/examples/shopify-theme',
+    icon: 'fa-palette',
+    label: 'Shopify 테마 디자인',
+    category: '레퍼런스',
+    description: '피그마 없이 Shopify 테마를 실시간으로 수정하며 디자인하기',
+    keywords: ['Shopify', '쇼피파이', '테마', 'theme', 'git clone', '클론', '개발 서버', 'theme dev', '포트', 'port', '스토어', 'store', 'EADDRINUSE', 'Liquid', '디자이너', '디자인', '실시간', '미리보기'],
+  },
+  {
     href: '/tips',
     icon: 'fa-star',
     label: '유용한 팁',

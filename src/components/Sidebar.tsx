@@ -84,6 +84,7 @@ const navSections = {
     title: '레퍼런스',
     items: [
       { href: '/examples', icon: 'fa-lightbulb', label: '실전 예시' },
+      { href: '/examples/shopify-theme', icon: 'fa-palette', label: 'Shopify 테마 디자인' },
       { href: '/tips', icon: 'fa-star', label: '유용한 팁' },
       { href: '/tips/session-resume', icon: 'fa-history', label: '세션 이어하기' },
       { href: '/tips/markdown-viewer', icon: 'fa-eye', label: 'MD 파일 보기' },
