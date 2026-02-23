@@ -10,7 +10,7 @@ export default function SessionResumePage() {
           <i className="fas fa-history" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           세션 이어하기
         </h2>
-        <p>이전 대화 컨텍스트를 불러와서 작업을 이어가는 방법을 알아봅니다.</p>
+        <p>어제 하던 대화를 오늘 이어서 할 수 있어요.</p>
       </div>
 
       {/* 개요 */}
@@ -19,10 +19,10 @@ export default function SessionResumePage() {
           <i className="fas fa-lightbulb"></i>
         </div>
         <div className="info-content">
-          <h4>왜 세션을 이어가야 하나요?</h4>
+          <h4>왜 필요해요?</h4>
           <p>
-            Claude Code는 대화 내용을 세션으로 저장합니다. 터미널을 닫거나 새 세션을 시작해도
-            이전 작업 내용을 불러와서 이어갈 수 있어, 컨텍스트를 다시 설명할 필요가 없습니다.
+            Claude Code는 대화 내용을 자동 저장해요. 터미널을 닫았다가 다시 열어도
+            이전에 하던 작업을 불러올 수 있어서, 처음부터 다시 설명할 필요가 없어요.
           </p>
         </div>
       </div>
@@ -32,16 +32,16 @@ export default function SessionResumePage() {
         <div className="method-header">
           <div className="method-number">1</div>
           <div className="method-title">
-            <h3>--resume 플래그로 시작하기</h3>
+            <h3>가장 최근 대화 이어하기</h3>
             <span className="badge badge-success">가장 간편</span>
           </div>
         </div>
         <div className="method-content">
-          <p>터미널에서 Claude Code를 시작할 때 <code>--resume</code> 플래그를 사용하면 가장 최근 세션을 자동으로 불러옵니다.</p>
+          <p>터미널에서 <code>--resume</code>을 붙이면 마지막으로 하던 대화를 바로 이어할 수 있어요.</p>
           <CommandBox command="claude --resume" />
           <div className="tip-box">
             <i className="fas fa-info-circle"></i>
-            <span>이 명령어는 마지막으로 작업했던 세션을 바로 이어서 시작합니다.</span>
+            <span>이게 가장 간단해요. 바로 직전 대화를 이어서 시작해요.</span>
           </div>
         </div>
       </div>
@@ -51,12 +51,12 @@ export default function SessionResumePage() {
         <div className="method-header">
           <div className="method-number">2</div>
           <div className="method-title">
-            <h3>--continue 플래그 사용하기</h3>
+            <h3>더 짧게 쓰기</h3>
             <span className="badge badge-primary">단축 옵션</span>
           </div>
         </div>
         <div className="method-content">
-          <p><code>--continue</code> 또는 줄여서 <code>-c</code> 플래그도 동일한 기능을 합니다.</p>
+          <p><code>--continue</code> 또는 줄여서 <code>-c</code>도 같은 기능이에요. 타이핑이 더 짧아요.</p>
           <CommandBox command="claude --continue" />
           <CommandBox command="claude -c" />
         </div>
@@ -67,12 +67,12 @@ export default function SessionResumePage() {
         <div className="method-header">
           <div className="method-number">3</div>
           <div className="method-title">
-            <h3>/resume 명령어로 선택하기</h3>
+            <h3>목록에서 골라서 이어하기</h3>
             <span className="badge badge-warning">세션 선택 가능</span>
           </div>
         </div>
         <div className="method-content">
-          <p>Claude Code 실행 중에 <code>/resume</code> 명령어를 입력하면 이전 세션 목록에서 원하는 세션을 선택할 수 있습니다.</p>
+          <p>Claude Code를 쓰고 있을 때 <code>/resume</code>을 입력하면 이전 대화 목록이 나와요. 원하는 걸 골라서 이어할 수 있어요.</p>
           <CommandBox command="/resume" />
           <div className="example-box">
             <div className="example-header">
@@ -96,16 +96,16 @@ export default function SessionResumePage() {
         <div className="method-header">
           <div className="method-number">4</div>
           <div className="method-title">
-            <h3>특정 세션 ID로 불러오기</h3>
+            <h3>특정 대화를 직접 지정하기</h3>
             <span className="badge badge-secondary">고급</span>
           </div>
         </div>
         <div className="method-content">
-          <p>특정 세션을 직접 지정하여 불러올 수도 있습니다.</p>
+          <p>대화마다 고유 번호(ID)가 있어요. 그 번호를 넣으면 딱 그 대화를 불러올 수 있어요.</p>
           <CommandBox command="claude --resume session_abc123" />
           <div className="tip-box">
             <i className="fas fa-lightbulb"></i>
-            <span>세션 ID는 <code>/resume</code> 명령어 실행 시 목록에서 확인할 수 있습니다.</span>
+            <span>대화 ID는 <code>/resume</code>을 입력하면 목록에서 확인할 수 있어요.</span>
           </div>
         </div>
       </div>
@@ -122,8 +122,8 @@ export default function SessionResumePage() {
               <i className="fas fa-folder"></i>
             </div>
             <div className="tip-card-content">
-              <h4>폴더별 세션 관리</h4>
-              <p>세션은 작업 폴더별로 관리됩니다. 같은 프로젝트 폴더에서 작업하면 관련 세션을 쉽게 찾을 수 있습니다.</p>
+              <h4>폴더별로 따로 관리돼요</h4>
+              <p>대화는 폴더별로 분리돼요. 같은 폴더에서 작업하면 관련 대화를 쉽게 찾을 수 있어요.</p>
             </div>
           </div>
           <div className="tip-card">
@@ -131,8 +131,8 @@ export default function SessionResumePage() {
               <i className="fas fa-clock"></i>
             </div>
             <div className="tip-card-content">
-              <h4>세션 유효 기간</h4>
-              <p>세션은 일정 기간 동안 유지됩니다. 오래된 세션은 자동으로 정리될 수 있으니 중요한 작업은 결과를 파일로 저장해두세요.</p>
+              <h4>오래되면 사라져요</h4>
+              <p>오래된 대화는 자동으로 지워질 수 있어요. 중요한 결과는 꼭 파일로 저장해두세요.</p>
             </div>
           </div>
           <div className="tip-card">
@@ -140,8 +140,8 @@ export default function SessionResumePage() {
               <i className="fas fa-memory"></i>
             </div>
             <div className="tip-card-content">
-              <h4>컨텍스트 유지</h4>
-              <p>세션을 이어가면 이전 대화에서 언급한 파일, 설정, 작업 내용을 Claude가 기억하고 있습니다.</p>
+              <h4>이전 내용을 기억해요</h4>
+              <p>대화를 이어가면 전에 말했던 파일이나 작업 내용을 Claude가 기억하고 있어요.</p>
             </div>
           </div>
           <div className="tip-card">
@@ -149,8 +149,8 @@ export default function SessionResumePage() {
               <i className="fas fa-redo"></i>
             </div>
             <div className="tip-card-content">
-              <h4>새 세션 시작</h4>
-              <p>완전히 새로운 작업을 시작하려면 플래그 없이 <code>claude</code>만 입력하면 됩니다.</p>
+              <h4>새로 시작하기</h4>
+              <p>완전히 새로운 작업을 하려면 그냥 <code>claude</code>만 입력하면 돼요.</p>
             </div>
           </div>
         </div>

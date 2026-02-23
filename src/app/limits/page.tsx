@@ -2,23 +2,23 @@
 
 export default function LimitsPage() {
   const canDo = [
-    '텍스트 기반 파일 변환 (PDF, PPT, Word, Excel)',
-    '문서 요약 및 분석',
-    '새 문서 작성 및 편집',
-    '웹 페이지 정보 수집 및 검색',
-    '파일 일괄 처리 및 자동화',
-    '마크다운, JSON, CSV 등 형식 변환',
-    '터미널 명령어 실행 (Git, SSH 등)',
-    'MCP를 통한 데이터베이스 연결',
+    'PDF, PPT, Word, Excel 파일을 텍스트로 바꾸기',
+    '긴 문서 요약하기',
+    '새 문서 만들기, 기존 문서 수정하기',
+    '웹사이트 내용 읽어오기, 인터넷 검색',
+    '여러 파일을 한꺼번에 바꾸기',
+    '마크다운, JSON, CSV 등 형식 바꾸기',
+    '터미널 명령어 실행 (Git 등)',
+    'MCP로 외부 서비스 연결하기',
   ];
 
   const cantDo = [
-    '실시간 동영상/오디오 처리',
-    '복잡한 그래픽 디자인 작업',
-    '실행 파일(.exe) 직접 생성',
-    'GUI 프로그램 조작 (마우스 클릭 등)',
-    '인터넷 없는 환경에서 사용',
-    '대용량 바이너리 파일 처리',
+    '동영상이나 음악 파일 편집',
+    '포토샵 같은 그래픽 작업',
+    '프로그램(.exe) 직접 만들기',
+    '마우스 클릭 같은 화면 조작',
+    '인터넷 없이 사용하기',
+    '아주 큰 파일 (영상, 게임 등) 처리',
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function LimitsPage() {
           <i className="fas fa-info-circle" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           가능/불가능
         </h2>
-        <p>Claude Code의 기능 범위를 확인하세요.</p>
+        <p>Claude Code가 할 수 있는 것과 못 하는 것을 알아봐요.</p>
       </div>
 
       <div className="limits-grid">

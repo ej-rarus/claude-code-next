@@ -15,42 +15,42 @@ export default function Home() {
       href: '/convert/pdf',
       icon: 'fa-exchange-alt',
       title: '파일 변환',
-      description: 'PPT, PDF, 이미지, Excel 등 다양한 파일을 마크다운으로 변환합니다.',
+      description: 'PPT, PDF, 이미지, Excel 파일을 텍스트로 바꿔줘요.',
       tags: ['PPT', 'PDF', 'OCR'],
     },
     {
       href: '/docs/create',
       icon: 'fa-file-signature',
       title: '문서 생성',
-      description: '회의록, 기획서, API 문서 등 다양한 형식의 문서를 자동으로 생성합니다.',
+      description: '회의록, 기획서, 보고서 등 문서를 대신 만들어줘요.',
       tags: ['회의록', '기획서', '템플릿'],
     },
     {
       href: '/analysis',
       icon: 'fa-chart-bar',
       title: '문서 분석',
-      description: '긴 문서를 요약하고, 핵심 내용을 추출하며, 문서 간 비교 분석을 수행합니다.',
+      description: '긴 문서를 짧게 요약하고, 핵심만 뽑아줘요.',
       tags: ['요약', '비교', '추출'],
     },
     {
       href: '/web',
       icon: 'fa-globe',
       title: '웹 정보 수집',
-      description: '웹 페이지 내용을 분석하고, 최신 정보를 검색하여 문서화합니다.',
+      description: '웹 페이지 내용을 읽어오고, 최신 정보를 검색해줘요.',
       tags: ['크롤링', '검색', '분석'],
     },
     {
       href: '/automation',
       icon: 'fa-robot',
       title: '자동화',
-      description: '여러 파일 일괄 처리, 패턴 기반 수정 등 반복 작업을 자동화합니다.',
+      description: '여러 파일을 한꺼번에 바꾸거나, 반복 작업을 대신 해줘요.',
       tags: ['일괄처리', '패턴', '스크립트'],
     },
     {
       href: '/tips',
       icon: 'fa-lightbulb',
       title: '팁 & 트릭',
-      description: 'Claude Code를 더 효율적으로 사용하기 위한 유용한 팁들을 확인하세요.',
+      description: '더 편하게 쓰는 방법, 알아두면 좋은 꿀팁 모음이에요.',
       tags: ['클립보드', '단축키', '효율'],
     },
   ];
@@ -69,8 +69,8 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">치명타</p>
           <p>
-            Anthropic의 AI 코딩 어시스턴트 <strong>Claude Code</strong>를 쉽게 시작할 수 있도록 돕는 한국어 가이드입니다.
-            설치부터 문서 작업, 자동화까지 단계별로 안내합니다.
+            AI가 내 컴퓨터에서 직접 파일을 만들고, 수정하고, 정리해주는 도구 <strong>Claude Code</strong>의 한국어 가이드예요.
+            설치부터 실전 활용까지 하나씩 알려드려요.
           </p>
           <div className="hero-buttons">
             <Link href="/quickstart" className="btn btn-primary">
@@ -99,7 +99,7 @@ export default function Home() {
       {/* Features Section */}
       <div className="section-header">
         <h2>주요 기능</h2>
-        <p>Claude Code로 할 수 있는 다양한 문서 작업을 살펴보세요.</p>
+        <p>Claude Code로 할 수 있는 것들이에요.</p>
       </div>
 
       <div className="cards-grid">

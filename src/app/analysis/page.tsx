@@ -10,11 +10,11 @@ export default function AnalysisPage() {
           <i className="fas fa-search" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           문서 분석
         </h2>
-        <p>문서를 분석하고 핵심 내용을 추출합니다.</p>
+        <p>긴 문서를 요약하거나, 중요한 내용만 뽑아줘요.</p>
       </div>
 
       <div className="card">
-        <h3>분석 기능</h3>
+        <h3>이렇게 써보세요</h3>
         <CommandBox command='이 문서를 3문장으로 요약해줘' />
         <CommandBox command='핵심 키워드를 추출해줘' />
         <CommandBox command='두 문서를 비교 분석해줘' />

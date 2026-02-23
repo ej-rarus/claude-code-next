@@ -11,14 +11,14 @@ export default function MarkdownViewerPage() {
           <i className="fas fa-eye" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           마크다운 파일 보는 법
         </h2>
-        <p>Claude Code가 생성한 .md 파일을 예쁘게 보는 방법을 알아봅니다.</p>
+        <p>Claude Code가 만든 .md 파일을 예쁘게 보는 방법이에요.</p>
       </div>
 
       <div className="tip-box info">
         <i className="fas fa-info-circle"></i>
         <div className="tip-content">
           <h4>마크다운(.md) 파일이란?</h4>
-          <p>마크다운은 텍스트 기반의 <span className="emphasis">문서 작성 형식</span>입니다. Claude Code는 결과물을 .md 파일로 저장하는 경우가 많은데, 일반 텍스트 편집기로 열면 #, *, - 같은 기호가 그대로 보여서 읽기 불편합니다.</p>
+          <p>마크다운은 텍스트로 문서를 쓰는 <span className="emphasis">간단한 형식</span>이에요. Claude Code는 결과를 .md 파일로 자주 저장하는데, 그냥 메모장으로 열면 #, *, - 같은 기호가 그대로 보여서 읽기 불편해요.</p>
         </div>
       </div>
 

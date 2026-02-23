@@ -10,11 +10,11 @@ export default function AutomationPage() {
           <i className="fas fa-magic" style={{ color: 'var(--secondary)', marginRight: '12px' }}></i>
           자동화
         </h2>
-        <p>반복적인 작업을 자동화합니다.</p>
+        <p>같은 작업을 여러 번 할 필요 없이 한꺼번에 처리해요.</p>
       </div>
 
       <div className="card">
-        <h3>자동화 기능</h3>
+        <h3>이렇게 써보세요</h3>
         <CommandBox command='이 폴더의 모든 .txt 파일을 .md로 변환해줘' />
         <CommandBox command='모든 문서에서 "2023"을 "2024"로 바꿔줘' />
         <CommandBox command='매일 실행할 수 있는 스크립트를 만들어줘' />

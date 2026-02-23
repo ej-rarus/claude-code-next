@@ -10,7 +10,7 @@ export default function IdePage() {
           <i className="fas fa-laptop-code" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           IDE 연동
         </h2>
-        <p>VS Code나 JetBrains IDE에서 Claude Code를 바로 사용하세요.</p>
+        <p>코드 편집기 안에서 바로 Claude를 쓸 수 있어요.</p>
       </div>
 
       {/* 개요 */}
@@ -20,9 +20,8 @@ export default function IdePage() {
           개요
         </h3>
         <p className="description">
-          Claude Code는 터미널에서 사용하는 CLI 도구이지만,
-          <strong> IDE 확장/플러그인</strong>을 통해 에디터 안에서도 직접 사용할 수 있습니다.
-          코드를 보면서 바로 Claude에게 질문하고, 인라인으로 수정할 수 있습니다.
+          Claude Code는 원래 터미널에서 쓰는 도구인데,
+          <strong>VS Code나 JetBrains 에디터</strong>에 설치하면 코드를 보면서 바로 Claude한테 물어볼 수 있어요.
         </p>
       </div>
 
@@ -67,7 +66,7 @@ export default function IdePage() {
               </div>
               <div className="feature-content">
                 <h4>인라인 편집</h4>
-                <p>코드를 선택한 후 Claude에게 수정을 요청하면 에디터에서 바로 변경됩니다.</p>
+                <p>코드를 선택하고 Claude한테 고쳐달라고 하면 바로 바뀌어요.</p>
               </div>
             </div>
             <div className="feature-item">
@@ -76,7 +75,7 @@ export default function IdePage() {
               </div>
               <div className="feature-content">
                 <h4>채팅 패널</h4>
-                <p>사이드바에서 Claude와 대화하며 코드를 분석하고 질문할 수 있습니다.</p>
+                <p>옆에 채팅창이 열려서 코드에 대해 물어볼 수 있어요.</p>
               </div>
             </div>
             <div className="feature-item">
@@ -85,7 +84,7 @@ export default function IdePage() {
               </div>
               <div className="feature-content">
                 <h4>터미널 통합</h4>
-                <p>VS Code 내장 터미널에서 Claude Code CLI를 바로 사용할 수 있습니다.</p>
+                <p>에디터 안에 있는 터미널에서 Claude Code를 바로 쓸 수 있어요.</p>
               </div>
             </div>
             <div className="feature-item">
@@ -94,7 +93,7 @@ export default function IdePage() {
               </div>
               <div className="feature-content">
                 <h4>컨텍스트 인식</h4>
-                <p>현재 열린 파일, 선택한 코드를 자동으로 Claude에게 전달합니다.</p>
+                <p>지금 보고 있는 파일을 Claude가 자동으로 읽어요.</p>
               </div>
             </div>
           </div>
@@ -241,9 +240,8 @@ export default function IdePage() {
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> 두 가지를 함께 사용하는 것이 가장 효과적입니다.
-            큰 작업은 터미널에서, 작은 수정은 IDE에서 처리하세요.
-            터미널의 Claude Code가 수정한 파일은 IDE에서 바로 확인할 수 있습니다.
+            <strong>팁:</strong> 둘 다 함께 쓰면 좋아요.
+            큰 작업은 터미널에서, 간단한 수정은 에디터에서 바로 처리하세요.
           </div>
         </div>
       </div>

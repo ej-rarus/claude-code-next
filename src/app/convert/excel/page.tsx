@@ -10,7 +10,7 @@ export default function ConvertExcelPage() {
           <i className="fas fa-file-excel" style={{ color: 'var(--success)', marginRight: '12px' }}></i>
           Excel → 테이블
         </h2>
-        <p>Excel 데이터를 마크다운 테이블로 변환합니다.</p>
+        <p>엑셀 데이터를 깔끔한 표 형태의 텍스트로 바꿔줘요.</p>
       </div>
 
       <div className="card">

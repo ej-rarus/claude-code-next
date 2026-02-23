@@ -10,7 +10,7 @@ export default function OpenClawPage() {
           <i className="fas fa-paw" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           OpenClaw
         </h2>
-        <p>오픈소스 개인 AI 비서를 설치하고 메시징 앱과 연결하세요.</p>
+        <p>카톡이나 슬랙에서 AI와 대화할 수 있는 무료 도구예요.</p>
       </div>
 
       {/* OpenClaw이란? */}
@@ -20,8 +20,8 @@ export default function OpenClawPage() {
           OpenClaw이란?
         </h3>
         <p className="description">
-          <strong>OpenClaw</strong>는 내 컴퓨터에서 실행되는 <strong>오픈소스 개인 AI 비서</strong>입니다.
-          WhatsApp, Telegram, Slack 같은 메시징 앱과 연결하여 대화형으로 AI를 활용할 수 있습니다.
+          <strong>OpenClaw</strong>는 내 컴퓨터에서 돌아가는 <strong>무료 AI 비서</strong>예요.
+          WhatsApp, Telegram, Slack 같은 채팅 앱에 연결해서 AI한테 뭐든 물어볼 수 있어요.
         </p>
 
         <div className="feature-grid">
@@ -31,7 +31,7 @@ export default function OpenClawPage() {
             </div>
             <div className="feature-content">
               <h4>로컬 실행</h4>
-              <p>내 컴퓨터에서 직접 실행되어 데이터가 외부로 나가지 않습니다.</p>
+              <p>내 컴퓨터에서 돌아가서 데이터가 밖으로 안 나가요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -40,7 +40,7 @@ export default function OpenClawPage() {
             </div>
             <div className="feature-content">
               <h4>메시징 앱 연동</h4>
-              <p>익숙한 채팅 앱에서 AI와 대화할 수 있습니다.</p>
+              <p>평소 쓰던 채팅 앱에서 AI와 대화할 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -49,7 +49,7 @@ export default function OpenClawPage() {
             </div>
             <div className="feature-content">
               <h4>오픈소스</h4>
-              <p>코드가 공개되어 있어 누구나 검증하고 기여할 수 있습니다.</p>
+              <p>코드가 공개되어 있어서 누구나 확인하고 참여할 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -58,7 +58,7 @@ export default function OpenClawPage() {
             </div>
             <div className="feature-content">
               <h4>확장 가능</h4>
-              <p>플러그인과 커스텀 에이전트로 기능을 확장할 수 있습니다.</p>
+              <p>원하는 기능을 추가해서 나만의 비서로 만들 수 있어요.</p>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function OpenClawPage() {
           설치하기
         </h3>
         <p className="description">
-          Node.js 22 이상이 필요합니다. Claude Code를 설치할 때 이미 Node.js를 설치했다면 바로 진행할 수 있습니다.
+          Node.js 22 이상이 필요해요. Claude Code 설치할 때 이미 깔았다면 바로 진행하면 돼요.
         </p>
 
         <AccordionItem title="1단계: Node.js 버전 확인" defaultOpen>
@@ -219,7 +219,7 @@ export default function OpenClawPage() {
           지원 채널
         </h3>
         <p className="description">
-          OpenClaw는 다양한 메시징 플랫폼과 연결할 수 있습니다.
+          이런 채팅 앱들과 연결할 수 있어요.
         </p>
 
         <div className="channel-list">
@@ -272,8 +272,8 @@ export default function OpenClawPage() {
           비용
         </h3>
         <p className="description">
-          OpenClaw 자체는 <strong>무료 오픈소스</strong>입니다.
-          AI 기능을 사용하려면 선택한 AI 제공자의 API 비용만 발생합니다.
+          OpenClaw 프로그램 자체는 <strong>완전 무료</strong>예요.
+          AI한테 물어보는 부분만 AI 회사에 내는 비용이 있어요.
         </p>
 
         <div className="cost-breakdown">

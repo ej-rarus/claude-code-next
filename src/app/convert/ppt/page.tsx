@@ -10,7 +10,7 @@ export default function ConvertPptPage() {
           <i className="fas fa-file-powerpoint" style={{ color: '#D35230', marginRight: '12px' }}></i>
           PPT → Markdown 변환
         </h2>
-        <p>파워포인트 파일의 텍스트를 추출하여 마크다운 문서로 변환합니다.</p>
+        <p>PPT 파일 안의 글자를 뽑아서 텍스트 문서로 만들어줘요.</p>
       </div>
 
       <div className="command-section">
@@ -65,7 +65,7 @@ export default function ConvertPptPage() {
           <i className="fas fa-info-circle"></i>
           <div className="tip-content">
             <h4>참고</h4>
-            <p>PPT 내의 이미지는 텍스트로 변환되지 않지만, 이미지 파일을 별도로 분석해달라고 요청하면 내용을 설명해드릴 수 있습니다.</p>
+            <p>PPT 안의 그림은 텍스트로 안 바뀌지만, 그림 파일을 따로 보여주면 내용을 설명해줄 수 있어요.</p>
           </div>
         </div>
       </div>

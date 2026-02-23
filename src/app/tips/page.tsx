@@ -8,27 +8,27 @@ export default function TipsPage() {
       title: '클립보드 활용',
       icon: 'fa-clipboard',
       badge: { text: '필수', type: 'success' as const },
-      content: '결과물을 바로 클립보드에 복사하여 다른 앱에 붙여넣기할 수 있습니다.',
+      content: '결과를 바로 복사해서 다른 앱에 붙여넣을 수 있어요.',
       command: '방금 결과 클립보드에 복사해줘',
     },
     {
       title: '파일 경로 단축',
       icon: 'fa-folder',
       badge: { text: '효율', type: 'primary' as const },
-      content: 'Finder에서 파일을 터미널로 드래그하면 전체 경로가 자동 입력됩니다.',
+      content: 'Finder에서 파일을 터미널로 끌어다 놓으면 경로가 자동으로 입력돼요.',
     },
     {
       title: '작업 이어하기',
       icon: 'fa-history',
       badge: { text: '생산성', type: 'warning' as const },
-      content: '이전 대화 내용을 기억하므로 "아까 그 파일" 같은 표현으로 이어서 작업할 수 있습니다.',
+      content: '이전 대화 내용을 기억하니까 "아까 그 파일" 같은 표현으로 이어서 작업할 수 있어요.',
       command: '아까 변환한 파일에서 표만 추출해줘',
     },
     {
       title: '일괄 처리',
       icon: 'fa-layer-group',
       badge: { text: '자동화', type: 'primary' as const },
-      content: '여러 파일을 한 번에 처리할 수 있습니다.',
+      content: '여러 파일을 한꺼번에 처리할 수 있어요.',
       command: '이 폴더의 모든 PDF를 마크다운으로 변환해줘',
     },
   ];
@@ -40,7 +40,7 @@ export default function TipsPage() {
           <i className="fas fa-star" style={{ color: 'var(--warning)', marginRight: '12px' }}></i>
           유용한 팁
         </h2>
-        <p>Claude Code를 더 효율적으로 사용하기 위한 팁들입니다.</p>
+        <p>알아두면 더 편하게 쓸 수 있는 꿀팁이에요.</p>
       </div>
 
       <div className="tips-list">

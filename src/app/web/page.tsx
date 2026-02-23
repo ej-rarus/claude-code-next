@@ -10,11 +10,11 @@ export default function WebPage() {
           <i className="fas fa-globe" style={{ color: 'var(--accent)', marginRight: '12px' }}></i>
           웹 정보 수집
         </h2>
-        <p>웹 페이지에서 정보를 수집하고 문서화합니다.</p>
+        <p>웹사이트 내용을 읽어오거나, 인터넷에서 정보를 찾아줘요.</p>
       </div>
 
       <div className="card">
-        <h3>웹 수집 기능</h3>
+        <h3>이렇게 써보세요</h3>
         <CommandBox command='이 URL의 내용을 요약해줘' />
         <CommandBox command='최신 뉴스를 검색해서 정리해줘' />
       </div>

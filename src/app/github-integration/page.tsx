@@ -10,7 +10,7 @@ export default function GitHubIntegrationPage() {
           <i className="fab fa-github" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           GitHub 연동
         </h2>
-        <p>gh CLI와 Claude Code를 조합하여 GitHub 워크플로우를 자동화하세요.</p>
+        <p>GitHub에서 하는 작업을 Claude한테 말로 시킬 수 있어요.</p>
       </div>
 
       {/* 개요 */}
@@ -20,9 +20,9 @@ export default function GitHubIntegrationPage() {
           개요
         </h3>
         <p className="description">
-          Claude Code는 <strong>GitHub CLI (gh)</strong>와 함께 사용하면
-          PR 생성, 이슈 관리, 코드 리뷰 등 GitHub 작업을 자연어로 처리할 수 있습니다.
-          복잡한 명령어를 외울 필요 없이 Claude에게 말로 설명하면 됩니다.
+          Claude Code에 <strong>GitHub CLI (gh)</strong>를 같이 쓰면
+          PR 만들기, 이슈 관리, 코드 리뷰 같은 걸 말로 시킬 수 있어요.
+          복잡한 명령어를 외울 필요 없이 그냥 말하면 돼요.
         </p>
 
         <div className="feature-grid">
@@ -32,7 +32,7 @@ export default function GitHubIntegrationPage() {
             </div>
             <div className="feature-content">
               <h4>PR 자동 생성</h4>
-              <p>변경사항을 분석하여 PR 제목과 설명을 자동 작성합니다.</p>
+              <p>바뀐 내용을 분석해서 PR 제목과 설명을 대신 써줘요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -41,7 +41,7 @@ export default function GitHubIntegrationPage() {
             </div>
             <div className="feature-content">
               <h4>이슈 관리</h4>
-              <p>이슈를 읽고, 코멘트를 달고, 라벨을 관리합니다.</p>
+              <p>이슈를 읽고, 댓글 달고, 라벨을 정리해줘요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -50,7 +50,7 @@ export default function GitHubIntegrationPage() {
             </div>
             <div className="feature-content">
               <h4>코드 리뷰</h4>
-              <p>PR의 변경사항을 분석하고 리뷰 의견을 제안합니다.</p>
+              <p>PR 코드를 읽고 리뷰 의견을 알려줘요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -59,7 +59,7 @@ export default function GitHubIntegrationPage() {
             </div>
             <div className="feature-content">
               <h4>워크플로우 자동화</h4>
-              <p>이슈 → 브랜치 → 구현 → PR까지 한번에 진행합니다.</p>
+              <p>이슈 확인 → 코드 작성 → PR 만들기까지 한번에 처리해요.</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function GitHubIntegrationPage() {
           gh CLI 설치
         </h3>
         <p className="description">
-          GitHub CLI가 설치되어 있어야 합니다. 아래 명령어로 설치하세요.
+          먼저 GitHub CLI를 설치해야 해요. 아래 명령어를 입력하세요.
         </p>
 
         <OSTabs>
@@ -91,10 +91,10 @@ export default function GitHubIntegrationPage() {
         </OSTabs>
 
         <p className="description" style={{ marginTop: '16px', marginBottom: '0' }}>
-          설치 후 GitHub 계정으로 로그인합니다.
+          설치했으면 GitHub 계정으로 로그인하세요.
         </p>
         <CommandBox command="gh auth login" />
-        <p className="note">브라우저가 열리면 GitHub에 로그인하고 권한을 승인하세요.</p>
+        <p className="note">브라우저가 열리면 GitHub에 로그인하고 허용 버튼을 누르세요.</p>
       </div>
 
       {/* PR 생성 자동화 */}
@@ -104,7 +104,7 @@ export default function GitHubIntegrationPage() {
           PR 생성 자동화
         </h3>
         <p className="description">
-          Claude에게 PR 생성을 요청하면 변경사항을 분석하여 자동으로 PR을 만들어줍니다.
+          Claude한테 "PR 만들어줘"라고 하면 알아서 변경사항을 정리해서 만들어줘요.
         </p>
 
         <AccordionItem title="자연어로 PR 생성" defaultOpen>
@@ -135,7 +135,7 @@ export default function GitHubIntegrationPage() {
         </h3>
 
         <AccordionItem title="이슈 확인" defaultOpen>
-          <p>Claude에게 이슈 목록을 확인하거나 특정 이슈의 내용을 물어볼 수 있습니다.</p>
+          <p>이슈 목록을 보여달라거나, 특정 이슈 내용을 요약해달라고 하면 돼요.</p>
           <div className="code-block">
             <div className="code-header">
               <span>Claude Code 프롬프트</span>
@@ -146,7 +146,7 @@ export default function GitHubIntegrationPage() {
         </AccordionItem>
 
         <AccordionItem title="이슈에 코멘트 달기">
-          <p>분석 결과나 진행 상황을 이슈에 댓글로 남길 수 있습니다.</p>
+          <p>분석 결과나 진행 상황을 이슈에 댓글로 남길 수도 있어요.</p>
           <CommandBox command="gh issue comment 42 --body '분석 결과: API 응답 시간이 원인입니다.'" />
         </AccordionItem>
       </div>
@@ -158,7 +158,7 @@ export default function GitHubIntegrationPage() {
           코드 리뷰 자동화
         </h3>
         <p className="description">
-          PR의 변경사항을 Claude가 분석하고 리뷰 의견을 제안합니다.
+          PR 코드를 Claude가 읽고 "여기 이상해요" 같은 리뷰를 해줘요.
         </p>
 
         <div className="code-block">
@@ -188,7 +188,7 @@ export default function GitHubIntegrationPage() {
           실전 워크플로우
         </h3>
         <p className="description">
-          이슈 확인부터 PR 생성까지 전체 흐름을 Claude Code에서 처리하는 예시입니다.
+          이슈 확인부터 PR 만들기까지 전부 Claude한테 시키는 예시예요.
         </p>
 
         <div className="workflow">

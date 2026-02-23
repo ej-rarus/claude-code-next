@@ -10,11 +10,11 @@ export default function DocsEditPage() {
           <i className="fas fa-pencil-alt" style={{ color: 'var(--warning)', marginRight: '12px' }}></i>
           문서 수정
         </h2>
-        <p>기존 문서를 수정하고 개선합니다.</p>
+        <p>이미 있는 문서를 고치거나 다듬어줘요.</p>
       </div>
 
       <div className="card">
-        <h3>문서 수정 예시</h3>
+        <h3>이렇게 써보세요</h3>
         <CommandBox command='이 문서의 오타를 수정해줘' />
         <CommandBox command='문서 형식을 통일해줘' />
         <CommandBox command='내용을 더 간결하게 다듬어줘' />

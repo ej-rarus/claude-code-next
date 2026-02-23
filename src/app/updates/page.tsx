@@ -15,11 +15,11 @@ const updates: UpdateEntry[] = [
     version: 'v2.1.2',
     tag: 'minor',
     highlights: [
-      'Sonnet 4.6 모델 지원 추가',
-      'Windows ARM64 네이티브 빌드 지원',
-      '인증 CLI 개선 (claude auth 명령어)',
-      '멀티에이전트 워크플로우 안정화',
-      'PDF 읽기 시 페이지 범위 지정 가능',
+      'Sonnet 4.6 모델 추가',
+      'Windows ARM64 지원',
+      '로그인 방식 개선',
+      '여러 작업 동시 처리 안정화',
+      'PDF 읽을 때 페이지 범위 지정 가능',
     ],
   },
   {
@@ -27,9 +27,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.1.1',
     tag: 'patch',
     highlights: [
-      'Task 도구 서브에이전트 타입 시스템 개선',
-      '백그라운드 태스크 출력 파일 안정화',
-      'MCP 서버 연결 타임아웃 개선',
+      '하위 작업 처리 방식 개선',
+      '백그라운드 작업 안정화',
+      'MCP 서버 연결 개선',
     ],
   },
   {
@@ -37,10 +37,10 @@ const updates: UpdateEntry[] = [
     version: 'v2.1.0',
     tag: 'major',
     highlights: [
-      '플러그인 시스템 (Skills) 정식 출시',
-      'SKILL.md 프론트매터 기반 커스텀 슬래시 명령',
-      '멀티에이전트 Task 도구 도입',
-      '백그라운드 에이전트 실행 지원',
+      '단축 명령(Skills) 기능 정식 출시',
+      '나만의 /명령어 만들기 지원',
+      '여러 작업 동시 처리 기능 추가',
+      '백그라운드 작업 실행 지원',
     ],
   },
   {
@@ -48,9 +48,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.9',
     tag: 'patch',
     highlights: [
-      'Plan 모드 개선 (ExitPlanMode 도구)',
-      'AskUserQuestion 미리보기 기능 추가',
-      '검색 모달 키보드 네비게이션 개선',
+      '계획 세우기 모드 개선',
+      '질문 시 미리보기 기능 추가',
+      '검색 키보드 조작 개선',
     ],
   },
   {
@@ -60,7 +60,7 @@ const updates: UpdateEntry[] = [
     highlights: [
       'Opus 4.5 모델 지원',
       'Haiku 4.5 모델 지원',
-      '컨텍스트 윈도우 자동 압축 개선',
+      '대화 내용 자동 요약 기능 개선',
     ],
   },
   {
@@ -68,9 +68,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.7',
     tag: 'minor',
     highlights: [
-      'VS Code 확장 프로그램 통합 강화',
-      'JetBrains IDE 플러그인 지원',
-      'Hooks 시스템 (도구 호출 이벤트 훅)',
+      'VS Code에서 바로 사용하기 강화',
+      'JetBrains 에디터 지원 추가',
+      '이벤트 훅(Hooks) 기능 추가',
     ],
   },
   {
@@ -78,9 +78,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.6',
     tag: 'patch',
     highlights: [
-      'WebSearch 도구 개선 (도메인 필터링)',
-      'WebFetch 15분 캐시 도입',
-      'Jupyter 노트북 읽기/편집 지원',
+      '웹 검색 기능 개선',
+      '웹 페이지 읽기 속도 향상',
+      '주피터 노트북 읽기/편집 지원',
     ],
   },
   {
@@ -88,9 +88,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.5',
     tag: 'patch',
     highlights: [
-      'Git 커밋 메시지 자동 생성 개선',
-      'PR 생성 워크플로우 안정화',
-      '파일 편집 시 유니크 매칭 검증 강화',
+      '커밋 메시지 자동 작성 개선',
+      'PR 만들기 기능 안정화',
+      '파일 수정 정확도 향상',
     ],
   },
   {
@@ -98,9 +98,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.3',
     tag: 'minor',
     highlights: [
-      'MCP (Model Context Protocol) 서버 지원',
-      'Playwright 브라우저 자동화 도구',
-      'Figma 디자인 데이터 연동',
+      'MCP 플러그인 시스템 지원',
+      '브라우저 자동 조작 도구 추가',
+      'Figma 디자인 연동',
     ],
   },
   {
@@ -108,9 +108,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.2',
     tag: 'patch',
     highlights: [
-      'Plan 모드 도입 (구현 전 계획 수립)',
-      'EnterPlanMode / ExitPlanMode 워크플로우',
-      'Todo 리스트 도구 (TaskCreate, TaskUpdate)',
+      '계획 세우기 모드 도입',
+      '계획 → 실행 워크플로우',
+      '할 일 목록 관리 기능',
     ],
   },
   {
@@ -118,9 +118,9 @@ const updates: UpdateEntry[] = [
     version: 'v2.0.1',
     tag: 'patch',
     highlights: [
-      'CLAUDE.md 프로젝트 설정 파일 지원',
-      '자동 메모리 (auto memory) 기능',
-      '세션 이어하기 (--resume) 개선',
+      'CLAUDE.md 설정 파일 지원',
+      '자동 메모리 기능 (대화 내용 기억)',
+      '이전 대화 이어하기 개선',
     ],
   },
   {
@@ -129,9 +129,9 @@ const updates: UpdateEntry[] = [
     tag: 'major',
     highlights: [
       'Claude Code v2 정식 출시',
-      'VS Code 확장 프로그램 출시',
-      '새로운 도구 시스템 (Read, Edit, Write, Glob, Grep)',
-      'Bash 샌드박스 모드 도입',
+      'VS Code에서 바로 사용하기 지원',
+      '파일 읽기/수정/만들기 도구 추가',
+      '안전한 명령어 실행 모드 도입',
     ],
   },
 ];
@@ -162,7 +162,7 @@ export default function UpdatesPage() {
           <i className="fas fa-bullhorn" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           업데이트 내역
         </h2>
-        <p>Claude Code의 주요 변경사항과 새로운 기능을 확인하세요.</p>
+        <p>Claude Code에 새로 추가된 기능과 바뀐 점을 확인해보세요.</p>
       </div>
 
       {/* 현재 버전 */}
@@ -171,7 +171,7 @@ export default function UpdatesPage() {
           <span className="version-badge">v2.1.2</span>
           <span className="version-date">2025년 5월 기준</span>
         </div>
-        <p className="current-version-desc">현재 설치된 버전을 확인하려면 아래 명령어를 실행하세요.</p>
+        <p className="current-version-desc">내 버전이 뭔지 확인하려면 터미널에서 이렇게 입력하세요.</p>
         <CommandBox command="claude --version" />
       </div>
 
@@ -215,7 +215,7 @@ export default function UpdatesPage() {
 
       <div className="card">
         <p style={{ marginBottom: '12px', color: 'var(--text-muted)' }}>
-          Claude Code를 최신 버전으로 업데이트하려면 터미널에서 아래 명령어를 실행하세요.
+          최신 버전으로 업데이트하려면 터미널에서 이렇게 입력하세요.
         </p>
         <CommandBox command="claude update" />
         <div className="tip-box" style={{ marginTop: '16px' }}>

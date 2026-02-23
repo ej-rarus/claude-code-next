@@ -7,7 +7,7 @@ export default function ExamplesPage() {
     {
       title: '회의록 작성',
       icon: 'fa-users',
-      description: '녹음 파일이나 메모를 기반으로 정리된 회의록을 생성합니다.',
+      description: '메모를 넘기면 깔끔한 회의록으로 정리해줘요.',
       commands: [
         '회의_메모.txt를 읽고 공식 회의록 형식으로 정리해줘',
         '결정사항과 액션아이템을 테이블로 정리해줘',
@@ -16,7 +16,7 @@ export default function ExamplesPage() {
     {
       title: 'API 문서 생성',
       icon: 'fa-code',
-      description: '코드를 분석하여 API 문서를 자동으로 생성합니다.',
+      description: '코드를 읽고 API 설명서를 대신 만들어줘요.',
       commands: [
         'src/api 폴더의 모든 엔드포인트를 문서화해줘',
         'Swagger 형식으로 API 스펙을 만들어줘',
@@ -25,7 +25,7 @@ export default function ExamplesPage() {
     {
       title: '보고서 요약',
       icon: 'fa-file-alt',
-      description: '긴 보고서를 핵심 내용만 추출하여 요약합니다.',
+      description: '100페이지 보고서도 핵심만 뽑아서 짧게 만들어줘요.',
       commands: [
         '이 100페이지 보고서를 3페이지로 요약해줘',
         '핵심 수치와 결론만 추출해줘',
@@ -34,7 +34,7 @@ export default function ExamplesPage() {
     {
       title: '다국어 번역',
       icon: 'fa-language',
-      description: '문서를 다른 언어로 번역합니다.',
+      description: '한국어를 영어로, 영어를 한국어로 번역해줘요.',
       commands: [
         '이 문서를 영어로 번역해줘',
         '기술 용어는 원문 그대로 유지해줘',
@@ -49,7 +49,7 @@ export default function ExamplesPage() {
           <i className="fas fa-lightbulb" style={{ color: 'var(--warning)', marginRight: '12px' }}></i>
           실전 예시
         </h2>
-        <p>실제 업무에서 활용할 수 있는 Claude Code 사용 예시입니다.</p>
+        <p>이런 식으로 쓰면 돼요. 따라 해보세요!</p>
       </div>
 
       <div className="examples-grid">

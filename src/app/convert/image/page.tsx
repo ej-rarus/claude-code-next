@@ -10,13 +10,13 @@ export default function ConvertImagePage() {
           <i className="fas fa-image" style={{ color: 'var(--accent)', marginRight: '12px' }}></i>
           이미지 → 텍스트
         </h2>
-        <p>이미지에서 텍스트를 추출합니다 (OCR).</p>
+        <p>사진이나 스크린샷에서 글자를 읽어내요.</p>
       </div>
 
       <div className="card">
         <h3>기본 사용법</h3>
         <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>
-          이미지 파일에서 텍스트를 추출합니다.
+          사진 속 글자를 텍스트로 뽑아줘요.
         </p>
         <CommandBox command='screenshot.png에서 텍스트를 추출해줘' />
         <CommandBox command='이 사진의 영수증 내용을 텍스트로 변환해줘' />

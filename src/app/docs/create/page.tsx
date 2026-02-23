@@ -10,11 +10,11 @@ export default function DocsCreatePage() {
           <i className="fas fa-plus" style={{ color: 'var(--success)', marginRight: '12px' }}></i>
           새 문서 생성
         </h2>
-        <p>다양한 형식의 문서를 자동으로 생성합니다.</p>
+        <p>원하는 문서를 말만 하면 대신 만들어줘요.</p>
       </div>
 
       <div className="card">
-        <h3>문서 생성 예시</h3>
+        <h3>이렇게 써보세요</h3>
         <CommandBox command='새로운 프로젝트 기획서를 작성해줘' />
         <CommandBox command='회의 안건을 바탕으로 회의록 템플릿을 만들어줘' />
         <CommandBox command='README.md 파일을 만들어줘' />
