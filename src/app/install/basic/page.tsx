@@ -11,7 +11,7 @@ export default function BasicPage() {
           <i className="fas fa-play-circle" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           기본 사용법
         </h2>
-        <p>AI에게 일 시키는 방법 3단계</p>
+        <p>AI에게 일 시키는 법, 이렇게 쉬워요</p>
       </div>
 
       <OSTabs>
@@ -35,7 +35,7 @@ export default function BasicPage() {
                     ~/Desktop/회사업무 폴더에서 작업할 거야
                   </div>
                 </div>
-                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 경로는 Finder에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
+                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 위치는 Finder에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
               </div>
 
               <div className="step-card">
@@ -70,7 +70,7 @@ export default function BasicPage() {
                     C:\Users\사용자\Desktop\회사업무 폴더에서 작업할 거야
                   </div>
                 </div>
-                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 경로는 파일 탐색기에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
+                <p style={{ marginTop: '16px' }}><strong>팁:</strong> 폴더 위치는 파일 탐색기에서 폴더를 드래그해서 터미널에 놓으면 자동으로 입력돼요!</p>
               </div>
 
               <div className="step-card">

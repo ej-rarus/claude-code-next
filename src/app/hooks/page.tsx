@@ -10,7 +10,7 @@ export default function HooksPage() {
           <i className="fas fa-bell" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           Hooks (이벤트 훅)
         </h2>
-        <p>도구 호출 전후에 자동으로 실행되는 셸 명령을 설정하세요.</p>
+        <p>Claude가 뭔가 할 때마다 자동으로 추가 작업을 실행시킬 수 있어요.</p>
       </div>
 
       {/* Hooks란? */}
@@ -20,8 +20,8 @@ export default function HooksPage() {
           Hooks란?
         </h3>
         <p className="description">
-          <strong>Hooks</strong>는 Claude Code가 특정 동작을 수행할 때 <strong>자동으로 실행되는 셸 명령</strong>입니다.
-          예를 들어 파일을 저장한 후 자동으로 포맷팅을 실행하거나, 커밋 전에 린트 검사를 하는 등의 워크플로우를 설정할 수 있습니다.
+          <strong>Hooks</strong>는 Claude가 뭔가를 할 때 <strong>자동으로 추가 작업을 실행</strong>시키는 기능이에요.
+          예를 들어 파일을 저장할 때마다 자동으로 코드 정리를 하거나, 저장 전에 검사를 하는 식으로 쓸 수 있어요.
         </p>
 
         <div className="feature-grid">
@@ -31,7 +31,7 @@ export default function HooksPage() {
             </div>
             <div className="feature-content">
               <h4>자동 실행</h4>
-              <p>도구 호출 전후에 별도 입력 없이 자동으로 동작합니다.</p>
+              <p>따로 시키지 않아도 알아서 동작해요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -39,8 +39,8 @@ export default function HooksPage() {
               <i className="fas fa-filter"></i>
             </div>
             <div className="feature-content">
-              <h4>조건부 실행</h4>
-              <p>matcher로 특정 도구에만 훅을 적용할 수 있습니다.</p>
+              <h4>조건 지정</h4>
+              <p>특정 동작(파일 저장, 명령어 실행 등)에만 적용할 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -49,7 +49,7 @@ export default function HooksPage() {
             </div>
             <div className="feature-content">
               <h4>품질 보호</h4>
-              <p>코드 품질 검사, 보안 체크 등을 자동화합니다.</p>
+              <p>코드 검사, 보안 확인 등을 자동으로 해줘요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -58,7 +58,7 @@ export default function HooksPage() {
             </div>
             <div className="feature-content">
               <h4>간단한 설정</h4>
-              <p>JSON 설정 파일 하나로 관리합니다.</p>
+              <p>설정 파일 하나만 수정하면 돼요.</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function HooksPage() {
           이벤트 종류
         </h3>
         <p className="description">
-          Hooks는 다음 이벤트에 반응합니다. 각 이벤트마다 실행 시점이 다릅니다.
+          Hooks는 아래와 같은 상황에서 동작해요. 상황마다 실행되는 타이밍이 달라요.
         </p>
 
         <div className="comparison-table">
@@ -86,13 +86,13 @@ export default function HooksPage() {
             <tbody>
               <tr>
                 <td><code>PreToolUse</code></td>
-                <td>도구 호출 <strong>직전</strong></td>
-                <td>린트 검사, 권한 확인</td>
+                <td>어떤 작업 <strong>직전</strong></td>
+                <td>코드 검사, 확인 작업</td>
               </tr>
               <tr>
                 <td><code>PostToolUse</code></td>
-                <td>도구 호출 <strong>직후</strong></td>
-                <td>포맷팅, 로그 기록</td>
+                <td>어떤 작업 <strong>직후</strong></td>
+                <td>코드 정리, 기록 남기기</td>
               </tr>
               <tr>
                 <td><code>Notification</code></td>
@@ -101,13 +101,13 @@ export default function HooksPage() {
               </tr>
               <tr>
                 <td><code>Stop</code></td>
-                <td>에이전트 응답 완료 시</td>
-                <td>결과 후처리, 정리 작업</td>
+                <td>Claude 답변 완료 시</td>
+                <td>결과 정리, 마무리 작업</td>
               </tr>
               <tr>
                 <td><code>SubagentStop</code></td>
-                <td>서브에이전트 종료 시</td>
-                <td>서브 작업 후처리</td>
+                <td>하위 작업 끝날 때</td>
+                <td>하위 작업 정리</td>
               </tr>
             </tbody>
           </table>
@@ -116,8 +116,8 @@ export default function HooksPage() {
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> 가장 많이 쓰이는 이벤트는 <code>PreToolUse</code>와 <code>PostToolUse</code>입니다.
-            파일 작성 전 검증, 작성 후 포맷팅 같은 패턴이 일반적입니다.
+            <strong>팁:</strong> 가장 많이 쓰이는 건 <code>PreToolUse</code>(작업 전)와 <code>PostToolUse</code>(작업 후)예요.
+            파일 저장 전에 검사하고, 저장 후에 정리하는 식으로 많이 써요.
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ export default function HooksPage() {
           설정 위치
         </h3>
         <p className="description">
-          Hooks는 <code>settings.json</code> 파일에 정의합니다. 개인용과 프로젝트용 두 가지 위치가 있습니다.
+          Hooks는 <code>settings.json</code> 파일에 적어요. 내 컴퓨터 전체용과 프로젝트용 두 곳이 있어요.
         </p>
 
         <div className="comparison-table">
@@ -164,8 +164,8 @@ export default function HooksPage() {
           Hook 구조
         </h3>
         <p className="description">
-          <code>settings.json</code>의 <code>hooks</code> 필드에 이벤트별 훅 배열을 정의합니다.
-          각 훅은 <code>matcher</code>(대상 도구)와 <code>hooks</code>(실행할 명령) 배열로 구성됩니다.
+          <code>settings.json</code> 파일 안에 아래처럼 적어요.
+          <code>matcher</code>는 "어떤 동작일 때", <code>command</code>는 "뭘 실행할지"를 뜻해요.
         </p>
 
         <div className="code-block">
@@ -211,7 +211,7 @@ export default function HooksPage() {
             <tbody>
               <tr>
                 <td><code>matcher</code></td>
-                <td>대상 도구 이름 (예: <code>Write</code>, <code>Bash</code>, <code>Edit</code>)</td>
+                <td>어떤 동작에 반응할지 (예: <code>Write</code>=파일 저장, <code>Bash</code>=명령어 실행)</td>
               </tr>
               <tr>
                 <td><code>hooks</code></td>
@@ -223,7 +223,7 @@ export default function HooksPage() {
               </tr>
               <tr>
                 <td><code>command</code></td>
-                <td>실행할 셸 명령어</td>
+                <td>실행할 명령어 (터미널에서 실행되는 명령)</td>
               </tr>
             </tbody>
           </table>
@@ -259,7 +259,7 @@ export default function HooksPage() {
   }
 }`}</pre>
           </div>
-          <p className="note">린트 검사에 실패하면 (exit code 0이 아니면) 훅이 도구 실행을 차단합니다.</p>
+          <p className="note">검사에 실패하면 작업이 자동으로 중단돼요. 실수를 미리 막아주는 거예요.</p>
         </AccordionItem>
 
         <AccordionItem title="예시 2: 파일 저장 후 자동 포맷팅">
@@ -324,23 +324,23 @@ export default function HooksPage() {
           <div className="warning-item">
             <i className="fas fa-clock"></i>
             <div>
-              <strong>타임아웃</strong>
-              <p>훅 명령은 기본 60초 타임아웃이 있습니다. 오래 걸리는 작업은 비동기로 처리하세요.</p>
+              <strong>시간 제한</strong>
+              <p>훅 명령은 60초 안에 끝나야 해요. 너무 오래 걸리는 작업은 피하세요.</p>
             </div>
           </div>
           <div className="warning-item">
             <i className="fas fa-shield-alt"></i>
             <div>
               <strong>보안</strong>
-              <p>프로젝트 설정(<code>.claude/settings.json</code>)의 훅은 팀원이 볼 수 있습니다.
-              민감한 명령은 개인 설정에 넣으세요.</p>
+              <p>프로젝트 폴더의 설정은 팀원도 볼 수 있어요.
+              비밀 정보가 포함된 명령은 개인 설정에 넣으세요.</p>
             </div>
           </div>
           <div className="warning-item">
             <i className="fas fa-bug"></i>
             <div>
-              <strong>디버깅</strong>
-              <p>훅이 예상대로 동작하지 않으면 <code>claude --debug</code>로 실행하여 훅 로그를 확인하세요.</p>
+              <strong>문제 해결</strong>
+              <p>훅이 안 되면 <code>claude --debug</code>로 실행해서 어디서 문제가 생기는지 확인해보세요.</p>
             </div>
           </div>
         </div>

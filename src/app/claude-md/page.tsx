@@ -10,7 +10,7 @@ export default function ClaudeMdPage() {
           <i className="fas fa-file-code" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           CLAUDE.md (프로젝트 설정)
         </h2>
-        <p>프로젝트별 규칙과 컨벤션을 Claude에게 알려주세요.</p>
+        <p>프로젝트마다 "이렇게 해줘"라는 규칙을 Claude에게 알려줄 수 있어요.</p>
       </div>
 
       {/* CLAUDE.md란? */}
@@ -20,8 +20,8 @@ export default function ClaudeMdPage() {
           CLAUDE.md란?
         </h3>
         <p className="description">
-          <strong>CLAUDE.md</strong>는 프로젝트의 규칙, 컨벤션, 중요 정보를 담는 <strong>마크다운 파일</strong>입니다.
-          Claude Code는 대화를 시작할 때 이 파일을 자동으로 읽어 프로젝트 맥락을 파악합니다.
+          <strong>CLAUDE.md</strong>는 프로젝트의 규칙과 중요 정보를 적어두는 <strong>메모장</strong>이에요.
+          Claude Code는 대화를 시작할 때 이 파일을 자동으로 읽어서 "아, 이 프로젝트는 이렇게 해야 하는구나" 하고 파악해요.
         </p>
 
         <div className="feature-grid">
@@ -31,7 +31,7 @@ export default function ClaudeMdPage() {
             </div>
             <div className="feature-content">
               <h4>자동 인식</h4>
-              <p>대화 시작 시 자동으로 읽혀 별도 안내가 필요 없습니다.</p>
+              <p>대화 시작하면 알아서 읽어요. 따로 알려줄 필요 없어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -39,8 +39,8 @@ export default function ClaudeMdPage() {
               <i className="fas fa-layer-group"></i>
             </div>
             <div className="feature-content">
-              <h4>계층 구조</h4>
-              <p>전역, 프로젝트, 폴더별로 단계적으로 적용됩니다.</p>
+              <h4>여러 곳에 둘 수 있어요</h4>
+              <p>내 컴퓨터 전체용, 프로젝트용, 특정 폴더용으로 나눠서 쓸 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -49,7 +49,7 @@ export default function ClaudeMdPage() {
             </div>
             <div className="feature-content">
               <h4>팀 공유</h4>
-              <p>Git에 포함하면 팀 전체가 같은 규칙을 사용합니다.</p>
+              <p>프로젝트에 넣어두면 팀원 모두 같은 규칙으로 작업해요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -57,8 +57,8 @@ export default function ClaudeMdPage() {
               <i className="fas fa-edit"></i>
             </div>
             <div className="feature-content">
-              <h4>마크다운</h4>
-              <p>익숙한 마크다운 형식으로 자유롭게 작성합니다.</p>
+              <h4>쉬운 형식</h4>
+              <p>메모장처럼 그냥 텍스트로 적으면 돼요. 특별한 형식 필요 없어요.</p>
             </div>
           </div>
         </div>
@@ -71,8 +71,8 @@ export default function ClaudeMdPage() {
           파일 위치와 우선순위
         </h3>
         <p className="description">
-          CLAUDE.md는 세 곳에 둘 수 있으며, 모두 동시에 적용됩니다.
-          같은 규칙이 충돌하면 더 구체적인 위치가 우선합니다.
+          CLAUDE.md는 세 곳에 둘 수 있어요. 여러 개를 동시에 쓸 수도 있고,
+          같은 내용이 겹치면 더 구체적인 위치에 있는 게 우선돼요.
         </p>
 
         <div className="comparison-table">
@@ -87,9 +87,9 @@ export default function ClaudeMdPage() {
             </thead>
             <tbody>
               <tr>
-                <td>전역</td>
+                <td>내 컴퓨터 전체</td>
                 <td><code>~/.claude/CLAUDE.md</code></td>
-                <td>내 모든 프로젝트</td>
+                <td>어떤 프로젝트든 적용</td>
                 <td><span className="badge muted">낮음</span></td>
               </tr>
               <tr>
@@ -111,8 +111,8 @@ export default function ClaudeMdPage() {
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> 전역 설정(<code>~/.claude/CLAUDE.md</code>)에는 개인 스타일(예: &quot;한국어로 응답&quot;)을,
-            프로젝트 루트에는 팀 컨벤션을, 하위 폴더에는 특정 모듈의 규칙을 넣으면 좋습니다.
+            <strong>팁:</strong> "내 컴퓨터 전체"에는 개인 습관(예: &quot;한국어로 답해줘&quot;)을,
+            프로젝트 폴더에는 팀 규칙을, 하위 폴더에는 그 폴더만의 특별한 규칙을 넣으면 좋아요.
           </div>
         </div>
       </div>
@@ -183,8 +183,8 @@ shotgun debugging (여러 곳 동시 변경) 금지`}</pre>
           자동 메모리 (Auto Memory)
         </h3>
         <p className="description">
-          Claude Code는 대화 중 학습한 내용을 <code>~/.claude/projects/</code> 폴더에 자동으로 저장합니다.
-          이 <strong>자동 메모리</strong>는 CLAUDE.md와 함께 동작합니다.
+          Claude Code는 대화하면서 배운 것을 <code>~/.claude/projects/</code> 폴더에 자동으로 메모해둬요.
+          다음에 같은 프로젝트를 열면 이전에 배운 걸 기억하고 있어요.
         </p>
 
         <div className="comparison-table">
@@ -229,8 +229,8 @@ shotgun debugging (여러 곳 동시 변경) 금지`}</pre>
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> Claude에게 &quot;이 내용을 기억해줘&quot;라고 말하면 자동 메모리에 저장됩니다.
-            &quot;항상 bun을 사용해&quot;, &quot;커밋 메시지는 영어로&quot; 같은 개인 선호도를 알려주세요.
+            <strong>팁:</strong> Claude에게 "이거 기억해줘"라고 말하면 자동으로 메모해둬요.
+            "항상 한국어로 답해줘", "커밋 메시지는 영어로" 같은 내 습관을 알려주세요.
           </div>
         </div>
       </div>
@@ -246,29 +246,29 @@ shotgun debugging (여러 곳 동시 변경) 금지`}</pre>
           <div className="tips-item">
             <i className="fas fa-check-circle"></i>
             <div>
-              <strong>간결하게 작성</strong>
-              <p>핵심만 담으세요. CLAUDE.md가 길면 중요한 내용이 묻힐 수 있습니다.</p>
+              <strong>짧고 핵심만</strong>
+              <p>핵심만 적으세요. 너무 길면 중요한 내용이 묻혀요.</p>
             </div>
           </div>
           <div className="tips-item">
             <i className="fas fa-check-circle"></i>
             <div>
               <strong>구체적으로</strong>
-              <p>&quot;좋은 코드를 작성해&quot;보다 &quot;화살표 함수를 사용하고 TypeScript strict 모드 적용&quot;이 낫습니다.</p>
+              <p>"잘 해줘"보다 "한국어로 답해줘, 파일명은 영어로"처럼 구체적일수록 좋아요.</p>
             </div>
           </div>
           <div className="tips-item">
             <i className="fas fa-check-circle"></i>
             <div>
-              <strong>업데이트 유지</strong>
-              <p>프로젝트가 변경되면 CLAUDE.md도 함께 업데이트하세요.</p>
+              <strong>꾸준히 업데이트</strong>
+              <p>프로젝트가 바뀌면 CLAUDE.md도 같이 고쳐주세요.</p>
             </div>
           </div>
           <div className="tips-item">
             <i className="fas fa-check-circle"></i>
             <div>
-              <strong>Git에 포함</strong>
-              <p>팀 프로젝트라면 CLAUDE.md를 Git에 커밋하여 팀원과 공유하세요.</p>
+              <strong>팀이라면 공유</strong>
+              <p>팀 프로젝트라면 CLAUDE.md를 프로젝트에 넣어서 팀원과 공유하세요.</p>
             </div>
           </div>
         </div>

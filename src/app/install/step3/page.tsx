@@ -18,7 +18,7 @@ export default function Step3Page() {
         <i className="fas fa-robot"></i>
         <div className="tip-content">
           <h4>Claude가 뭔가요?</h4>
-          <p>ChatGPT처럼 대화하는 AI인데, <span className="emphasis">내 컴퓨터 파일을 직접 읽고 작업할 수 있어요!</span> PPT 변환, 문서 정리, 데이터 분석 등을 대화하듯이 시킬 수 있습니다.</p>
+          <p>ChatGPT처럼 대화하는 AI인데, <span className="emphasis">내 컴퓨터 파일을 직접 읽고 작업할 수 있어요!</span> PPT 변환, 문서 정리, 데이터 분석 등을 말로 시키면 알아서 해줘요.</p>
         </div>
       </div>
 
@@ -26,8 +26,8 @@ export default function Step3Page() {
         <i className="fas fa-exclamation-triangle"></i>
         <div className="tip-content">
           <h4>설치 전 확인 필수!</h4>
-          <p>Claude Code는 <span className="emphasis">유료 플랜(Claude Pro 또는 Team)</span> 사용자만 이용할 수 있습니다. 무료 계정으로는 설치해도 사용할 수 없으니 주의하세요!</p>
-          <p style={{ marginTop: '8px' }}>유료 플랜: 월 $20 (Claude Pro) 또는 월 $30/인 (Team)</p>
+          <p>Claude Code는 <span className="emphasis">유료 플랜(Claude Pro 또는 Team)</span>이 있어야 써요. 무료 계정으로는 깔아도 쓸 수 없으니 주의!</p>
+          <p style={{ marginTop: '8px' }}>가격: 월 $20 (Claude Pro) 또는 월 $30/인 (Team)</p>
         </div>
       </div>
 
@@ -39,16 +39,25 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">1</div>
                   <h3>Node.js 설치하기</h3>
-                  <p>Claude Code는 Node.js가 필요합니다. iTerm2를 열고 아래 명령어를 입력하세요.</p>
+                  <p>Claude Code를 돌리려면 Node.js라는 프로그램이 필요해요. iTerm2를 열고 아래 명령어를 입력하세요.</p>
                   <CommandBox command="brew install node" />
-                  <p style={{ marginTop: '16px' }}>설치 완료 후 확인해보세요:</p>
+                  <p style={{ marginTop: '16px' }}>설치 끝나면 잘 깔렸는지 확인:</p>
                   <CommandBox command="node --version" />
 
                   <div className="tip-box info" style={{ marginTop: '16px' }}>
                     <i className="fas fa-check-circle"></i>
                     <div className="tip-content">
                       <h4>이미 Node.js가 있다면?</h4>
-                      <p><code>node --version</code>을 입력해서 버전이 나오면 이 단계는 건너뛰세요!</p>
+                      <p><code>node --version</code>을 입력해서 숫자가 나오면 이 단계는 건너뛰세요!</p>
+                    </div>
+                  </div>
+
+                  <div className="tip-box warning" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-exclamation-circle"></i>
+                    <div className="tip-content">
+                      <h4>반드시 터미널을 껐다 켜세요!</h4>
+                      <p>Node.js 설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span></p>
+                      <p style={{ marginTop: '4px', color: 'var(--text-muted)' }}>창 닫기(X 버튼)만으로는 안 돼요! 앱 자체를 종료해야 다음 명령어가 작동해요.</p>
                     </div>
                   </div>
                 </div>
@@ -56,15 +65,16 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">2</div>
                   <h3>Claude Code 설치하기</h3>
-                  <p>Node.js 설치 후, 아래 명령어로 Claude Code를 설치합니다.</p>
+                  <p>터미널을 다시 열었으면, 아래 명령어로 Claude Code를 깔아요.</p>
                   <CommandBox command="npm install -g @anthropic-ai/claude-code" />
-                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 완료!</p>
+                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 끝!</p>
 
-                  <div className="tip-box info" style={{ marginTop: '16px' }}>
-                    <i className="fas fa-sync-alt"></i>
+                  <div className="tip-box warning" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-exclamation-circle"></i>
                     <div className="tip-content">
-                      <h4>터미널 재시작 필요!</h4>
-                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 인식됩니다.</p>
+                      <h4>또! 터미널을 껐다 켜세요!</h4>
+                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 작동해요.</p>
+                      <p style={{ marginTop: '4px', color: 'var(--text-muted)' }}>Mac에서는 뭔가를 설치할 때마다 터미널을 껐다 켜야 해요. 꼭 기억하세요!</p>
                     </div>
                   </div>
                 </div>
@@ -72,7 +82,7 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">3</div>
                   <h3>계정 만들기 (무료)</h3>
-                  <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
+                  <p>Claude를 쓰려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있어요!</p>
                   <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
                     <li style={{ marginBottom: '12px' }}>
                       <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
@@ -92,10 +102,10 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">4</div>
                   <h3>로그인하기</h3>
-                  <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
+                  <p>내 컴퓨터의 Claude와 계정을 연결해요.</p>
                   <CommandBox command="claude auth login" />
                   <ul style={{ marginTop: '16px' }}>
-                    <li><strong>브라우저가 자동으로 열립니다</strong> (Safari, Chrome 등)</li>
+                    <li><strong>웹 브라우저가 자동으로 열려요</strong> (Safari, Chrome 등)</li>
                     <li>방금 만든 계정으로 <strong>로그인</strong></li>
                     <li>"Claude Code 접근 허용" 같은 버튼이 나오면 <strong>"허용"</strong> 클릭</li>
                     <li>"인증 완료" 메시지가 보이면 → 터미널로 돌아오세요</li>
@@ -124,15 +134,15 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">1</div>
                   <h3>Node.js 설치하기</h3>
-                  <p>Claude Code는 Node.js가 필요합니다. Windows Terminal을 열고 아래 명령어를 입력하세요.</p>
+                  <p>Claude Code를 돌리려면 Node.js라는 프로그램이 필요해요. Windows Terminal을 열고 아래 명령어를 입력하세요.</p>
                   <CommandBox command="winget install OpenJS.NodeJS.LTS" />
-                  <p style={{ marginTop: '16px' }}>설치 완료 후 터미널을 껐다가 다시 열어주세요!</p>
+                  <p style={{ marginTop: '16px' }}>설치 끝나면 터미널을 껐다가 다시 열어주세요!</p>
 
                   <div className="tip-box info" style={{ marginTop: '16px' }}>
                     <i className="fas fa-check-circle"></i>
                     <div className="tip-content">
                       <h4>이미 Node.js가 있다면?</h4>
-                      <p><code>node --version</code>을 입력해서 버전이 나오면 이 단계는 건너뛰세요!</p>
+                      <p><code>node --version</code>을 입력해서 숫자가 나오면 이 단계는 건너뛰세요!</p>
                     </div>
                   </div>
                 </div>
@@ -140,15 +150,15 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">2</div>
                   <h3>Claude Code 설치하기</h3>
-                  <p>Node.js 설치 후, 아래 명령어로 Claude Code를 설치합니다.</p>
+                  <p>터미널을 다시 열었으면, 아래 명령어로 Claude Code를 깔아요.</p>
                   <CommandBox command="npm install -g @anthropic-ai/claude-code" />
-                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 완료!</p>
+                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 끝!</p>
 
-                  <div className="tip-box info" style={{ marginTop: '16px' }}>
-                    <i className="fas fa-sync-alt"></i>
+                  <div className="tip-box warning" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-exclamation-circle"></i>
                     <div className="tip-content">
-                      <h4>터미널 재시작 필요!</h4>
-                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 인식됩니다.</p>
+                      <h4>터미널을 껐다 켜세요!</h4>
+                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 작동해요.</p>
                     </div>
                   </div>
                 </div>
@@ -156,7 +166,7 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">3</div>
                   <h3>계정 만들기 (무료)</h3>
-                  <p>Claude를 사용하려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있습니다!</p>
+                  <p>Claude를 쓰려면 Anthropic 계정이 필요해요. <span className="emphasis">무료</span>로 만들 수 있어요!</p>
                   <ol style={{ paddingLeft: '24px', color: 'var(--text-muted)', marginTop: '12px' }}>
                     <li style={{ marginBottom: '12px' }}>
                       <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>여기를 클릭</a>해서 Anthropic 사이트로 이동
@@ -176,10 +186,10 @@ export default function Step3Page() {
                 <div className="step-card">
                   <div className="step-number">4</div>
                   <h3>로그인하기</h3>
-                  <p>이제 내 컴퓨터의 Claude와 계정을 연결합니다.</p>
+                  <p>내 컴퓨터의 Claude와 계정을 연결해요.</p>
                   <CommandBox command="claude auth login" />
                   <ul style={{ marginTop: '16px' }}>
-                    <li><strong>브라우저가 자동으로 열립니다</strong> (Chrome, Edge 등)</li>
+                    <li><strong>웹 브라우저가 자동으로 열려요</strong> (Chrome, Edge 등)</li>
                     <li>방금 만든 계정으로 <strong>로그인</strong></li>
                     <li>"Claude Code 접근 허용" 같은 버튼이 나오면 <strong>"허용"</strong> 클릭</li>
                     <li>"인증 완료" 메시지가 보이면 → 터미널로 돌아오세요</li>
@@ -209,7 +219,7 @@ export default function Step3Page() {
         <i className="fas fa-trophy"></i>
         <div className="tip-content">
           <h4>축하합니다!</h4>
-          <p>모든 설치가 완료되었습니다! 이제 실제 업무에 활용하는 방법을 배워봅시다.</p>
+          <p>모든 설치가 끝났어요! 이제 실제로 AI에게 일 시키는 방법을 배워봐요.</p>
         </div>
       </div>
 

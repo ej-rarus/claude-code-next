@@ -11,7 +11,7 @@ export default function Step1Page() {
           <i className="fas fa-download" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           1단계: 패키지 관리자 설치하기
         </h2>
-        <p>프로그램 설치를 쉽게 도와주는 도구를 설치합니다</p>
+        <p>프로그램을 쉽게 깔아주는 도구부터 설치해요</p>
       </div>
 
       <OSTabs>
@@ -22,7 +22,7 @@ export default function Step1Page() {
                 <i className="fas fa-info-circle"></i>
                 <div className="tip-content">
                   <h4>Homebrew가 뭔가요?</h4>
-                  <p>Mac에서 프로그램을 쉽게 설치할 수 있게 해주는 <span className="emphasis">설치 도우미</span>입니다. 앱스토어가 아닌 프로그램들을 간단한 명령어로 설치할 수 있게 해줍니다.</p>
+                  <p>Mac에서 프로그램을 쉽게 깔아주는 <span className="emphasis">설치 도우미</span>예요. 앱스토어에 없는 프로그램도 명령어 한 줄이면 설치 끝!</p>
                 </div>
               </div>
 
@@ -30,7 +30,7 @@ export default function Step1Page() {
                 <div className="step-card">
                   <div className="step-number">1</div>
                   <h3>터미널 열기</h3>
-                  <p><span className="emphasis">터미널</span>은 컴퓨터에게 글자로 명령을 내리는 프로그램입니다. Mac에 기본으로 설치되어 있어요.</p>
+                  <p><span className="emphasis">터미널</span>은 컴퓨터에게 글자로 명령하는 창이에요. Mac에 이미 깔려 있어요.</p>
                   <ul>
                     <li>화면 오른쪽 위 <strong>돋보기 아이콘</strong>을 클릭하거나</li>
                     <li>키보드에서 <strong>Command + Space</strong>를 누르세요</li>
@@ -77,15 +77,15 @@ export default function Step1Page() {
                 </div>
               </div>
 
-              <div className="tip-box info" style={{ marginTop: '20px' }}>
-                <i className="fas fa-sync-alt"></i>
+              <div className="tip-box warning" style={{ marginTop: '20px' }}>
+                <i className="fas fa-exclamation-circle"></i>
                 <div className="tip-content">
-                  <h4>터미널 재시작 필요!</h4>
-                  <p>Homebrew 설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span></p>
+                  <h4>반드시 터미널을 껐다 켜세요!</h4>
+                  <p>Homebrew 설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어야</span> 다음 단계가 정상 작동해요.</p>
                   <ul style={{ marginTop: '8px', color: 'var(--text-muted)' }}>
-                    <li>터미널 창을 닫는 것만으로는 부족합니다</li>
-                    <li><strong>Command + Q</strong>를 눌러 터미널 앱 자체를 종료하세요</li>
-                    <li>다시 터미널(또는 iTerm2)을 열고 다음 단계를 진행하세요</li>
+                    <li>창 닫기(X 버튼)만으로는 안 돼요!</li>
+                    <li><strong>Command + Q</strong>를 눌러서 터미널 앱 자체를 완전히 종료하세요</li>
+                    <li>그 다음 터미널을 다시 열고 다음 단계를 진행하세요</li>
                   </ul>
                 </div>
               </div>

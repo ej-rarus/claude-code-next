@@ -10,7 +10,7 @@ export default function McpPage() {
           <i className="fas fa-plug" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           MCP 서버
         </h2>
-        <p>Model Context Protocol로 Claude의 기능을 확장하세요.</p>
+        <p>Claude에게 추가 능력을 붙여주는 확장 기능이에요.</p>
       </div>
 
       {/* MCP란? */}
@@ -20,8 +20,8 @@ export default function McpPage() {
           MCP란 무엇인가요?
         </h3>
         <p className="description">
-          <strong>MCP (Model Context Protocol)</strong>는 Anthropic이 개발한 오픈 프로토콜로,
-          Claude가 외부 도구 및 데이터 소스와 안전하게 연결할 수 있게 해줍니다.
+          <strong>MCP (Model Context Protocol)</strong>는 Claude에게 추가 능력을 붙여주는 <strong>확장 기능</strong>이에요.
+          쉽게 말해, Claude가 더 많은 곳(파일, 데이터베이스, 웹 등)에 접근할 수 있게 해주는 "플러그인" 같은 거예요.
         </p>
 
         <div className="feature-grid">
@@ -30,8 +30,8 @@ export default function McpPage() {
               <i className="fas fa-folder-open"></i>
             </div>
             <div className="feature-content">
-              <h4>로컬 파일 접근</h4>
-              <p>컴퓨터의 파일과 폴더를 읽고 수정할 수 있습니다.</p>
+              <h4>내 컴퓨터 파일</h4>
+              <p>파일과 폴더를 읽고 수정할 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -39,8 +39,8 @@ export default function McpPage() {
               <i className="fas fa-database"></i>
             </div>
             <div className="feature-content">
-              <h4>데이터베이스 연결</h4>
-              <p>PostgreSQL, SQLite 등 DB에 쿼리를 실행할 수 있습니다.</p>
+              <h4>데이터베이스</h4>
+              <p>데이터베이스에서 직접 데이터를 가져올 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -49,7 +49,7 @@ export default function McpPage() {
             </div>
             <div className="feature-content">
               <h4>Git 연동</h4>
-              <p>저장소의 히스토리 조회, 커밋, 브랜치 관리가 가능합니다.</p>
+              <p>코드 변경 이력 보기, 저장, 분기 관리 등이 가능해요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -57,8 +57,8 @@ export default function McpPage() {
               <i className="fas fa-globe"></i>
             </div>
             <div className="feature-content">
-              <h4>웹 API 호출</h4>
-              <p>외부 API를 호출하여 실시간 데이터를 가져옵니다.</p>
+              <h4>웹 연결</h4>
+              <p>외부 웹사이트나 서비스에서 실시간 데이터를 가져와요.</p>
             </div>
           </div>
         </div>
@@ -113,8 +113,8 @@ export default function McpPage() {
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> Claude Code는 터미널에서 바로 로컬 파일에 접근할 수 있어 MCP 설정이 불필요합니다.
-            반면 Claude Desktop에서 같은 기능을 사용하려면 MCP 서버 설정이 필요합니다.
+            <strong>팁:</strong> Claude Code는 이미 내 컴퓨터 파일에 접근할 수 있어서 MCP가 꼭 필요하진 않아요.
+            반면 Claude Desktop(앱 버전)에서 같은 기능을 쓰려면 MCP 설정이 필요해요.
           </div>
         </div>
       </div>
@@ -127,13 +127,13 @@ export default function McpPage() {
         </h3>
 
         <AccordionItem title="1단계: 설정 파일 열기" defaultOpen>
-          <p>Claude Desktop의 MCP 설정 파일을 엽니다.</p>
+          <p>Claude Desktop의 MCP 설정 파일을 열어요.</p>
           <CommandBox command="open ~/Library/Application\ Support/Claude/claude_desktop_config.json" />
-          <p className="note">파일이 없다면 새로 생성하세요.</p>
+          <p className="note">파일이 없다면 새로 만드세요.</p>
         </AccordionItem>
 
         <AccordionItem title="2단계: 파일시스템 MCP 서버 추가">
-          <p>로컬 파일에 접근하려면 <code>@modelcontextprotocol/server-filesystem</code>을 설정합니다.</p>
+          <p>내 컴퓨터 파일에 접근하게 하려면 아래 설정을 넣어요.</p>
           <div className="code-block">
             <pre>{`{
   "mcpServers": {
@@ -148,11 +148,11 @@ export default function McpPage() {
   }
 }`}</pre>
           </div>
-          <p className="note"><code>/Users/사용자이름/Documents</code>를 실제 작업 폴더 경로로 변경하세요.</p>
+          <p className="note"><code>/Users/사용자이름/Documents</code> 부분을 실제 작업 폴더 위치로 바꿔주세요.</p>
         </AccordionItem>
 
         <AccordionItem title="3단계: Git MCP 서버 추가 (선택)">
-          <p>Git 기능을 사용하려면 아래 설정을 추가합니다.</p>
+          <p>Git 기능도 쓰고 싶다면 아래 설정을 추가해요.</p>
           <div className="code-block">
             <pre>{`{
   "mcpServers": {
@@ -170,7 +170,7 @@ export default function McpPage() {
         </AccordionItem>
 
         <AccordionItem title="4단계: Claude Desktop 재시작">
-          <p>설정을 저장한 후 Claude Desktop을 완전히 종료했다가 다시 실행합니다.</p>
+          <p>설정을 저장한 후 Claude Desktop을 완전히 종료했다가 다시 실행해요.</p>
           <div className="steps">
             <div className="step">
               <span className="step-number">1</span>
@@ -259,25 +259,25 @@ export default function McpPage() {
 
         <AccordionItem title="MCP 서버가 연결되지 않아요">
           <ul>
-            <li>설정 파일의 JSON 문법이 올바른지 확인하세요.</li>
-            <li>Node.js가 설치되어 있는지 확인하세요: <code>node --version</code></li>
-            <li>Claude Desktop을 완전히 종료 후 재시작하세요.</li>
-            <li>터미널에서 직접 MCP 서버를 실행해 에러 메시지를 확인하세요.</li>
+            <li>설정 파일에 오타가 없는지 확인하세요.</li>
+            <li>Node.js가 깔려 있는지 확인: <code>node --version</code></li>
+            <li>Claude Desktop을 완전히 종료한 뒤 다시 실행하세요.</li>
+            <li>터미널에서 직접 실행해서 에러 메시지가 뜨는지 확인하세요.</li>
           </ul>
         </AccordionItem>
 
         <AccordionItem title="파일을 찾을 수 없다고 해요">
           <ul>
-            <li>설정 파일의 경로가 정확한지 확인하세요.</li>
-            <li>경로에 <code>~</code> 대신 전체 경로(<code>/Users/이름/...</code>)를 사용하세요.</li>
-            <li>폴더에 대한 읽기 권한이 있는지 확인하세요.</li>
+            <li>설정 파일의 폴더 위치가 정확한지 확인하세요.</li>
+            <li><code>~</code> 대신 전체 경로(<code>/Users/이름/...</code>)를 써보세요.</li>
+            <li>해당 폴더를 열 수 있는 권한이 있는지 확인하세요.</li>
           </ul>
         </AccordionItem>
 
         <AccordionItem title="npx/uvx 명령어를 찾을 수 없어요">
           <ul>
-            <li><strong>npx</strong>: Node.js 설치 필요 - <code>brew install node</code></li>
-            <li><strong>uvx</strong>: uv 설치 필요 - <code>brew install uv</code></li>
+            <li><strong>npx</strong>: Node.js가 필요해요 - <code>brew install node</code>로 설치</li>
+            <li><strong>uvx</strong>: uv가 필요해요 - <code>brew install uv</code>로 설치</li>
           </ul>
         </AccordionItem>
       </div>

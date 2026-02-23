@@ -11,7 +11,7 @@ export default function Step2Page() {
           <i className="fas fa-terminal" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           2단계: 터미널 프로그램 설치하기
         </h2>
-        <p>더 편한 터미널 프로그램을 설치합니다</p>
+        <p>더 편한 터미널 프로그램을 깔아요</p>
       </div>
 
       <OSTabs>
@@ -22,7 +22,7 @@ export default function Step2Page() {
                 <i className="fas fa-info-circle"></i>
                 <div className="tip-content">
                   <h4>왜 iTerm2가 필요한가요?</h4>
-                  <p>기본 터미널보다 <span className="emphasis">복사/붙여넣기가 쉽고, 여러 창을 나눠서 볼 수 있고, 더 예쁩니다!</span> 업무 효율이 훨씬 좋아져요.</p>
+                  <p>Mac 기본 터미널보다 <span className="emphasis">복사/붙여넣기가 쉽고, 여러 창을 나눠서 볼 수 있고, 더 예뻐요!</span> 훨씬 편하게 작업할 수 있어요.</p>
                 </div>
               </div>
 
@@ -30,9 +30,18 @@ export default function Step2Page() {
                 <div className="step-card">
                   <div className="step-number">1</div>
                   <h3>iTerm2 설치하기</h3>
-                  <p>1단계에서 설치한 Homebrew를 사용하면 아주 간단합니다!</p>
+                  <p>1단계에서 깔았던 Homebrew를 사용하면 한 줄이면 끝!</p>
                   <CommandBox command="brew install --cask iterm2" />
-                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 자동으로 설치됩니다!</p>
+                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 자동으로 깔려요!</p>
+                </div>
+
+                <div className="tip-box warning" style={{ margin: '-8px 0 24px' }}>
+                  <i className="fas fa-exclamation-circle"></i>
+                  <div className="tip-content">
+                    <h4>반드시 터미널을 껐다 켜세요!</h4>
+                    <p>iTerm2 설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span></p>
+                    <p style={{ marginTop: '4px', color: 'var(--text-muted)' }}>창 닫기(X 버튼)만으로는 안 돼요! 앱 자체를 종료해야 해요.</p>
+                  </div>
                 </div>
 
                 <div className="step-card">
@@ -76,7 +85,7 @@ export default function Step2Page() {
                 <i className="fas fa-info-circle"></i>
                 <div className="tip-content">
                   <h4>왜 Windows Terminal이 필요한가요?</h4>
-                  <p>기본 명령 프롬프트보다 <span className="emphasis">복사/붙여넣기가 쉽고, 탭 기능이 있고, 더 예쁩니다!</span> 현대적인 터미널 환경을 제공해요.</p>
+                  <p>기본 명령 프롬프트보다 <span className="emphasis">복사/붙여넣기가 쉽고, 탭 기능이 있고, 더 예뻐요!</span> 훨씬 편하게 작업할 수 있어요.</p>
                 </div>
               </div>
 

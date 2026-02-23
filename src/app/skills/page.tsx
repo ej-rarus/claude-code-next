@@ -10,7 +10,7 @@ export default function SkillsPage() {
           <i className="fas fa-wand-magic-sparkles" style={{ color: 'var(--primary)', marginRight: '12px' }}></i>
           Skills (커스텀 슬래시 명령)
         </h2>
-        <p>자주 쓰는 작업을 나만의 슬래시 명령으로 만들어 보세요.</p>
+        <p>자주 쓰는 작업을 나만의 단축 명령으로 만들어 보세요.</p>
       </div>
 
       {/* Skills란? */}
@@ -20,8 +20,8 @@ export default function SkillsPage() {
           Skills란?
         </h3>
         <p className="description">
-          <strong>Skills</strong>는 Claude Code에서 사용할 수 있는 <strong>재사용 가능한 슬래시 명령</strong>입니다.
-          자주 반복하는 작업을 한 번 정의해 두면 <code>/명령어</code>로 간단히 실행할 수 있습니다.
+          <strong>Skills</strong>는 자주 하는 작업을 <strong>단축 명령으로 만들어 두는 기능</strong>이에요.
+          한 번 만들어 놓으면 <code>/명령어</code> 한 줄로 바로 실행할 수 있어요.
         </p>
 
         <div className="feature-grid">
@@ -31,7 +31,7 @@ export default function SkillsPage() {
             </div>
             <div className="feature-content">
               <h4>빠른 실행</h4>
-              <p><code>/커밋</code>처럼 슬래시 명령으로 즉시 호출됩니다.</p>
+              <p><code>/커밋</code>처럼 한 줄이면 바로 실행돼요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -40,7 +40,7 @@ export default function SkillsPage() {
             </div>
             <div className="feature-content">
               <h4>재사용 가능</h4>
-              <p>한 번 만들면 어떤 프로젝트에서든 반복 사용할 수 있습니다.</p>
+              <p>한 번 만들면 어디서든 계속 쓸 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -49,7 +49,7 @@ export default function SkillsPage() {
             </div>
             <div className="feature-content">
               <h4>팀 공유</h4>
-              <p>프로젝트에 포함하면 팀원 모두가 같은 명령을 사용합니다.</p>
+              <p>프로젝트에 넣어두면 팀원 모두 같은 명령을 쓸 수 있어요.</p>
             </div>
           </div>
           <div className="feature-item">
@@ -57,8 +57,8 @@ export default function SkillsPage() {
               <i className="fas fa-file-alt"></i>
             </div>
             <div className="feature-content">
-              <h4>마크다운 기반</h4>
-              <p>별도 프로그래밍 없이 마크다운 파일 하나로 만듭니다.</p>
+              <h4>쉬운 형식</h4>
+              <p>코딩 없이 텍스트 파일 하나로 만들 수 있어요.</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function SkillsPage() {
           저장 위치
         </h3>
         <p className="description">
-          Skills 파일은 두 곳에 저장할 수 있습니다. 용도에 따라 선택하세요.
+          Skills 파일은 두 곳에 저장할 수 있어요. 용도에 따라 골라 쓰세요.
         </p>
 
         <div className="comparison-table">
@@ -116,9 +116,9 @@ export default function SkillsPage() {
         <div className="tip-box">
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> 하위 폴더도 사용할 수 있습니다.
-            예를 들어 <code>.claude/skills/git/commit.md</code>처럼 정리하면
-            <code>/git:commit</code>으로 호출됩니다.
+            <strong>팁:</strong> 폴더로 나눠서 정리할 수도 있어요.
+            예를 들어 <code>.claude/skills/git/commit.md</code>처럼 넣으면
+            <code>/git:commit</code>으로 쓸 수 있어요.
           </div>
         </div>
       </div>
@@ -131,13 +131,13 @@ export default function SkillsPage() {
         </h3>
 
         <AccordionItem title="1단계: 폴더 만들기" defaultOpen>
-          <p>Skills를 저장할 폴더를 만듭니다.</p>
+          <p>Skills를 저장할 폴더를 만들어요.</p>
           <CommandBox command="mkdir -p .claude/skills" />
-          <p className="note">개인용이라면 <code>mkdir -p ~/.claude/skills</code>를 사용하세요.</p>
+          <p className="note">내 컴퓨터 전체에서 쓰려면 <code>mkdir -p ~/.claude/skills</code>를 쓰세요.</p>
         </AccordionItem>
 
         <AccordionItem title="2단계: SKILL.md 파일 작성">
-          <p>폴더 안에 마크다운 파일을 만듭니다. 파일 이름이 곧 명령어 이름이 됩니다.</p>
+          <p>폴더 안에 텍스트 파일을 만들어요. 파일 이름이 곧 명령어 이름이 돼요.</p>
           <div className="code-block">
             <div className="code-header">
               <span>.claude/skills/commit.md</span>
@@ -162,15 +162,15 @@ allowed-tools:
    - refactor: 리팩토링`}</pre>
           </div>
           <p className="note">
-            <code>---</code> 사이의 부분이 <strong>frontmatter</strong>(설정),
-            아래가 <strong>본문</strong>(Claude에게 보내는 지시)입니다.
+            <code>---</code> 사이의 부분은 <strong>설정</strong>(이름, 설명 등)이고,
+            아래는 Claude에게 보내는 <strong>지시 내용</strong>이에요.
           </p>
         </AccordionItem>
 
         <AccordionItem title="3단계: 사용하기">
-          <p>Claude Code에서 슬래시(<code>/</code>)를 입력하면 내가 만든 스킬이 목록에 나타납니다.</p>
+          <p>Claude Code에서 <code>/</code>를 입력하면 내가 만든 명령이 목록에 나타나요.</p>
           <CommandBox command="/commit" />
-          <p className="note">인자를 전달할 수도 있습니다: <code>/commit 로그인 버그 수정</code></p>
+          <p className="note">뒤에 추가 정보를 붙일 수도 있어요: <code>/commit 로그인 버그 수정</code></p>
         </AccordionItem>
       </div>
 
@@ -178,7 +178,7 @@ allowed-tools:
       <div className="card">
         <h3>
           <i className="fas fa-sliders-h" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
-          Frontmatter 주요 옵션
+          설정 항목 (--- 안에 적는 것들)
         </h3>
 
         <div className="comparison-table">
@@ -194,7 +194,7 @@ allowed-tools:
               <tr>
                 <td><code>name</code></td>
                 <td><span className="badge success">필수</span></td>
-                <td>슬래시 명령어 이름 (예: <code>commit</code>)</td>
+                <td>명령어 이름 (예: <code>commit</code>)</td>
               </tr>
               <tr>
                 <td><code>description</code></td>
@@ -204,12 +204,12 @@ allowed-tools:
               <tr>
                 <td><code>allowed-tools</code></td>
                 <td><span className="badge muted">선택</span></td>
-                <td>자동 허용할 도구 목록 (권한 확인 건너뛰기)</td>
+                <td>이 명령에서 자동으로 허용할 동작 (매번 확인 안 물어봄)</td>
               </tr>
               <tr>
                 <td><code>context</code></td>
                 <td><span className="badge muted">선택</span></td>
-                <td>자동으로 읽어올 파일 경로 목록</td>
+                <td>자동으로 읽어올 파일 목록</td>
               </tr>
             </tbody>
           </table>
@@ -218,9 +218,8 @@ allowed-tools:
         <div className="tip-box">
           <i className="fas fa-shield-alt"></i>
           <div>
-            <strong>보안:</strong> <code>allowed-tools</code>에는 와일드카드 패턴을 사용할 수 있습니다.
-            예: <code>Bash(git *)</code>는 git으로 시작하는 모든 명령을 허용합니다.
-            필요한 최소 권한만 부여하세요.
+            <strong>보안:</strong> <code>allowed-tools</code>에 <code>Bash(git *)</code>처럼 쓰면 git 관련 명령은 모두 허용돼요.
+            꼭 필요한 것만 허용하는 게 안전해요.
           </div>
         </div>
       </div>
