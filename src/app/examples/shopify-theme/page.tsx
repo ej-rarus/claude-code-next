@@ -84,6 +84,44 @@ export default function ShopifyThemeDevPage() {
         </div>
       </div>
 
+      {/* 권한 요청 안내 */}
+      <div className="card permission-card">
+        <h3>
+          <i className="fas fa-user-shield" style={{ marginRight: '8px', color: '#ef4444' }}></i>
+          먼저! 권한을 받으세요
+        </h3>
+        <p className="description" style={{ marginBottom: '16px' }}>
+          시작하기 전에 아래 <strong>2가지 권한</strong>이 반드시 필요해요.
+          없으면 아래 과정을 진행할 수 없으니 <strong>먼저 요청</strong>하세요.
+        </p>
+        <div className="permission-grid">
+          <div className="permission-item">
+            <div className="permission-icon"><i className="fab fa-github"></i></div>
+            <div className="permission-content">
+              <h4>GitHub 저장소 접근 권한</h4>
+              <p>테마 코드가 올라가 있는 GitHub 저장소에 초대를 받아야 해요.</p>
+            </div>
+          </div>
+          <div className="permission-item">
+            <div className="permission-icon"><i className="fas fa-store"></i></div>
+            <div className="permission-content">
+              <h4>Shopify 스토어 접근 권한</h4>
+              <p>테마를 미리보려면 해당 Shopify 스토어의 직원(Staff) 권한이 필요해요.</p>
+            </div>
+          </div>
+        </div>
+        <div className="permission-cta">
+          <i className="fas fa-paper-plane"></i>
+          <div>
+            <strong>은국님</strong> 또는 <strong>Nurani님</strong>에게 아래 내용으로 요청하세요:
+            <div className="permission-template">
+              &quot;GitHub 레포 초대 + Shopify 스토어 Staff 권한 요청드립니다.
+              제 GitHub 아이디는 <code>___</code>, Shopify 로그인 이메일은 <code>___</code> 입니다.&quot;
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 사전 준비: 처음 한 번만 하면 돼요 */}
       <div className="card">
         <h3>
@@ -91,7 +129,7 @@ export default function ShopifyThemeDevPage() {
           사전 준비 (처음 한 번만 하면 돼요)
         </h3>
         <p className="description">
-          아래 도구들을 순서대로 설치하세요. 이미 설치된 건 건너뛰면 돼요.
+          위 권한을 받았으면, 아래 도구들을 순서대로 설치하세요. 이미 설치된 건 건너뛰면 돼요.
           <strong> 각 항목의 &quot;설치 확인&quot; 명령어를 실행해서 버전이 나오면 이미 설치된 거예요.</strong>
         </p>
 
@@ -251,35 +289,10 @@ export default function ShopifyThemeDevPage() {
           </div>
         </div>
 
-        {/* 준비물 7: 계정 */}
-        <div className="prereq-card">
-          <div className="prereq-number">7</div>
-          <div className="prereq-body">
-            <h4>필요한 계정들</h4>
-            <p>아래 계정이 준비되어 있어야 해요.</p>
-            <div className="account-list">
-              <div className="account-item">
-                <i className="fab fa-github"></i>
-                <div>
-                  <strong>GitHub 계정</strong>
-                  <span>테마 코드가 올라가 있는 저장소에 접근하려면 필요해요. 팀에서 초대를 받아야 할 수 있어요.</span>
-                </div>
-              </div>
-              <div className="account-item">
-                <i className="fas fa-store"></i>
-                <div>
-                  <strong>Shopify 스토어 접근 권한</strong>
-                  <span>테마를 미리보려면 해당 스토어의 직원(Staff) 또는 협력자(Collaborator) 권한이 필요해요. 스토어 관리자에게 요청하세요.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="warning-item" style={{ marginTop: '20px' }}>
           <i className="fas fa-exclamation-triangle"></i>
           <div>
-            <strong>설치가 어렵다면?</strong> 개발자나 같은 팀의 기술 담당에게
+            <strong>설치가 어렵다면?</strong> 은국님이나 Nurani님에게
             &quot;위 6가지 설치 도와주세요&quot;라고 요청하세요. 처음 한 번만 세팅하면 그 다음부터는 쉬워요.
           </div>
         </div>
@@ -945,6 +958,92 @@ shopify theme dev --store="내스토어ID"
           border-width: 2px;
         }
 
+        .permission-card {
+          border-color: #ef4444;
+          border-width: 2px;
+          background: rgba(239, 68, 68, 0.03);
+        }
+
+        .permission-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          margin-bottom: 16px;
+        }
+
+        .permission-item {
+          display: flex;
+          gap: 12px;
+          padding: 16px;
+          background: var(--bg-primary);
+          border-radius: 12px;
+          border: 1px solid var(--border-color);
+        }
+
+        .permission-icon {
+          width: 44px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(239, 68, 68, 0.1);
+          color: #ef4444;
+          border-radius: 12px;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        .permission-content h4 {
+          font-size: 0.95rem;
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+
+        .permission-content p {
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          margin: 0;
+        }
+
+        .permission-cta {
+          display: flex;
+          gap: 12px;
+          padding: 16px 20px;
+          background: rgba(239, 68, 68, 0.08);
+          border-radius: 12px;
+          border-left: 4px solid #ef4444;
+        }
+
+        .permission-cta > i {
+          color: #ef4444;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .permission-cta > div {
+          font-size: 0.9rem;
+          line-height: 1.6;
+        }
+
+        .permission-template {
+          margin-top: 10px;
+          padding: 12px 16px;
+          background: var(--bg-primary);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          font-size: 0.85rem;
+          line-height: 1.6;
+          color: var(--text-secondary);
+        }
+
+        .permission-template code {
+          background: var(--bg-tertiary);
+          padding: 2px 6px;
+          border-radius: 4px;
+          font-size: 0.85rem;
+        }
+
         .description {
           color: var(--text-secondary);
           line-height: 1.7;
@@ -1430,6 +1529,7 @@ shopify theme dev --store="내스토어ID"
           .section-header h2 { font-size: 1.5rem; }
           .feature-grid { grid-template-columns: 1fr; }
           .use-case-grid { grid-template-columns: 1fr; }
+          .permission-grid { grid-template-columns: 1fr; }
           .how-it-works { gap: 8px; }
           .how-step { min-width: 70px; }
           .how-icon { width: 44px; height: 44px; font-size: 1.1rem; }
