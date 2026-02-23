@@ -292,7 +292,7 @@ export default function ShopifyThemeDevPage() {
         <div className="warning-item" style={{ marginTop: '20px' }}>
           <i className="fas fa-exclamation-triangle"></i>
           <div>
-            <strong>설치가 어렵다면?</strong> 은국님이나 Nurani님에게
+            <strong>설치가 어렵다면?</strong> 담당자나 개발자에게
             &quot;위 6가지 설치 도와주세요&quot;라고 요청하세요. 처음 한 번만 세팅하면 그 다음부터는 쉬워요.
           </div>
         </div>
