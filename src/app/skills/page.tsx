@@ -64,6 +64,50 @@ export default function SkillsPage() {
         </div>
       </div>
 
+      {/* 기본 제공 Skills */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-box-open" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          기본 제공 Skills (Bundled)
+        </h3>
+        <p className="description">
+          Claude Code에 <strong>기본으로 포함된 Skills</strong>이에요. 별도 설정 없이 바로 사용할 수 있어요.
+        </p>
+
+        <div className="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>명령어</th>
+                <th>기능</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>/simplify</code></td>
+                <td>최근 변경 파일을 3개 에이전트가 병렬로 검토 (코드 재사용, 품질, 효율성)</td>
+              </tr>
+              <tr>
+                <td><code>/batch</code></td>
+                <td>대규모 변경을 5~30개 단위로 분할 후 병렬 실행. 각각 PR 생성</td>
+              </tr>
+              <tr>
+                <td><code>/debug</code></td>
+                <td>현재 세션의 디버그 로그를 분석해서 문제를 진단</td>
+              </tr>
+              <tr>
+                <td><code>/loop</code></td>
+                <td>프롬프트를 주기적으로 반복 실행 (배포 체크, PR 모니터링 등)</td>
+              </tr>
+              <tr>
+                <td><code>/claude-api</code></td>
+                <td>Claude API 레퍼런스 로드. <code>anthropic</code> import 시 자동 활성화</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* 저장 위치 */}
       <div className="card">
         <h3>
@@ -193,23 +237,43 @@ allowed-tools:
             <tbody>
               <tr>
                 <td><code>name</code></td>
-                <td><span className="badge success">필수</span></td>
-                <td>명령어 이름 (예: <code>commit</code>)</td>
+                <td><span className="badge muted">선택</span></td>
+                <td>명령어 이름. 생략하면 폴더 이름 사용</td>
               </tr>
               <tr>
                 <td><code>description</code></td>
-                <td><span className="badge success">필수</span></td>
-                <td>명령어 설명 (목록에 표시됨)</td>
+                <td><span className="badge success">추천</span></td>
+                <td>명령어 설명. Claude가 자동 로드 여부를 판단해요</td>
               </tr>
               <tr>
                 <td><code>allowed-tools</code></td>
                 <td><span className="badge muted">선택</span></td>
-                <td>이 명령에서 자동으로 허용할 동작 (매번 확인 안 물어봄)</td>
+                <td>이 명령에서 자동으로 허용할 동작</td>
+              </tr>
+              <tr>
+                <td><code>disable-model-invocation</code></td>
+                <td><span className="badge muted">선택</span></td>
+                <td><code>true</code>로 설정하면 수동으로만 실행 가능 (Claude가 자동으로 쓰지 않음)</td>
+              </tr>
+              <tr>
+                <td><code>user-invocable</code></td>
+                <td><span className="badge muted">선택</span></td>
+                <td><code>false</code>로 설정하면 / 메뉴에서 숨김 (Claude만 사용)</td>
+              </tr>
+              <tr>
+                <td><code>model</code></td>
+                <td><span className="badge muted">선택</span></td>
+                <td>사용할 모델 (sonnet, haiku, opus)</td>
               </tr>
               <tr>
                 <td><code>context</code></td>
                 <td><span className="badge muted">선택</span></td>
-                <td>자동으로 읽어올 파일 목록</td>
+                <td><code>fork</code>로 설정하면 서브에이전트에서 실행</td>
+              </tr>
+              <tr>
+                <td><code>hooks</code></td>
+                <td><span className="badge muted">선택</span></td>
+                <td>이 Skill 실행 시 동작할 Hooks</td>
               </tr>
             </tbody>
           </table>

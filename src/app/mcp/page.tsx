@@ -119,6 +119,68 @@ export default function McpPage() {
         </div>
       </div>
 
+      {/* Claude Code에서 MCP 서버 추가 */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-terminal" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          Claude Code에서 MCP 서버 추가
+        </h3>
+        <p className="description">
+          Claude Code에서는 <code>claude mcp add</code> 명령으로 MCP 서버를 추가할 수 있어요.
+          3가지 연결 방식이 있어요.
+        </p>
+
+        <AccordionItem title="HTTP 서버 (추천)" icon="fa-globe" defaultOpen>
+          <p>원격 MCP 서버에 연결하는 <strong>권장 방법</strong>이에요.</p>
+          <CommandBox command="claude mcp add --transport http notion https://mcp.notion.com/mcp" />
+          <p className="note">인증이 필요한 서버는 <code>/mcp</code> 명령으로 OAuth 로그인하세요.</p>
+        </AccordionItem>
+
+        <AccordionItem title="SSE 서버 (레거시)" icon="fa-stream">
+          <p>SSE 방식은 <strong>deprecated</strong>예요. 가능하면 HTTP를 사용하세요.</p>
+          <CommandBox command="claude mcp add --transport sse asana https://mcp.asana.com/sse" />
+        </AccordionItem>
+
+        <AccordionItem title="로컬 stdio 서버" icon="fa-laptop">
+          <p>로컬에서 프로세스로 실행하는 방식이에요.</p>
+          <CommandBox command='claude mcp add --transport stdio --env AIRTABLE_API_KEY=YOUR_KEY airtable -- npx -y airtable-mcp-server' />
+        </AccordionItem>
+
+        <AccordionItem title="서버 관리" icon="fa-list-ul">
+          <CommandBox command="claude mcp list        # 목록 확인" />
+          <CommandBox command="claude mcp get github   # 상세 정보" />
+          <CommandBox command="claude mcp remove github # 제거" />
+          <p className="note" style={{ marginTop: '8px' }}>세션 중에는 <code>/mcp</code> 명령으로 상태를 확인할 수 있어요.</p>
+        </AccordionItem>
+      </div>
+
+      {/* Tool Search */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-search" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          MCP Tool Search
+        </h3>
+        <p className="description">
+          MCP 도구가 많아지면 컨텍스트 창의 10%를 넘게 돼요.
+          그러면 <strong>Tool Search</strong>가 자동으로 활성화되어, 필요한 도구만 로드해요.
+        </p>
+        <div className="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>설정</th>
+                <th>동작</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>auto</code> (기본)</td><td>10% 초과 시 자동 활성화</td></tr>
+              <tr><td><code>true</code></td><td>항상 활성화</td></tr>
+              <tr><td><code>false</code></td><td>비활성화 (모든 도구 로드)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Claude Desktop에서 MCP 설정하기 */}
       <div className="card">
         <h3>

@@ -85,29 +85,54 @@ export default function HooksPage() {
             </thead>
             <tbody>
               <tr>
+                <td><code>SessionStart</code></td>
+                <td>세션 시작/재개 시</td>
+                <td>초기 컨텍스트 주입</td>
+              </tr>
+              <tr>
+                <td><code>UserPromptSubmit</code></td>
+                <td>프롬프트 제출 직후</td>
+                <td>입력 검증, 변환</td>
+              </tr>
+              <tr>
                 <td><code>PreToolUse</code></td>
-                <td>어떤 작업 <strong>직전</strong></td>
-                <td>코드 검사, 확인 작업</td>
+                <td>도구 실행 <strong>직전</strong></td>
+                <td>코드 검사, 차단</td>
               </tr>
               <tr>
                 <td><code>PostToolUse</code></td>
-                <td>어떤 작업 <strong>직후</strong></td>
-                <td>코드 정리, 기록 남기기</td>
+                <td>도구 실행 <strong>직후</strong></td>
+                <td>코드 정리, 기록</td>
               </tr>
               <tr>
                 <td><code>Notification</code></td>
                 <td>알림 발생 시</td>
-                <td>커스텀 알림 (소리, 팝업)</td>
+                <td>커스텀 알림</td>
               </tr>
               <tr>
                 <td><code>Stop</code></td>
-                <td>Claude 답변 완료 시</td>
-                <td>결과 정리, 마무리 작업</td>
+                <td>Claude 응답 완료 시</td>
+                <td>결과 정리, 검증</td>
               </tr>
               <tr>
-                <td><code>SubagentStop</code></td>
-                <td>하위 작업 끝날 때</td>
-                <td>하위 작업 정리</td>
+                <td><code>SubagentStart/Stop</code></td>
+                <td>서브에이전트 시작/종료</td>
+                <td>서브에이전트 모니터링</td>
+              </tr>
+              <tr>
+                <td><code>PreCompact</code></td>
+                <td>컨텍스트 압축 전</td>
+                <td>압축 전 정보 저장</td>
+              </tr>
+              <tr>
+                <td><code>ConfigChange</code></td>
+                <td>설정 파일 변경 시</td>
+                <td>변경 감사 로그</td>
+              </tr>
+              <tr>
+                <td><code>SessionEnd</code></td>
+                <td>세션 종료 시</td>
+                <td>정리, 보고</td>
               </tr>
             </tbody>
           </table>
@@ -154,6 +179,59 @@ export default function HooksPage() {
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      {/* Hook 타입 */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-tags" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          Hook 타입
+        </h3>
+        <p className="description">
+          Hook은 4가지 타입을 지원해요. <code>command</code> 외에도 LLM 기반 훅을 쓸 수 있어요.
+        </p>
+
+        <div className="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>타입</th>
+                <th>동작</th>
+                <th>용도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>command</code></td>
+                <td>셸 명령어 실행</td>
+                <td>포맷팅, 파일 보호, 알림</td>
+              </tr>
+              <tr>
+                <td><code>http</code></td>
+                <td>HTTP POST 요청</td>
+                <td>외부 서비스 연동, 웹훅</td>
+              </tr>
+              <tr>
+                <td><code>prompt</code></td>
+                <td>LLM 단일 판단 (Haiku)</td>
+                <td>작업 완료 여부 판단</td>
+              </tr>
+              <tr>
+                <td><code>agent</code></td>
+                <td>LLM + 도구 사용</td>
+                <td>테스트 실행 후 검증</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="tip-box">
+          <i className="fas fa-lightbulb"></i>
+          <div>
+            <strong>팁:</strong> <code>prompt</code>와 <code>agent</code> 타입은 규칙 기반 판단이 어려운 경우에 써요.
+            예: "모든 작업이 완료됐는지 확인" 같은 판단이 필요할 때.
+          </div>
         </div>
       </div>
 

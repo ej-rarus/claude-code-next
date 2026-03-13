@@ -223,6 +223,80 @@ export default function ClaudeMdPage() {
         </div>
       </div>
 
+      {/* .claude/rules/ */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-layer-group" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          심화: .claude/rules/ (규칙 파일 분리)
+        </h3>
+        <p className="description">
+          CLAUDE.md가 너무 길어지면, 규칙을 <strong>주제별 파일로 분리</strong>할 수 있어요.
+          특정 파일 타입에만 적용되는 규칙도 만들 수 있어요.
+        </p>
+
+        <AccordionItem title="기본 사용법" icon="fa-folder" defaultOpen>
+          <p><code>.claude/rules/</code> 폴더에 마크다운 파일을 넣으면 자동으로 읽혀요.</p>
+          <div className="code-block">
+            <div className="code-header">
+              <span>폴더 구조 예시</span>
+            </div>
+            <pre>{`.claude/
+├── CLAUDE.md              # 메인 설정
+└── rules/
+    ├── code-style.md      # 코드 스타일 규칙
+    ├── testing.md         # 테스트 규칙
+    └── security.md        # 보안 규칙`}</pre>
+          </div>
+        </AccordionItem>
+
+        <AccordionItem title="파일 타입별 규칙 (paths)" icon="fa-filter">
+          <p>frontmatter에 <code>paths</code>를 넣으면 해당 파일을 열 때만 적용돼요.</p>
+          <div className="code-block">
+            <div className="code-header">
+              <span>.claude/rules/api-rules.md</span>
+            </div>
+            <pre>{`---
+paths:
+  - "src/api/**/*.ts"
+---
+
+# API 개발 규칙
+- 모든 엔드포인트에 입력 검증 포함
+- 표준 에러 응답 형식 사용
+- OpenAPI 문서 주석 포함`}</pre>
+          </div>
+        </AccordionItem>
+      </div>
+
+      {/* @path 임포트 */}
+      <div className="card">
+        <h3>
+          <i className="fas fa-link" style={{ marginRight: '8px', color: 'var(--primary)' }}></i>
+          심화: @경로 임포트
+        </h3>
+        <p className="description">
+          CLAUDE.md에서 <code>@파일경로</code>를 쓰면 다른 파일 내용을 자동으로 불러와요.
+        </p>
+
+        <div className="code-block">
+          <div className="code-header">
+            <span>CLAUDE.md에서 @임포트 사용</span>
+          </div>
+          <pre>{`프로젝트 개요는 @README.md 참고
+NPM 명령어는 @package.json 참고
+
+# 추가 가이드
+- git 워크플로우 @docs/git-instructions.md`}</pre>
+        </div>
+
+        <div className="tip-box">
+          <i className="fas fa-lightbulb"></i>
+          <div>
+            <strong>팁:</strong> 상대 경로는 CLAUDE.md 파일 위치 기준이에요. 최대 5단계까지 중첩 임포트가 가능해요.
+          </div>
+        </div>
+      </div>
+
       {/* 자동 메모리 */}
       <div className="card">
         <h3>

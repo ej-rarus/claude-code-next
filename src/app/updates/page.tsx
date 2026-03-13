@@ -11,6 +11,52 @@ interface UpdateEntry {
 
 const updates: UpdateEntry[] = [
   {
+    date: '2026-03-09',
+    version: 'v2.5.0',
+    tag: 'major',
+    highlights: [
+      '플러그인 시스템 정식 출시 (Skills + MCP + Hooks 패키징)',
+      '에이전트 팀 (실험적) — 여러 Claude 세션이 협력하는 병렬 작업',
+      '네이티브 설치 방식 권장 (curl 한 줄, npm 더 이상 불필요)',
+      'CLAUDE.md @경로 임포트, .claude/rules/ 지원',
+    ],
+  },
+  {
+    date: '2026-02-20',
+    version: 'v2.4.0',
+    tag: 'major',
+    highlights: [
+      'Desktop 앱 출시 (macOS, Windows) — 터미널 없이 사용',
+      'Web 버전 (claude.ai/code) — 브라우저에서 바로 사용',
+      'Remote Control API — 외부 앱에서 Claude Code 제어',
+      'Slack 연동 — Slack에서 Claude Code 세션 실행',
+      'Chrome 확장 — 웹페이지 컨텍스트를 Claude Code에 전달',
+    ],
+  },
+  {
+    date: '2026-01-30',
+    version: 'v2.3.0',
+    tag: 'major',
+    highlights: [
+      'Fast Mode — 같은 Opus 모델로 2.5배 빠른 출력',
+      '샌드박싱 — 파일/네트워크 격리로 안전한 실행',
+      '체크포인트 — 자동 추적, Esc×2로 되돌리기',
+      '스케줄 작업 (/loop) — 반복 실행 및 일회성 알림',
+    ],
+  },
+  {
+    date: '2025-12-19',
+    version: 'v2.2.0',
+    tag: 'minor',
+    highlights: [
+      '서브에이전트 개선 — 커스텀 에이전트 정의, 전용 Skills',
+      'Hook 타입 확장 — command, http, prompt, agent 4종',
+      'MCP Tool Search — 도구 자동 검색 모드',
+      'MCP HTTP 전송 (SSE 대체, OAuth 인증)',
+      'Skills 번들 제공 — /simplify, /batch, /debug, /loop, /claude-api',
+    ],
+  },
+  {
     date: '2025-05-22',
     version: 'v2.1.2',
     tag: 'minor',
@@ -168,8 +214,8 @@ export default function UpdatesPage() {
       {/* 현재 버전 */}
       <div className="card current-version-card">
         <div className="current-version-header">
-          <span className="version-badge">v2.1.2</span>
-          <span className="version-date">2025년 5월 기준</span>
+          <span className="version-badge">v2.5.0</span>
+          <span className="version-date">2026년 3월 기준</span>
         </div>
         <p className="current-version-desc">내 버전이 뭔지 확인하려면 터미널에서 이렇게 입력하세요.</p>
         <CommandBox command="claude --version" />
@@ -221,7 +267,7 @@ export default function UpdatesPage() {
         <div className="tip-box" style={{ marginTop: '16px' }}>
           <i className="fas fa-lightbulb"></i>
           <div>
-            <strong>팁:</strong> Homebrew로 설치한 경우 <code>brew upgrade claude-code</code>로도 업데이트할 수 있습니다.
+            <strong>팁:</strong> 네이티브 설치(curl)는 <span style={{ fontWeight: 600 }}>자동 업데이트</span>돼요. Homebrew는 <code>brew upgrade claude-code</code>, WinGet은 <code>winget upgrade Anthropic.ClaudeCode</code>로 수동 업데이트하세요.
           </div>
         </div>
       </div>

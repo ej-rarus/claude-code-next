@@ -26,8 +26,16 @@ export default function Step3Page() {
         <i className="fas fa-exclamation-triangle"></i>
         <div className="tip-content">
           <h4>설치 전 확인 필수!</h4>
-          <p>Claude Code는 <span className="emphasis">유료 플랜(Claude Pro 또는 Team)</span>이 있어야 써요. 무료 계정으로는 깔아도 쓸 수 없으니 주의!</p>
-          <p style={{ marginTop: '8px' }}>가격: 월 $20 (Claude Pro) 또는 월 $30/인 (Team)</p>
+          <p>Claude Code는 <span className="emphasis">유료 플랜(Pro, Max, Team, Enterprise)</span>이 있어야 써요. 무료 계정으로는 깔아도 쓸 수 없으니 주의!</p>
+          <p style={{ marginTop: '8px' }}>가격: 월 $20 (Pro) / 월 $100 (Max) / 월 $30/인 (Team)</p>
+        </div>
+      </div>
+
+      <div className="tip-box info">
+        <i className="fas fa-desktop"></i>
+        <div className="tip-content">
+          <h4>터미널이 어렵다면?</h4>
+          <p><span className="emphasis">Desktop 앱</span>을 쓰면 터미널 없이도 Claude Code를 사용할 수 있어요! <Link href="/desktop" style={{ color: 'var(--primary)', fontWeight: 600 }}>Desktop 앱 안내 보기</Link></p>
         </div>
       </div>
 
@@ -38,17 +46,16 @@ export default function Step3Page() {
               <div className="steps-container">
                 <div className="step-card">
                   <div className="step-number">1</div>
-                  <h3>Node.js 설치하기</h3>
-                  <p>Claude Code를 돌리려면 Node.js라는 프로그램이 필요해요. iTerm2를 열고 아래 명령어를 입력하세요.</p>
-                  <CommandBox command="brew install node" />
-                  <p style={{ marginTop: '16px' }}>설치 끝나면 잘 깔렸는지 확인:</p>
-                  <CommandBox command="node --version" />
+                  <h3>Claude Code 설치하기 (권장)</h3>
+                  <p>iTerm2를 열고 아래 명령어 <span className="emphasis">한 줄</span>만 입력하면 끝! Node.js 설치도 필요 없어요.</p>
+                  <CommandBox command="curl -fsSL https://claude.ai/install.sh | bash" />
+                  <p style={{ marginTop: '16px' }}>설치가 끝나면 터미널을 껐다 켜세요.</p>
 
                   <div className="tip-box info" style={{ marginTop: '16px' }}>
-                    <i className="fas fa-check-circle"></i>
+                    <i className="fas fa-sync-alt"></i>
                     <div className="tip-content">
-                      <h4>이미 Node.js가 있다면?</h4>
-                      <p><code>node --version</code>을 입력해서 숫자가 나오면 이 단계는 건너뛰세요!</p>
+                      <h4>자동 업데이트!</h4>
+                      <p>이 방식으로 설치하면 <span className="emphasis">백그라운드에서 자동으로 최신 버전으로 업데이트</span>돼요.</p>
                     </div>
                   </div>
 
@@ -56,27 +63,21 @@ export default function Step3Page() {
                     <i className="fas fa-exclamation-circle"></i>
                     <div className="tip-content">
                       <h4>반드시 터미널을 껐다 켜세요!</h4>
-                      <p>Node.js 설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span></p>
+                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span></p>
                       <p style={{ marginTop: '4px', color: 'var(--text-muted)' }}>창 닫기(X 버튼)만으로는 안 돼요! 앱 자체를 종료해야 다음 명령어가 작동해요.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="step-card">
-                  <div className="step-number">2</div>
-                  <h3>Claude Code 설치하기</h3>
-                  <p>터미널을 다시 열었으면, 아래 명령어로 Claude Code를 깔아요.</p>
+                <div className="step-card" style={{ opacity: 0.85 }}>
+                  <div className="step-number" style={{ background: 'var(--text-muted)' }}>?</div>
+                  <h3>다른 설치 방법 (선택)</h3>
+                  <p>위 명령어가 안 되는 경우에만 아래 방법을 시도하세요.</p>
+                  <p style={{ fontSize: '0.95rem' }}><strong>Homebrew:</strong></p>
+                  <CommandBox command="brew install --cask claude-code" />
+                  <p style={{ marginTop: '12px', fontSize: '0.95rem' }}><strong>npm (구버전 호환):</strong></p>
                   <CommandBox command="npm install -g @anthropic-ai/claude-code" />
-                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 끝!</p>
-
-                  <div className="tip-box warning" style={{ marginTop: '16px' }}>
-                    <i className="fas fa-exclamation-circle"></i>
-                    <div className="tip-content">
-                      <h4>또! 터미널을 껐다 켜세요!</h4>
-                      <p>설치 후 <span className="emphasis">터미널을 완전히 종료(Command + Q)했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 작동해요.</p>
-                      <p style={{ marginTop: '4px', color: 'var(--text-muted)' }}>Mac에서는 뭔가를 설치할 때마다 터미널을 껐다 켜야 해요. 꼭 기억하세요!</p>
-                    </div>
-                  </div>
+                  <p style={{ marginTop: '8px', color: 'var(--text-muted)', fontSize: '0.85rem' }}>npm 설치는 Node.js 18+이 필요하고 자동 업데이트가 안 됩니다.</p>
                 </div>
 
                 <div className="step-card">
@@ -133,26 +134,26 @@ export default function Step3Page() {
               <div className="steps-container">
                 <div className="step-card">
                   <div className="step-number">1</div>
-                  <h3>Node.js 설치하기</h3>
-                  <p>Claude Code를 돌리려면 Node.js라는 프로그램이 필요해요. Windows Terminal을 열고 아래 명령어를 입력하세요.</p>
-                  <CommandBox command="winget install OpenJS.NodeJS.LTS" />
-                  <p style={{ marginTop: '16px' }}>설치 끝나면 터미널을 껐다가 다시 열어주세요!</p>
-
-                  <div className="tip-box info" style={{ marginTop: '16px' }}>
-                    <i className="fas fa-check-circle"></i>
-                    <div className="tip-content">
-                      <h4>이미 Node.js가 있다면?</h4>
-                      <p><code>node --version</code>을 입력해서 숫자가 나오면 이 단계는 건너뛰세요!</p>
-                    </div>
-                  </div>
+                  <h3>Git for Windows 설치</h3>
+                  <p>Claude Code는 내부적으로 Git Bash를 사용해요. 먼저 Git을 설치하세요.</p>
+                  <CommandBox command="winget install Git.Git" />
+                  <p style={{ marginTop: '12px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>이미 Git이 있다면 이 단계는 건너뛰세요!</p>
                 </div>
 
                 <div className="step-card">
                   <div className="step-number">2</div>
-                  <h3>Claude Code 설치하기</h3>
-                  <p>터미널을 다시 열었으면, 아래 명령어로 Claude Code를 깔아요.</p>
-                  <CommandBox command="npm install -g @anthropic-ai/claude-code" />
-                  <p style={{ marginTop: '16px' }}>1-2분 기다리면 설치 끝!</p>
+                  <h3>Claude Code 설치하기 (권장)</h3>
+                  <p>PowerShell을 열고 아래 명령어를 입력하세요. Node.js 설치도 필요 없어요!</p>
+                  <CommandBox command="irm https://claude.ai/install.ps1 | iex" />
+                  <p style={{ marginTop: '16px' }}>설치가 끝나면 터미널을 껐다 켜세요.</p>
+
+                  <div className="tip-box info" style={{ marginTop: '16px' }}>
+                    <i className="fas fa-sync-alt"></i>
+                    <div className="tip-content">
+                      <h4>자동 업데이트!</h4>
+                      <p>이 방식으로 설치하면 <span className="emphasis">백그라운드에서 자동으로 최신 버전으로 업데이트</span>돼요.</p>
+                    </div>
+                  </div>
 
                   <div className="tip-box warning" style={{ marginTop: '16px' }}>
                     <i className="fas fa-exclamation-circle"></i>
@@ -161,6 +162,17 @@ export default function Step3Page() {
                       <p>설치 후 <span className="emphasis">터미널을 완전히 종료했다가 다시 열어주세요.</span> 그래야 <code>claude</code> 명령어가 작동해요.</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="step-card" style={{ opacity: 0.85 }}>
+                  <div className="step-number" style={{ background: 'var(--text-muted)' }}>?</div>
+                  <h3>다른 설치 방법 (선택)</h3>
+                  <p>위 명령어가 안 되는 경우에만 시도하세요.</p>
+                  <p style={{ fontSize: '0.95rem' }}><strong>WinGet:</strong></p>
+                  <CommandBox command="winget install Anthropic.ClaudeCode" />
+                  <p style={{ marginTop: '12px', fontSize: '0.95rem' }}><strong>npm (구버전 호환):</strong></p>
+                  <CommandBox command="npm install -g @anthropic-ai/claude-code" />
+                  <p style={{ marginTop: '8px', color: 'var(--text-muted)', fontSize: '0.85rem' }}>npm 설치는 Node.js 18+이 필요하고 자동 업데이트가 안 됩니다.</p>
                 </div>
 
                 <div className="step-card">

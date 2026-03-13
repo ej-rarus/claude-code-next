@@ -66,6 +66,10 @@ const navSections = {
       { href: '/web', icon: 'fa-globe', label: '웹 정보 수집' },
       { href: '/automation', icon: 'fa-magic', label: '자동화' },
       { href: '/mcp', icon: 'fa-plug', label: 'MCP 서버' },
+      { href: '/fast-mode', icon: 'fa-bolt', label: 'Fast Mode' },
+      { href: '/sandboxing', icon: 'fa-shield-alt', label: '샌드박싱' },
+      { href: '/scheduled-tasks', icon: 'fa-clock', label: '예약 작업 (/loop)' },
+      { href: '/checkpointing', icon: 'fa-history', label: '체크포인팅' },
     ],
   },
   tools: {
@@ -74,10 +78,23 @@ const navSections = {
       { href: '/skills', icon: 'fa-wand-magic-sparkles', label: 'Skills (커스텀 명령)' },
       { href: '/hooks', icon: 'fa-bell', label: 'Hooks (이벤트 훅)' },
       { href: '/claude-md', icon: 'fa-file-code', label: 'CLAUDE.md (프로젝트 설정)' },
+      { href: '/sub-agents', icon: 'fa-users-cog', label: '서브에이전트' },
+      { href: '/agent-teams', icon: 'fa-users', label: 'Agent Teams' },
+      { href: '/plugins', icon: 'fa-puzzle-piece', label: 'Plugins' },
       { href: '/ide', icon: 'fa-laptop-code', label: 'IDE 연동' },
       { href: '/github-integration', icon: 'fab fa-github', label: 'GitHub 연동' },
       { href: '/local-agent', icon: 'fa-robot', label: '로컬 에이전트' },
       { href: '/openclaw', icon: 'fa-paw', label: 'OpenClaw' },
+    ],
+  },
+  platform: {
+    title: '플랫폼 & 연동',
+    items: [
+      { href: '/desktop', icon: 'fa-desktop', label: 'Desktop 앱' },
+      { href: '/code-web', icon: 'fa-cloud', label: '웹에서 Claude Code' },
+      { href: '/remote-control', icon: 'fa-wifi', label: 'Remote Control' },
+      { href: '/chrome', icon: 'fab fa-chrome', label: 'Chrome 연동' },
+      { href: '/slack', icon: 'fab fa-slack', label: 'Slack 연동' },
     ],
   },
   reference: {
@@ -241,6 +258,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="nav-section">
           <div className="nav-section-title">{navSections.tools.title}</div>
           {navSections.tools.items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav-item ${isActive(item.href) ? 'active' : ''}`}
+              onClick={onClose}
+            >
+              <i className={item.icon.startsWith('fab ') ? item.icon : `fas ${item.icon}`}></i>
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* 플랫폼 & 연동 */}
+        <div className="nav-section">
+          <div className="nav-section-title">{navSections.platform.title}</div>
+          {navSections.platform.items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
