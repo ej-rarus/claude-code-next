@@ -147,6 +147,39 @@ export default function RemoteControlPage() {
       </div>
 
       <style jsx>{`
+        .description {
+          color: var(--text-secondary);
+          line-height: 1.7;
+          margin-bottom: 24px;
+        }
+        .comparison-table {
+          overflow-x: auto;
+          margin-bottom: 16px;
+        }
+        .comparison-table table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .comparison-table th,
+        .comparison-table td {
+          padding: 12px 16px;
+          text-align: left;
+          border-bottom: 1px solid var(--border-color);
+        }
+        .comparison-table th {
+          background: var(--bg-primary);
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
+        .comparison-table td {
+          font-size: 0.9rem;
+        }
+        .comparison-table td code {
+          background: var(--bg-primary);
+          padding: 2px 6px;
+          border-radius: 4px;
+          font-size: 0.85rem;
+        }
         .feature-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
